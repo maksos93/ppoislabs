@@ -1,0 +1,49 @@
+\doxysection{book.\+hpp}
+\hypertarget{book_8hpp_source}{}\label{book_8hpp_source}\index{include/book.hpp@{include/book.hpp}}
+\doxymbox{\hyperlink{book_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }Book\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ isbn;}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ title;}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ author;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ price;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ stockQuantity;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ Book(\textcolor{keyword}{const}\ std::string\&\ isbn,\ \textcolor{keyword}{const}\ std::string\&\ title,\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ author,\ \textcolor{keywordtype}{double}\ price,\ \textcolor{keywordtype}{int}\ stock);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ getIsbn()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ getTitle()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ getAuthor()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{double}\ getPrice()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ getStockQuantity()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ setStockQuantity(\textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePrice(\textcolor{keywordtype}{double}\ newPrice);}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }Catalog\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ std::map<std::string,\ Book>\ books;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ Catalog()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ addBook(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ removeBook(\textcolor{keyword}{const}\ std::string\&\ isbn);}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\&\ getBook(\textcolor{keyword}{const}\ std::string\&\ isbn);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ getBook(\textcolor{keyword}{const}\ std::string\&\ isbn)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ getBookCount()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \};}
+
+\end{DoxyCode}

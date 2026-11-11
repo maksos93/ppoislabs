@@ -1,0 +1,55 @@
+\doxysection{turing\+\_\+machine.\+hpp}
+\hypertarget{turing__machine_8hpp_source}{}\label{turing__machine_8hpp_source}\index{include/turing\_machine.hpp@{include/turing\_machine.hpp}}
+\doxymbox{\hyperlink{turing__machine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}{Tape}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<char>\ cells;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ headPosition;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ blankChar;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}{Tape}}(\textcolor{keyword}{const}\ std::string\&\ input\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{char}\ blank\ =\ \textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{char}\ read()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ write(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ moveLeft();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ moveRight();}
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ getTapeString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}{Tape}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}{Tape}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_turing_machine_ab9aac95217841c6e96552caf3e67b3f4}{TuringMachine}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{class_tape}{Tape}}\ tape;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ currentState;\ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ haltState;\ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{struct\ }Rule\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::string\ nextState;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ writeSymbol;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ direction;}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ \ \ \ \ std::map<std::pair<std::string,\ char>,\ Rule>\ rules;\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \doxymbox{\hyperlink{class_turing_machine_ab9aac95217841c6e96552caf3e67b3f4}{TuringMachine}}(\textcolor{keyword}{const}\ std::string\&\ input,\ \textcolor{keyword}{const}\ std::string\&\ startState,\ \textcolor{keyword}{const}\ std::string\&\ haltState);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ addRule(\textcolor{keyword}{const}\ std::string\&\ state,\ \textcolor{keywordtype}{char}\ symbol,\ \textcolor{keyword}{const}\ std::string\&\ nextState,\ \textcolor{keywordtype}{char}\ writeSymbol,\ \textcolor{keywordtype}{char}\ direction);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ step();}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ std::string\ getResultTape()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \};}
+
+\end{DoxyCode}

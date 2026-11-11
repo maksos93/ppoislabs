@@ -1,0 +1,62 @@
+\doxysection{Node Struct Reference}
+\hypertarget{struct_node}{}\label{struct_node}\index{Node@{Node}}
+
+
+Узел двоичного дерева поиска для хранения пары слов.  
+
+
+
+
+{\ttfamily \+\#include $<$dictionary.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}{Node}} (const std::\+string \&eng, const std::\+string \&rus)
+\begin{DoxyCompactList}\small\item\em Конструктор узла. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_node_a64b19dcfe5a6989d7cbb9f98ee3e0e5f}\label{struct_node_a64b19dcfe5a6989d7cbb9f98ee3e0e5f} 
+std::\+string {\bfseries english\+Word}
+\begin{DoxyCompactList}\small\item\em Английское слово (ключ). \end{DoxyCompactList}\item 
+\Hypertarget{struct_node_ab1c19bed4a20e0f8f5bd5395a362a9f5}\label{struct_node_ab1c19bed4a20e0f8f5bd5395a362a9f5} 
+std::\+string {\bfseries russian\+Translation}
+\begin{DoxyCompactList}\small\item\em Перевод на русский язык (значение). \end{DoxyCompactList}\item 
+\Hypertarget{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}\label{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee} 
+\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries left}
+\begin{DoxyCompactList}\small\item\em Указатель на левое дочернее поддерево \end{DoxyCompactList}\item 
+\Hypertarget{struct_node_a7328862eaa6dea28018326549b3294d3}\label{struct_node_a7328862eaa6dea28018326549b3294d3} 
+\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries right}
+\begin{DoxyCompactList}\small\item\em Указатель на правое дочернее поддерево \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Узел двоичного дерева поиска для хранения пары слов. 
+
+\label{struct_node_doc-constructors}
+\Hypertarget{struct_node_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily \label{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b} 
+Node::\+\+Node (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{eng}{, }\item[{const std::\+string \&}]{rus}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор узла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eng} & Английское слово. \\
+\hline
+{\em rus} & Русский перевод. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{dictionary_8hpp}{dictionary.\+hpp}}\item 
+src/\doxymbox{\hyperlink{dictionary_8cpp}{dictionary.\+cpp}}\end{DoxyCompactItemize}

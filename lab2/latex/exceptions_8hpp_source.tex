@@ -1,0 +1,84 @@
+\doxysection{exceptions.\+hpp}
+\hypertarget{exceptions_8hpp_source}{}\label{exceptions_8hpp_source}\index{include/exceptions.hpp@{include/exceptions.hpp}}
+\doxymbox{\hyperlink{exceptions_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }LibraryException\ :\ \textcolor{keyword}{public}\ std::runtime\_error\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{explicit}\ LibraryException(\textcolor{keyword}{const}\ std::string\&\ message)\ :\ std::runtime\_error(message)\ \{\}}
+\DoxyCodeLine{00014\ \};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }BookNotFoundException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ BookNotFoundException(\textcolor{keyword}{const}\ std::string\&\ isbn)\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Book\ not\ found\ with\ ISBN:\ "{}}\ +\ isbn)\ \{\}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }DuplicateBookException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{explicit}\ DuplicateBookException(\textcolor{keyword}{const}\ std::string\&\ isbn)\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Duplicate\ book\ with\ ISBN:\ "{}}\ +\ isbn)\ \{\}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }OutOfStockException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{explicit}\ OutOfStockException(\textcolor{keyword}{const}\ std::string\&\ title)\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Out\ of\ stock\ for\ book:\ "{}}\ +\ title)\ \{\}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }InvalidUserException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{explicit}\ InvalidUserException(\textcolor{keyword}{const}\ std::string\&\ user)\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Invalid\ user\ data:\ "{}}\ +\ user)\ \{\}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }OrderNotFoundException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{explicit}\ OrderNotFoundException(\textcolor{keywordtype}{int}\ orderId)\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Order\ not\ found\ with\ ID:\ "{}}\ +\ std::to\_string(orderId))\ \{\}}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }InvalidPaymentException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ InvalidPaymentException(\textcolor{keyword}{const}\ std::string\&\ details)\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Invalid\ payment\ processing:\ "{}}\ +\ details)\ \{\}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }InsufficientFundsException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{explicit}\ InsufficientFundsException(\textcolor{keywordtype}{double}\ required,\ \textcolor{keywordtype}{double}\ available)\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Insufficient\ funds.\ Required:\ "{}}\ +\ std::to\_string(required)\ +\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ Available:\ "{}}\ +\ std::to\_string(available))\ \{\}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }DeliveryException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{explicit}\ DeliveryException(\textcolor{keyword}{const}\ std::string\&\ reason)\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Delivery\ error:\ "{}}\ +\ reason)\ \{\}}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{class\ }UnauthorizedAccessException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{explicit}\ UnauthorizedAccessException(\textcolor{keyword}{const}\ std::string\&\ role)\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Unauthorized\ access\ for\ role:\ "{}}\ +\ role)\ \{\}}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }InvalidDiscountException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{explicit}\ InvalidDiscountException(\textcolor{keywordtype}{double}\ value)\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Invalid\ discount\ value:\ "{}}\ +\ std::to\_string(value))\ \{\}}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{class\ }ReviewNotFoundException\ :\ \textcolor{keyword}{public}\ LibraryException\ \{}
+\DoxyCodeLine{00078\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{explicit}\ ReviewNotFoundException(\textcolor{keywordtype}{int}\ reviewId)\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ :\ LibraryException(\textcolor{stringliteral}{"{}Review\ not\ found\ with\ ID:\ "{}}\ +\ std::to\_string(reviewId))\ \{\}}
+\DoxyCodeLine{00081\ \};}
+
+\end{DoxyCode}

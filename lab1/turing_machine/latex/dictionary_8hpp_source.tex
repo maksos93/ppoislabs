@@ -1,0 +1,65 @@
+\doxysection{dictionary.\+hpp}
+\hypertarget{dictionary_8hpp_source}{}\label{dictionary_8hpp_source}\index{include/dictionary.hpp@{include/dictionary.hpp}}
+\doxymbox{\hyperlink{dictionary_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}{Node}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_node_a64b19dcfe5a6989d7cbb9f98ee3e0e5f}{englishWord}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_node_ab1c19bed4a20e0f8f5bd5395a362a9f5}{russianTranslation}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}{Node}}*\ \doxymbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}{Node}}*\ \doxymbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{struct_node_ab36edf0b0d407cf3d17bfbf4fd9f392b}{Node}}(\textcolor{keyword}{const}\ std::string\&\ eng,\ \textcolor{keyword}{const}\ std::string\&\ rus);}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ root;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ wordCount;\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ insertNode(\doxymbox{\hyperlink{struct_node}{Node}}*\ node,\ \textcolor{keyword}{const}\ std::string\&\ eng,\ \textcolor{keyword}{const}\ std::string\&\ rus);}
+\DoxyCodeLine{00043\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ removeNode(\doxymbox{\hyperlink{struct_node}{Node}}*\ node,\ \textcolor{keyword}{const}\ std::string\&\ eng);}
+\DoxyCodeLine{00044\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ findNode(\doxymbox{\hyperlink{struct_node}{Node}}*\ node,\ \textcolor{keyword}{const}\ std::string\&\ eng)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ clearTree(\doxymbox{\hyperlink{struct_node}{Node}}*\ node);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ copyNode(\doxymbox{\hyperlink{struct_node}{Node}}*\ destination,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_node}{Node}}*\ source);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ compareNodes(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_node}{Node}}*\ n1,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_node}{Node}}*\ n2)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ findMin(\doxymbox{\hyperlink{struct_node}{Node}}*\ node)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ removeMin(\doxymbox{\hyperlink{struct_node}{Node}}*\ node);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ other);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{\string~Dictionary}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ \doxymbox{\hyperlink{class_dictionary_adef03ad37e04caedc31df65caff051ca}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ other);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00076\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ \doxymbox{\hyperlink{class_dictionary_a3dde78a6fa4d8b15acdd2707ef46d73e}{operator+=}}(\textcolor{keyword}{const}\ std::pair<std::string,\ std::string>\&\ pair);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00083\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ \doxymbox{\hyperlink{class_dictionary_a3dde78a6fa4d8b15acdd2707ef46d73e}{operator+=}}(\textcolor{keyword}{const}\ std::pair<const\ char*,\ const\ char*>\&\ pair);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ \doxymbox{\hyperlink{class_dictionary_a282805bbdb2abe4efd2712555b8931f1}{operator-\/=}}(\textcolor{keyword}{const}\ std::string\&\ engWord);}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ std::string\&\ \doxymbox{\hyperlink{class_dictionary_a7485ae46895129980af2bb9e3a510610}{operator[]}}(\textcolor{keyword}{const}\ std::string\&\ engWord);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{class_dictionary_a7485ae46895129980af2bb9e3a510610}{operator[]}}(\textcolor{keyword}{const}\ std::string\&\ engWord)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_dictionary_afb1f6ad1be43c514062ea8f75babc654}{operator==}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_dictionary_ad3ea9937ec10c9bdb148c8afef43f449}{operator!=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_dictionary_addd02b8242413aed66e0065dad924d23}{getCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_dictionary_a39219b232394548b3deb0f160ce7ee3e}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00120\ \};}
+
+\end{DoxyCode}

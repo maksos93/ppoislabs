@@ -1,0 +1,55 @@
+\doxysection{turing\+\_\+machine.\+hpp}
+\hypertarget{turing__machine_8hpp_source}{}\label{turing__machine_8hpp_source}\index{include/turing\_machine.hpp@{include/turing\_machine.hpp}}
+\doxymbox{\hyperlink{turing__machine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_turing_machine_ae9940ca20aac588bb398e8822690b94e}{TuringMachine}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}\ \{\ LEFT,\ RIGHT,\ STAY\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_turing_machine_1_1_transition}{Transition}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ nextState;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ writeSymbol;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}\ moveDirection;}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<char>\ tape;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ headPosition;}
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ currentState;}
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ haltState;}
+\DoxyCodeLine{00036\ \ \ \ \ std::map<std::pair<std::string,\ char>,\ \doxymbox{\hyperlink{struct_turing_machine_1_1_transition}{Transition}}>\ rules;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ expandTapeIfNeeded(\textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{char}\ charFromDirection(\doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}\ dir)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}\ directionFromChar(\textcolor{keywordtype}{char}\ c)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \doxymbox{\hyperlink{class_turing_machine_ae9940ca20aac588bb398e8822690b94e}{TuringMachine}}(\textcolor{keyword}{const}\ std::string\&\ startState,\ \textcolor{keyword}{const}\ std::string\&\ haltState);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_turing_machine_a806d6522ba42ea1162c34e40e793b1fd}{addRule}}(\textcolor{keyword}{const}\ std::string\&\ state,\ \textcolor{keywordtype}{char}\ symbol,\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ nextState,\ \textcolor{keywordtype}{char}\ writeSymbol,\ \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}\ dir);}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_turing_machine_a43997e20906cc7de869fb2177dbbf365}{setTape}}(\textcolor{keyword}{const}\ std::string\&\ inputTape,\ \textcolor{keywordtype}{int}\ initialHeadPos\ =\ 0);}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda}{step}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_turing_machine_ae492842d3d54a0e041feb5bf3ad8dfaf}{run}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_turing_machine_ae9e309f390acfbfb7c597940ec146d94}{getTapeAsString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_turing_machine_a6dbe2ee2972dca2c846b382170322fa3}{getCurrentState}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_turing_machine_af337d554ebf0d6252094c50183adebe1}{getHeadPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_turing_machine_ae0d941458859797a82db541a78ada165}{isHalted}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,140 @@
+\doxysection{Turing\+Machine Class Reference}
+\hypertarget{class_turing_machine}{}\label{class_turing_machine}\index{TuringMachine@{TuringMachine}}
+
+
+Класс, реализующий симулятор машины Тьюринга.  
+
+
+
+
+{\ttfamily \+\#include $<$turing\+\_\+machine.\+hpp$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_turing_machine_1_1_transition}{Transition}}
+\begin{DoxyCompactList}\small\item\em Правило перехода для машины Тьюринга. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}\label{class_turing_machine_a2b10c8245368e0c2e47628b60502a756} 
+enum class \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}} \{ {\bfseries LEFT}
+, {\bfseries RIGHT}
+, {\bfseries STAY}
+ \}
+\begin{DoxyCompactList}\small\item\em Направления движения головки ленты. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_turing_machine_ae9940ca20aac588bb398e8822690b94e}{Turing\+Machine}} (const std::\+string \&start\+State, const std::\+string \&halt\+State)
+\begin{DoxyCompactList}\small\item\em Конструктор машины Тьюринга. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_turing_machine_a806d6522ba42ea1162c34e40e793b1fd}{add\+Rule}} (const std::\+string \&state, char symbol, const std::\+string \&next\+State, char write\+Symbol, \doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Добавление правила перехода в таблицу переходов. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_turing_machine_a43997e20906cc7de869fb2177dbbf365}{set\+Tape}} (const std::\+string \&input\+Tape, int initial\+Head\+Pos=0)
+\begin{DoxyCompactList}\small\item\em Установка содержимого ленты. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda}{step}} ()
+\begin{DoxyCompactList}\small\item\em Выполнение одного шага (такта) машины. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_ae492842d3d54a0e041feb5bf3ad8dfaf}\label{class_turing_machine_ae492842d3d54a0e041feb5bf3ad8dfaf} 
+void {\bfseries run} ()
+\begin{DoxyCompactList}\small\item\em Запуск машины до достижения состояния остановки. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_ae9e309f390acfbfb7c597940ec146d94}\label{class_turing_machine_ae9e309f390acfbfb7c597940ec146d94} 
+std::\+string {\bfseries get\+Tape\+As\+String} () const
+\begin{DoxyCompactList}\small\item\em Получение текущего содержимого ленты в виде строки. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_a6dbe2ee2972dca2c846b382170322fa3}\label{class_turing_machine_a6dbe2ee2972dca2c846b382170322fa3} 
+std::\+string {\bfseries get\+Current\+State} () const
+\begin{DoxyCompactList}\small\item\em Получение текущего состояния машины. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_af337d554ebf0d6252094c50183adebe1}\label{class_turing_machine_af337d554ebf0d6252094c50183adebe1} 
+int {\bfseries get\+Head\+Position} () const
+\begin{DoxyCompactList}\small\item\em Получение текущей позиции головки на ленте. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_ae0d941458859797a82db541a78ada165}\label{class_turing_machine_ae0d941458859797a82db541a78ada165} 
+bool {\bfseries is\+Halted} () const
+\begin{DoxyCompactList}\small\item\em Проверка, остановлена ли машина. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, реализующий симулятор машины Тьюринга. 
+
+\label{class_turing_machine_doc-constructors}
+\Hypertarget{class_turing_machine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_turing_machine_ae9940ca20aac588bb398e8822690b94e}\index{TuringMachine@{TuringMachine}!TuringMachine@{TuringMachine}}
+\index{TuringMachine@{TuringMachine}!TuringMachine@{TuringMachine}}
+\doxysubsubsection{\texorpdfstring{TuringMachine()}{TuringMachine()}}
+{\footnotesize\ttfamily \label{class_turing_machine_ae9940ca20aac588bb398e8822690b94e} 
+Turing\+Machine::\+\+Turing\+Machine (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{start\+State}{, }\item[{const std::\+string \&}]{halt\+State}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор машины Тьюринга. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+State} & Начальное состояние. \\
+\hline
+{\em halt\+State} & Состояние остановки. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_turing_machine_doc-func-members}
+\Hypertarget{class_turing_machine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_turing_machine_a806d6522ba42ea1162c34e40e793b1fd}\index{TuringMachine@{TuringMachine}!addRule@{addRule}}
+\index{addRule@{addRule}!TuringMachine@{TuringMachine}}
+\doxysubsubsection{\texorpdfstring{addRule()}{addRule()}}
+{\footnotesize\ttfamily \label{class_turing_machine_a806d6522ba42ea1162c34e40e793b1fd} 
+void Turing\+Machine::\+add\+Rule (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{state}{, }\item[{char}]{symbol}{, }\item[{const std::\+string \&}]{next\+State}{, }\item[{char}]{write\+Symbol}{, }\item[{\doxymbox{\hyperlink{class_turing_machine_a2b10c8245368e0c2e47628b60502a756}{Direction}}}]{dir}{}\end{DoxyParamCaption})}
+
+
+
+Добавление правила перехода в таблицу переходов. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Текущее состояние. \\
+\hline
+{\em symbol} & Считываемый символ. \\
+\hline
+{\em next\+State} & Следующее состояние. \\
+\hline
+{\em write\+Symbol} & Символ для записи на ленту. \\
+\hline
+{\em dir} & Направление движения головки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turing_machine_a43997e20906cc7de869fb2177dbbf365}\index{TuringMachine@{TuringMachine}!setTape@{setTape}}
+\index{setTape@{setTape}!TuringMachine@{TuringMachine}}
+\doxysubsubsection{\texorpdfstring{setTape()}{setTape()}}
+{\footnotesize\ttfamily \label{class_turing_machine_a43997e20906cc7de869fb2177dbbf365} 
+void Turing\+Machine::\+set\+Tape (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{input\+Tape}{, }\item[{int}]{initial\+Head\+Pos}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Установка содержимого ленты. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Tape} & Строка с начальными символами. \\
+\hline
+{\em initial\+Head\+Pos} & Начальная позиция головки. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda}\index{TuringMachine@{TuringMachine}!step@{step}}
+\index{step@{step}!TuringMachine@{TuringMachine}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily \label{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda} 
+bool Turing\+Machine::\+step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Выполнение одного шага (такта) машины. 
+
+\begin{DoxyReturn}{Returns}
+true, если шаг выполнен успешно, false в случае остановки. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{turing__machine_8hpp}{turing\+\_\+machine.\+hpp}}\item 
+src/\doxymbox{\hyperlink{turing__machine_8cpp}{turing\+\_\+machine.\+cpp}}\end{DoxyCompactItemize}

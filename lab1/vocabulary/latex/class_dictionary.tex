@@ -1,0 +1,253 @@
+\doxysection{Dictionary Class Reference}
+\hypertarget{class_dictionary}{}\label{class_dictionary}\index{Dictionary@{Dictionary}}
+
+
+Класс, реализующий англо-\/русский словарь на основе бинарного дерева поиска.  
+
+
+
+
+{\ttfamily \+\#include $<$dictionary.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}\label{class_dictionary_aee8d612bc9d323c38faba045ba384b8b} 
+{\bfseries Dictionary} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Инициализирует пустое дерево. \end{DoxyCompactList}\item 
+\Hypertarget{class_dictionary_aa36f24073d9c9001768517aa2322cb82}\label{class_dictionary_aa36f24073d9c9001768517aa2322cb82} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Dictionary} ()
+\begin{DoxyCompactList}\small\item\em Деструктор. Освобождает выделенную память. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dictionary_a408e2c9dfcea8f536666b89fed403074}{Dictionary}} (const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&other)
+\begin{DoxyCompactList}\small\item\em Конструктор копирования. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& \doxymbox{\hyperlink{class_dictionary_adef03ad37e04caedc31df65caff051ca}{operator=}} (const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&other)
+\begin{DoxyCompactList}\small\item\em Оператор присваивания копированием. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& \doxymbox{\hyperlink{class_dictionary_a3dde78a6fa4d8b15acdd2707ef46d73e}{operator+=}} (const std::\+pair$<$ std::\+string, std::\+string $>$ \&pair)
+\begin{DoxyCompactList}\small\item\em Добавление слова через std::\+string. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& \doxymbox{\hyperlink{class_dictionary_a502ad0b4a78b2dad819da0aa35b07754}{operator+=}} (const std::\+pair$<$ const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*} $>$ \&pair)
+\begin{DoxyCompactList}\small\item\em Добавление слова через C-\/строки (char\texorpdfstring{$\ast$}{*}). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& \doxymbox{\hyperlink{class_dictionary_a282805bbdb2abe4efd2712555b8931f1}{operator-\/=}} (const std::\+string \&eng\+Word)
+\begin{DoxyCompactList}\small\item\em Удаление слова из словаря. \end{DoxyCompactList}\item 
+std::\+string \& \doxymbox{\hyperlink{class_dictionary_a7485ae46895129980af2bb9e3a510610}{operator\+[$\,$]}} (const std::\+string \&eng\+Word)
+\begin{DoxyCompactList}\small\item\em Поиск или создание перевода для изменения. \end{DoxyCompactList}\item 
+const std::\+string \& \doxymbox{\hyperlink{class_dictionary_a389aeff091125b31e2be47ed5a27a851}{operator\+[$\,$]}} (const std::\+string \&eng\+Word) const
+\begin{DoxyCompactList}\small\item\em Константный поиск перевода (только для чтения). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_dictionary_afb1f6ad1be43c514062ea8f75babc654}{operator==}} (const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&other) const
+\begin{DoxyCompactList}\small\item\em Проверка словарей на равенство. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_dictionary_ad3ea9937ec10c9bdb148c8afef43f449}{operator!=}} (const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&other) const
+\begin{DoxyCompactList}\small\item\em Проверка словарей на неравенство. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_dictionary_a246e6323f6ac0fa909eae5ffafd92638}{size}} () const
+\begin{DoxyCompactList}\small\item\em Получение количества слов в словаре. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_dictionary_a39219b232394548b3deb0f160ce7ee3e}{load\+From\+File}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Загрузка словаря из текстового файла. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, реализующий англо-\/русский словарь на основе бинарного дерева поиска. 
+
+\label{class_dictionary_doc-constructors}
+\Hypertarget{class_dictionary_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dictionary_a408e2c9dfcea8f536666b89fed403074}\index{Dictionary@{Dictionary}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{Dictionary()}{Dictionary()}}
+{\footnotesize\ttfamily \label{class_dictionary_a408e2c9dfcea8f536666b89fed403074} 
+Dictionary::\+\+Dictionary (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор копирования. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Ссылка на копируемый словарь. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_dictionary_doc-func-members}
+\Hypertarget{class_dictionary_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dictionary_a39219b232394548b3deb0f160ce7ee3e}\index{Dictionary@{Dictionary}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_dictionary_a39219b232394548b3deb0f160ce7ee3e} 
+void Dictionary::\+load\+From\+File (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Загрузка словаря из текстового файла. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Путь к файлу. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & если файл не удалось открыть. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_dictionary_ad3ea9937ec10c9bdb148c8afef43f449}\index{Dictionary@{Dictionary}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_dictionary_ad3ea9937ec10c9bdb148c8afef43f449} 
+bool Dictionary::\+operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверка словарей на неравенство. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Сравниваемый словарь. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если словари отличаются. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a502ad0b4a78b2dad819da0aa35b07754}\index{Dictionary@{Dictionary}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dictionary_a502ad0b4a78b2dad819da0aa35b07754} 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& Dictionary::\+operator+= (\begin{DoxyParamCaption}\item[{const std::\+pair$<$ const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*} $>$ \&}]{pair}{}\end{DoxyParamCaption})}
+
+
+
+Добавление слова через C-\/строки (char\texorpdfstring{$\ast$}{*}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pair} & Пара C-\/строк: английское слово и перевод. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a3dde78a6fa4d8b15acdd2707ef46d73e}\index{Dictionary@{Dictionary}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dictionary_a3dde78a6fa4d8b15acdd2707ef46d73e} 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& Dictionary::\+operator+= (\begin{DoxyParamCaption}\item[{const std::\+pair$<$ std::\+string, std::\+string $>$ \&}]{pair}{}\end{DoxyParamCaption})}
+
+
+
+Добавление слова через std::\+string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pair} & Пара: английское слово и перевод. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a282805bbdb2abe4efd2712555b8931f1}\index{Dictionary@{Dictionary}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{class_dictionary_a282805bbdb2abe4efd2712555b8931f1} 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& Dictionary::\+operator-\/= (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{eng\+Word}{}\end{DoxyParamCaption})}
+
+
+
+Удаление слова из словаря. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eng\+Word} & Английское слово для удаления. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_adef03ad37e04caedc31df65caff051ca}\index{Dictionary@{Dictionary}!operator=@{operator=}}
+\index{operator=@{operator=}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_dictionary_adef03ad37e04caedc31df65caff051ca} 
+\doxymbox{\hyperlink{class_dictionary}{Dictionary}} \& Dictionary::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Оператор присваивания копированием. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Ссылка на копируемый словарь. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на текущий объект. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_afb1f6ad1be43c514062ea8f75babc654}\index{Dictionary@{Dictionary}!operator==@{operator==}}
+\index{operator==@{operator==}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_dictionary_afb1f6ad1be43c514062ea8f75babc654} 
+bool Dictionary::\+operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dictionary}{Dictionary}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Проверка словарей на равенство. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Сравниваемый словарь. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если словари идентичны, иначе false. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a7485ae46895129980af2bb9e3a510610}\index{Dictionary@{Dictionary}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dictionary_a7485ae46895129980af2bb9e3a510610} 
+std::\+string \& Dictionary::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{eng\+Word}{}\end{DoxyParamCaption})}
+
+
+
+Поиск или создание перевода для изменения. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eng\+Word} & Английское слово. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на перевод. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a389aeff091125b31e2be47ed5a27a851}\index{Dictionary@{Dictionary}!operator\+[]@{operator[]}}
+\index{operator\+[]@{operator[]}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dictionary_a389aeff091125b31e2be47ed5a27a851} 
+const std::\+string \& Dictionary::\+operator\+[$\,$] (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{eng\+Word}{}\end{DoxyParamCaption}) const}
+
+
+
+Константный поиск перевода (только для чтения). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eng\+Word} & Английское слово. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Константная ссылка на перевод. 
+\end{DoxyReturn}
+\Hypertarget{class_dictionary_a246e6323f6ac0fa909eae5ffafd92638}\index{Dictionary@{Dictionary}!size@{size}}
+\index{size@{size}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_dictionary_a246e6323f6ac0fa909eae5ffafd92638} 
+size\+\_\+t Dictionary::\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получение количества слов в словаре. 
+
+\begin{DoxyReturn}{Returns}
+Количество узлов в дереве. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{dictionary_8hpp}{dictionary.\+hpp}}\item 
+src/\doxymbox{\hyperlink{dictionary_8cpp}{dictionary.\+cpp}}\end{DoxyCompactItemize}

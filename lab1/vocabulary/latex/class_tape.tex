@@ -1,0 +1,68 @@
+\doxysection{Tape Class Reference}
+\hypertarget{class_tape}{}\label{class_tape}\index{Tape@{Tape}}
+
+
+Класс ленты Машины Тьюринга.  
+
+
+
+
+{\ttfamily \+\#include $<$turing\+\_\+machine.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}{Tape}} (const std::\+string \&input="{}"{}, char blank=\textquotesingle{}\_\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Конструктор ленты. \end{DoxyCompactList}\item 
+\Hypertarget{class_tape_ab8ff70f09fd81b9c23b561ee58e9f85c}\label{class_tape_ab8ff70f09fd81b9c23b561ee58e9f85c} 
+char {\bfseries read} () const
+\item 
+\Hypertarget{class_tape_a106da612b72ead6e926ff2b36fb7a80d}\label{class_tape_a106da612b72ead6e926ff2b36fb7a80d} 
+void {\bfseries write} (char symbol)
+\item 
+\Hypertarget{class_tape_a2e143a0f3de65e626e7d030b2b698ada}\label{class_tape_a2e143a0f3de65e626e7d030b2b698ada} 
+void {\bfseries move\+Left} ()
+\item 
+\Hypertarget{class_tape_a045da6e9cc8d21024d89c0bee6e639f6}\label{class_tape_a045da6e9cc8d21024d89c0bee6e639f6} 
+void {\bfseries move\+Right} ()
+\item 
+\Hypertarget{class_tape_ade9ea6c581f312acee817ac4a976d02f}\label{class_tape_ade9ea6c581f312acee817ac4a976d02f} 
+std::\+string {\bfseries get\+Tape\+String} () const
+\item 
+\Hypertarget{class_tape_a7daca6bd8be44aa6ab1575bc181d5676}\label{class_tape_a7daca6bd8be44aa6ab1575bc181d5676} 
+bool {\bfseries operator==} (const \doxymbox{\hyperlink{class_tape}{Tape}} \&other) const
+\item 
+\Hypertarget{class_tape_a1c649670a7da9911f8dc26b9a9f80312}\label{class_tape_a1c649670a7da9911f8dc26b9a9f80312} 
+bool {\bfseries operator!=} (const \doxymbox{\hyperlink{class_tape}{Tape}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс ленты Машины Тьюринга. 
+
+\label{class_tape_doc-constructors}
+\Hypertarget{class_tape_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb}\index{Tape@{Tape}!Tape@{Tape}}
+\index{Tape@{Tape}!Tape@{Tape}}
+\doxysubsubsection{\texorpdfstring{Tape()}{Tape()}}
+{\footnotesize\ttfamily \label{class_tape_a86592c5fb1d4053c13b1f99bb504b0eb} 
+Tape::\+\+Tape (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{input}{ = {\ttfamily "{}"{}}, }\item[{char}]{blank}{ = {\ttfamily \textquotesingle{}\_\textquotesingle{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор ленты. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Начальная строка на ленте. \\
+\hline
+{\em blank} & Символ пустоты. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{turing__machine_8hpp}{turing\+\_\+machine.\+hpp}}\item 
+src/\doxymbox{\hyperlink{turing__machine_8cpp}{turing\+\_\+machine.\+cpp}}\end{DoxyCompactItemize}

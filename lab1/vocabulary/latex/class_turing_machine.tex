@@ -1,0 +1,38 @@
+\doxysection{Turing\+Machine Class Reference}
+\hypertarget{class_turing_machine}{}\label{class_turing_machine}\index{TuringMachine@{TuringMachine}}
+
+
+Класс управляющего устройства Машины Тьюринга.  
+
+
+
+
+{\ttfamily \+\#include $<$turing\+\_\+machine.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_turing_machine_ab9aac95217841c6e96552caf3e67b3f4}\label{class_turing_machine_ab9aac95217841c6e96552caf3e67b3f4} 
+{\bfseries Turing\+Machine} (const std::\+string \&input, const std::\+string \&start\+State, const std::\+string \&halt\+State)
+\begin{DoxyCompactList}\small\item\em Конструктор Машины Тьюринга. \end{DoxyCompactList}\item 
+\Hypertarget{class_turing_machine_a2240bd85fbee1f95ba60ade04501dd5f}\label{class_turing_machine_a2240bd85fbee1f95ba60ade04501dd5f} 
+void {\bfseries add\+Rule} (const std::\+string \&state, char symbol, const std::\+string \&next\+State, char write\+Symbol, char direction)
+\item 
+\Hypertarget{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda}\label{class_turing_machine_a5abd5fff93c1ff762615dbdb94a67dda} 
+bool {\bfseries step} ()
+\item 
+\Hypertarget{class_turing_machine_ae492842d3d54a0e041feb5bf3ad8dfaf}\label{class_turing_machine_ae492842d3d54a0e041feb5bf3ad8dfaf} 
+void {\bfseries run} ()
+\item 
+\Hypertarget{class_turing_machine_a48969f9c4c3bf0d07803d3fb7a27acbd}\label{class_turing_machine_a48969f9c4c3bf0d07803d3fb7a27acbd} 
+std::\+string {\bfseries get\+Result\+Tape} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс управляющего устройства Машины Тьюринга. 
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{turing__machine_8hpp}{turing\+\_\+machine.\+hpp}}\item 
+src/\doxymbox{\hyperlink{turing__machine_8cpp}{turing\+\_\+machine.\+cpp}}\end{DoxyCompactItemize}
