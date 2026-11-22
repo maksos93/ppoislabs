@@ -1,0 +1,99 @@
+\doxysection{Publisher Class Reference}
+\hypertarget{class_publisher}{}\label{class_publisher}\index{Publisher@{Publisher}}
+
+
+Represents a publishing house with licensing code and office address.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_publisher_aa8b3e694488852deb5f4c9474fea50d9}{Publisher}} (std::\+string name="{}Independent"{}, std::\+string code="{}000"{}, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_publisher}{Publisher} instance. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_publisher_a6395b83156cfd4330048b24f0b082c92}{verify\+License}} () const
+\begin{DoxyCompactList}\small\item\em Verifies whether the publisher holds a valid non-\/default registration code. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_publisher_ab5e2bc6aed8ac93635e190843949307d}{generate\+Imprint\+Header}} () const
+\begin{DoxyCompactList}\small\item\em Generates a formatted imprint header for book title pages. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_publisher_a0b2fa67191000b9a3917afc75f20b0cd}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the publisher name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a publishing house with licensing code and office address. 
+
+\label{class_publisher_doc-constructors}
+\Hypertarget{class_publisher_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_publisher_aa8b3e694488852deb5f4c9474fea50d9}\index{Publisher@{Publisher}!Publisher@{Publisher}}
+\index{Publisher@{Publisher}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{Publisher()}{Publisher()}}
+{\footnotesize\ttfamily \label{class_publisher_aa8b3e694488852deb5f4c9474fea50d9} 
+Publisher::\+\+Publisher (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}Independent"{}}, }\item[{std::\+string}]{code}{ = {\ttfamily "{}000"{}}, }\item[{\doxymbox{\hyperlink{class_address}{Address}}}]{addr}{ = {\ttfamily \doxymbox{\hyperlink{class_address}{Address}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_publisher}{Publisher} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_publisher}{Publisher} name. \\
+\hline
+{\em code} & Registration code. \\
+\hline
+{\em addr} & Office \doxylink{class_address}{Address}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_publisher_doc-func-members}
+\Hypertarget{class_publisher_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_publisher_ab5e2bc6aed8ac93635e190843949307d}\index{Publisher@{Publisher}!generateImprintHeader@{generateImprintHeader}}
+\index{generateImprintHeader@{generateImprintHeader}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{generateImprintHeader()}{generateImprintHeader()}}
+{\footnotesize\ttfamily \label{class_publisher_ab5e2bc6aed8ac93635e190843949307d} 
+std::\+string Publisher::\+generate\+Imprint\+Header (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Generates a formatted imprint header for book title pages. 
+
+\begin{DoxyReturn}{Returns}
+Imprint string containing publisher name, code, and city. 
+\end{DoxyReturn}
+\Hypertarget{class_publisher_a0b2fa67191000b9a3917afc75f20b0cd}\index{Publisher@{Publisher}!getName@{getName}}
+\index{getName@{getName}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_publisher_a0b2fa67191000b9a3917afc75f20b0cd} 
+std::\+string Publisher::\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the publisher name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_publisher}{Publisher} name string. 
+\end{DoxyReturn}
+\Hypertarget{class_publisher_a6395b83156cfd4330048b24f0b082c92}\index{Publisher@{Publisher}!verifyLicense@{verifyLicense}}
+\index{verifyLicense@{verifyLicense}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{verifyLicense()}{verifyLicense()}}
+{\footnotesize\ttfamily \label{class_publisher_a6395b83156cfd4330048b24f0b082c92} 
+bool Publisher::\+verify\+License (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifies whether the publisher holds a valid non-\/default registration code. 
+
+\begin{DoxyReturn}{Returns}
+True if registration code is valid. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

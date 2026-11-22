@@ -1,0 +1,234 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Base class representing a registered system user with contact info and preferences.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+Inheritance diagram for User:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}} (int id=0, std::\+string name="{}"{}, std::\+string email="{}"{}, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_user}{User} account. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_user_a634d7ad22c3d2b5fed35f71e10d98628}{\texorpdfstring{$\sim$}{\string~}\+User}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for user hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_user_ac5a839e8c9b3bb68858d8c206a32885d}{get\+User\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a41aaa8d1f105ff225353dfe895306fde}{get\+Full\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a68c520e78268ba63c97ff04b6fb210a1}{get\+Email}} () const
+\item 
+bool \doxymbox{\hyperlink{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf}{validate\+Email\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Validates basic email syntax (\textquotesingle{}@\textquotesingle{} and \textquotesingle{}.\textquotesingle{} presence). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_afd788345e0a135166880f3827025b962}{relocate}} (const \doxymbox{\hyperlink{class_address}{Address}} \&new\+Address)
+\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_a16ebaa37e193ab4e11a70d850560b8ee}{apply\+Notification\+Preferences}} (const \doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \&prefs)
+\begin{DoxyCompactList}\small\item\em Applies updated notification preferences to the user profile. \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_user_ac007e6f7428dba19fd3bbe11d45efef4}{get\+Access\+Tier}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user\textquotesingle{}s access tier label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_user_a5986b220d29c26d9f8bcd8a31b404a76}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique numeric user ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_a0cf4d35683a5bbfb232721eb5877690d}{full\+Name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_user_af340678819489cd891b44490fc799cfa}{address}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \doxymbox{\hyperlink{class_user_ac3df1beda00cc0c2265a2b7f152419fc}{preferences}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s notification settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a registered system user with contact info and preferences. 
+
+\label{class_user_doc-constructors}
+\Hypertarget{class_user_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_a215ef3e0986908c5715e9a68ddaa27b1}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily \label{class_user_a215ef3e0986908c5715e9a68ddaa27b1} 
+User::\+\+User (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 0}, }\item[{std::\+string}]{name}{ = {\ttfamily "{}"{}}, }\item[{std::\+string}]{email}{ = {\ttfamily "{}"{}}, }\item[{\doxymbox{\hyperlink{class_address}{Address}}}]{addr}{ = {\ttfamily \doxymbox{\hyperlink{class_address}{Address}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_user}{User} account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique user ID. \\
+\hline
+{\em name} & Full name. \\
+\hline
+{\em email} & Email address. \\
+\hline
+{\em addr} & Postal \doxylink{class_address}{Address}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_a634d7ad22c3d2b5fed35f71e10d98628}\index{User@{User}!````~User@{\texorpdfstring{$\sim$}{\string~}User}}
+\index{````~User@{\texorpdfstring{$\sim$}{\string~}User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}User()}{\string~User()}}
+{\footnotesize\ttfamily \label{class_user_a634d7ad22c3d2b5fed35f71e10d98628} 
+virtual User::\+\texorpdfstring{$\sim$}{\string~}\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for user hierarchy. 
+
+
+
+\label{class_user_doc-func-members}
+\Hypertarget{class_user_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_a16ebaa37e193ab4e11a70d850560b8ee}\index{User@{User}!applyNotificationPreferences@{applyNotificationPreferences}}
+\index{applyNotificationPreferences@{applyNotificationPreferences}!User@{User}}
+\doxysubsubsection{\texorpdfstring{applyNotificationPreferences()}{applyNotificationPreferences()}}
+{\footnotesize\ttfamily \label{class_user_a16ebaa37e193ab4e11a70d850560b8ee} 
+void User::\+apply\+Notification\+Preferences (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \&}]{prefs}{}\end{DoxyParamCaption})}
+
+
+
+Applies updated notification preferences to the user profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefs} & New \doxylink{class_notification_preferences}{Notification\+Preferences} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_ac007e6f7428dba19fd3bbe11d45efef4}\index{User@{User}!getAccessTier@{getAccessTier}}
+\index{getAccessTier@{getAccessTier}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getAccessTier()}{getAccessTier()}}
+{\footnotesize\ttfamily \label{class_user_ac007e6f7428dba19fd3bbe11d45efef4} 
+std::\+string User::\+get\+Access\+Tier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the user\textquotesingle{}s access tier label. 
+
+\begin{DoxyReturn}{Returns}
+Access tier string. 
+\end{DoxyReturn}
+
+
+Reimplemented in \doxymbox{\hyperlink{class_professor_a84b44314cbc7c21e0130bc6de30c34b2}{Professor}}, \doxymbox{\hyperlink{class_reader_a75301c3009eb0cc43adef1e902342256}{Reader}}, \doxymbox{\hyperlink{class_student_a023b9ea31f7fc91ea574a06f562eead4}{Student}}, and \doxymbox{\hyperlink{class_v_i_p_customer_addc7b48ed64528fd8a82bd2ddbcab93a}{VIPCustomer}}.
+
+\Hypertarget{class_user_a68c520e78268ba63c97ff04b6fb210a1}\index{User@{User}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{class_user_a68c520e78268ba63c97ff04b6fb210a1} 
+std::\+string User::\+get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_user_a41aaa8d1f105ff225353dfe895306fde}\index{User@{User}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily \label{class_user_a41aaa8d1f105ff225353dfe895306fde} 
+std::\+string User::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_user_ac5a839e8c9b3bb68858d8c206a32885d}\index{User@{User}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily \label{class_user_ac5a839e8c9b3bb68858d8c206a32885d} 
+int User::\+get\+User\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_user_afd788345e0a135166880f3827025b962}\index{User@{User}!relocate@{relocate}}
+\index{relocate@{relocate}!User@{User}}
+\doxysubsubsection{\texorpdfstring{relocate()}{relocate()}}
+{\footnotesize\ttfamily \label{class_user_afd788345e0a135166880f3827025b962} 
+void User::\+relocate (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_address}{Address}} \&}]{new\+Address}{}\end{DoxyParamCaption})}
+
+
+
+Updates the user\textquotesingle{}s postal address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Address} & New \doxylink{class_address}{Address} instance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf}\index{User@{User}!validateEmailFormat@{validateEmailFormat}}
+\index{validateEmailFormat@{validateEmailFormat}!User@{User}}
+\doxysubsubsection{\texorpdfstring{validateEmailFormat()}{validateEmailFormat()}}
+{\footnotesize\ttfamily \label{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf} 
+bool User::\+validate\+Email\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Validates basic email syntax (\textquotesingle{}@\textquotesingle{} and \textquotesingle{}.\textquotesingle{} presence). 
+
+\begin{DoxyReturn}{Returns}
+True if email format appears valid. 
+\end{DoxyReturn}
+
+
+\label{class_user_doc-variable-members}
+\Hypertarget{class_user_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_user_af340678819489cd891b44490fc799cfa}\index{User@{User}!address@{address}}
+\index{address@{address}!User@{User}}
+\doxysubsubsection{\texorpdfstring{address}{address}}
+{\footnotesize\ttfamily \label{class_user_af340678819489cd891b44490fc799cfa} 
+\doxymbox{\hyperlink{class_address}{Address}} User::\+address\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_user}{User}\textquotesingle{}s postal address. 
+
+\Hypertarget{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}\index{User@{User}!email@{email}}
+\index{email@{email}!User@{User}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily \label{class_user_ac35b7c63228119cb91acdbd7ed32b8cb} 
+std::\+string User::\+email\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_user}{User}\textquotesingle{}s email address. 
+
+\Hypertarget{class_user_a0cf4d35683a5bbfb232721eb5877690d}\index{User@{User}!fullName@{fullName}}
+\index{fullName@{fullName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{fullName}{fullName}}
+{\footnotesize\ttfamily \label{class_user_a0cf4d35683a5bbfb232721eb5877690d} 
+std::\+string User::\+full\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_user}{User}\textquotesingle{}s full name. 
+
+\Hypertarget{class_user_ac3df1beda00cc0c2265a2b7f152419fc}\index{User@{User}!preferences@{preferences}}
+\index{preferences@{preferences}!User@{User}}
+\doxysubsubsection{\texorpdfstring{preferences}{preferences}}
+{\footnotesize\ttfamily \label{class_user_ac3df1beda00cc0c2265a2b7f152419fc} 
+\doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} User::\+preferences\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_user}{User}\textquotesingle{}s notification settings. 
+
+\Hypertarget{class_user_a5986b220d29c26d9f8bcd8a31b404a76}\index{User@{User}!userId@{userId}}
+\index{userId@{userId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{userId}{userId}}
+{\footnotesize\ttfamily \label{class_user_a5986b220d29c26d9f8bcd8a31b404a76} 
+int User::\+user\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unique numeric user ID. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

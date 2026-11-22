@@ -1,0 +1,94 @@
+\doxysection{Popularity\+Rating Class Reference}
+\hypertarget{class_popularity_rating}{}\label{class_popularity_rating}\index{PopularityRating@{PopularityRating}}
+
+
+Tracks page views and purchase counts to compute a book popularity index.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_popularity_rating_a87e22eebe8b502446130240603e67052}{Popularity\+Rating}} (std::\+string isbn="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_popularity_rating}{Popularity\+Rating} tracker for an ISBN. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_popularity_rating_a94fa9d697da7e1b004baede8856aeb1f}{record\+View}} ()
+\begin{DoxyCompactList}\small\item\em Increments the catalog view counter. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_popularity_rating_ae5e58d589ae1e6ba4f46dffebd101c73}{record\+Purchase}} (int qty)
+\begin{DoxyCompactList}\small\item\em Adds purchased copies to the purchase counter. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_popularity_rating_ac6cb6469538bcd8f67a6ef91370495c1}{compute\+Popularity\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Computes a weighted popularity score from views and purchases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks page views and purchase counts to compute a book popularity index. 
+
+\label{class_popularity_rating_doc-constructors}
+\Hypertarget{class_popularity_rating_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_popularity_rating_a87e22eebe8b502446130240603e67052}\index{PopularityRating@{PopularityRating}!PopularityRating@{PopularityRating}}
+\index{PopularityRating@{PopularityRating}!PopularityRating@{PopularityRating}}
+\doxysubsubsection{\texorpdfstring{PopularityRating()}{PopularityRating()}}
+{\footnotesize\ttfamily \label{class_popularity_rating_a87e22eebe8b502446130240603e67052} 
+Popularity\+Rating::\+\+Popularity\+Rating (\begin{DoxyParamCaption}\item[{std::\+string}]{isbn}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_popularity_rating}{Popularity\+Rating} tracker for an ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & \doxylink{class_book}{Book} ISBN. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_popularity_rating_doc-func-members}
+\Hypertarget{class_popularity_rating_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_popularity_rating_ac6cb6469538bcd8f67a6ef91370495c1}\index{PopularityRating@{PopularityRating}!computePopularityIndex@{computePopularityIndex}}
+\index{computePopularityIndex@{computePopularityIndex}!PopularityRating@{PopularityRating}}
+\doxysubsubsection{\texorpdfstring{computePopularityIndex()}{computePopularityIndex()}}
+{\footnotesize\ttfamily \label{class_popularity_rating_ac6cb6469538bcd8f67a6ef91370495c1} 
+double Popularity\+Rating::\+compute\+Popularity\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes a weighted popularity score from views and purchases. 
+
+\begin{DoxyReturn}{Returns}
+Weighted popularity index. 
+\end{DoxyReturn}
+\Hypertarget{class_popularity_rating_ae5e58d589ae1e6ba4f46dffebd101c73}\index{PopularityRating@{PopularityRating}!recordPurchase@{recordPurchase}}
+\index{recordPurchase@{recordPurchase}!PopularityRating@{PopularityRating}}
+\doxysubsubsection{\texorpdfstring{recordPurchase()}{recordPurchase()}}
+{\footnotesize\ttfamily \label{class_popularity_rating_ae5e58d589ae1e6ba4f46dffebd101c73} 
+void Popularity\+Rating::\+record\+Purchase (\begin{DoxyParamCaption}\item[{int}]{qty}{}\end{DoxyParamCaption})}
+
+
+
+Adds purchased copies to the purchase counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em qty} & Quantity purchased. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_popularity_rating_a94fa9d697da7e1b004baede8856aeb1f}\index{PopularityRating@{PopularityRating}!recordView@{recordView}}
+\index{recordView@{recordView}!PopularityRating@{PopularityRating}}
+\doxysubsubsection{\texorpdfstring{recordView()}{recordView()}}
+{\footnotesize\ttfamily \label{class_popularity_rating_a94fa9d697da7e1b004baede8856aeb1f} 
+void Popularity\+Rating::\+record\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increments the catalog view counter. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

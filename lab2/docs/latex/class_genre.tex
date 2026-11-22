@@ -1,0 +1,102 @@
+\doxysection{Genre Class Reference}
+\hypertarget{class_genre}{}\label{class_genre}\index{Genre@{Genre}}
+
+
+Represents a literary genre or subject classification.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}} (std::\+string name="{}General"{}, std::\+string desc="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_genre}{Genre} instance. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_genre_aedcd2419ad45706bc043df5df0697f7f}{matches\+Keyword}} (const std::\+string \&keyword) const
+\begin{DoxyCompactList}\small\item\em Checks if the genre name or description contains a given keyword. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_genre_a8642603abffbb2b7bc4ec0534257fa00}{generate\+Tag}} () const
+\begin{DoxyCompactList}\small\item\em Generates a hashtag identifier for catalog filtering. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_genre_ae65281d5e620764003daad44202cb8d4}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the genre name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a literary genre or subject classification. 
+
+\label{class_genre_doc-constructors}
+\Hypertarget{class_genre_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}\index{Genre@{Genre}!Genre@{Genre}}
+\index{Genre@{Genre}!Genre@{Genre}}
+\doxysubsubsection{\texorpdfstring{Genre()}{Genre()}}
+{\footnotesize\ttfamily \label{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95} 
+Genre::\+\+Genre (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}General"{}}, }\item[{std::\+string}]{desc}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_genre}{Genre} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_genre}{Genre} name. \\
+\hline
+{\em desc} & \doxylink{class_genre}{Genre} description. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_genre_doc-func-members}
+\Hypertarget{class_genre_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_genre_a8642603abffbb2b7bc4ec0534257fa00}\index{Genre@{Genre}!generateTag@{generateTag}}
+\index{generateTag@{generateTag}!Genre@{Genre}}
+\doxysubsubsection{\texorpdfstring{generateTag()}{generateTag()}}
+{\footnotesize\ttfamily \label{class_genre_a8642603abffbb2b7bc4ec0534257fa00} 
+std::\+string Genre::\+generate\+Tag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Generates a hashtag identifier for catalog filtering. 
+
+\begin{DoxyReturn}{Returns}
+Tag string prefixed with \textquotesingle{}\#\textquotesingle{}. 
+\end{DoxyReturn}
+\Hypertarget{class_genre_ae65281d5e620764003daad44202cb8d4}\index{Genre@{Genre}!getName@{getName}}
+\index{getName@{getName}!Genre@{Genre}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_genre_ae65281d5e620764003daad44202cb8d4} 
+std::\+string Genre::\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the genre name. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_genre}{Genre} name string. 
+\end{DoxyReturn}
+\Hypertarget{class_genre_aedcd2419ad45706bc043df5df0697f7f}\index{Genre@{Genre}!matchesKeyword@{matchesKeyword}}
+\index{matchesKeyword@{matchesKeyword}!Genre@{Genre}}
+\doxysubsubsection{\texorpdfstring{matchesKeyword()}{matchesKeyword()}}
+{\footnotesize\ttfamily \label{class_genre_aedcd2419ad45706bc043df5df0697f7f} 
+bool Genre::\+matches\+Keyword (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{keyword}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the genre name or description contains a given keyword. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em keyword} & Substring to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if keyword matches name or description. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

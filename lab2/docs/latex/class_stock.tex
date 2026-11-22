@@ -1,0 +1,97 @@
+\doxysection{Stock Class Reference}
+\hypertarget{class_stock}{}\label{class_stock}\index{Stock@{Stock}}
+
+
+Aggregates a batch of \doxylink{class_inventory_item}{Inventory\+Item} entries for valuation and low-\/stock monitoring.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_stock_a980b1ea82ebf1d872f43a2121b3960cb}{Stock}} (std::\+string batch="{}BATCH-\/01"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_stock}{Stock} batch. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_stock_a31be52465fd329c2e3b2d3e381019dc0}{register\+Item}} (const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Registers a new \doxylink{class_inventory_item}{Inventory\+Item} into the stock batch. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_stock_ac1ac39960567a973660b585c8c2a7a42}{count\+Low\+Stock\+Items}} () const
+\begin{DoxyCompactList}\small\item\em Counts how many items in the batch require reordering. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_stock_acfa48cfdabf26c1fde72445cebf40556}{compute\+Batch\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Computes total monetary valuation across all registered items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aggregates a batch of \doxylink{class_inventory_item}{Inventory\+Item} entries for valuation and low-\/stock monitoring. 
+
+\label{class_stock_doc-constructors}
+\Hypertarget{class_stock_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stock_a980b1ea82ebf1d872f43a2121b3960cb}\index{Stock@{Stock}!Stock@{Stock}}
+\index{Stock@{Stock}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{Stock()}{Stock()}}
+{\footnotesize\ttfamily \label{class_stock_a980b1ea82ebf1d872f43a2121b3960cb} 
+Stock::\+\+Stock (\begin{DoxyParamCaption}\item[{std::\+string}]{batch}{ = {\ttfamily "{}BATCH-\/01"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_stock}{Stock} batch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch} & Batch identifier string. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_stock_doc-func-members}
+\Hypertarget{class_stock_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stock_acfa48cfdabf26c1fde72445cebf40556}\index{Stock@{Stock}!computeBatchValue@{computeBatchValue}}
+\index{computeBatchValue@{computeBatchValue}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{computeBatchValue()}{computeBatchValue()}}
+{\footnotesize\ttfamily \label{class_stock_acfa48cfdabf26c1fde72445cebf40556} 
+double Stock::\+compute\+Batch\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes total monetary valuation across all registered items. 
+
+\begin{DoxyReturn}{Returns}
+Cumulative batch valuation. 
+\end{DoxyReturn}
+\Hypertarget{class_stock_ac1ac39960567a973660b585c8c2a7a42}\index{Stock@{Stock}!countLowStockItems@{countLowStockItems}}
+\index{countLowStockItems@{countLowStockItems}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{countLowStockItems()}{countLowStockItems()}}
+{\footnotesize\ttfamily \label{class_stock_ac1ac39960567a973660b585c8c2a7a42} 
+int Stock::\+count\+Low\+Stock\+Items (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Counts how many items in the batch require reordering. 
+
+\begin{DoxyReturn}{Returns}
+Number of low-\/stock items. 
+\end{DoxyReturn}
+\Hypertarget{class_stock_a31be52465fd329c2e3b2d3e381019dc0}\index{Stock@{Stock}!registerItem@{registerItem}}
+\index{registerItem@{registerItem}!Stock@{Stock}}
+\doxysubsubsection{\texorpdfstring{registerItem()}{registerItem()}}
+{\footnotesize\ttfamily \label{class_stock_a31be52465fd329c2e3b2d3e381019dc0} 
+void Stock::\+register\+Item (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Registers a new \doxylink{class_inventory_item}{Inventory\+Item} into the stock batch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \doxylink{class_inventory_item}{Inventory\+Item} to add. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

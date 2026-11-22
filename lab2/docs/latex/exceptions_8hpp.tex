@@ -1,0 +1,43 @@
+\doxysection{include/\+exceptions.hpp File Reference}
+\hypertarget{exceptions_8hpp}{}\label{exceptions_8hpp}\index{include/exceptions.hpp@{include/exceptions.hpp}}
+
+
+Custom exception classes for the Library and Bookstore domain.  
+
+
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_library_exception}{Library\+Exception}}
+\begin{DoxyCompactList}\small\item\em Base runtime exception for all domain errors in the library and bookstore system. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_book_not_found_exception}{Book\+Not\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when a requested book cannot be located in the catalog by ISBN. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_duplicate_book_exception}{Duplicate\+Book\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when attempting to register a book whose ISBN already exists in the catalog. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_out_of_stock_exception}{Out\+Of\+Stock\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when requested copies exceed available stock quantity. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when book attributes (price, stock, quantity, appraisal) violate domain constraints. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_invalid_user_exception}{Invalid\+User\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when user registration, lookup, or profile data is invalid. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_order_not_found_exception}{Order\+Not\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when an order is missing or cannot be confirmed due to empty state. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_invalid_payment_exception}{Invalid\+Payment\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when payment verification or settlement fails. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when tendered cash, credit limit, or loyalty points are below the required amount. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_delivery_exception}{Delivery\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when shipment dispatch or courier order assignment encounters an error. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_unauthorized_access_exception}{Unauthorized\+Access\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when a user, card, or staff role lacks permission for a restricted operation. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_invalid_discount_exception}{Invalid\+Discount\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when a discount percentage or eligibility condition is invalid. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_review_not_found_exception}{Review\+Not\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Thrown when attempting to access or delete a review ID that does not exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom exception classes for the Library and Bookstore domain. 
+

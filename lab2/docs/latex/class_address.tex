@@ -1,0 +1,121 @@
+\doxysection{Address Class Reference}
+\hypertarget{class_address}{}\label{class_address}\index{Address@{Address}}
+
+
+Represents a physical postal address for users, publishers, warehouses, and delivery routes.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}} (std::\+string street="{}"{}, std::\+string city="{}"{}, std::\+string postal="{}"{}, std::\+string country="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_address}{Address} object. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_address_a6055a29fc50bbf75bb5c077e243ed61b}{format\+Full\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Formats all address components into a single human-\/readable string. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_address_a77eda7625cb04a92214c2dce100a2381}{validate\+Postal\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Validates whether the postal code length falls within standard bounds (4..10 chars). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_address_a9ec674c554eee58cd2987e420d9bab83}{is\+Same\+City}} (const \doxymbox{\hyperlink{class_address}{Address}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks whether another address is located in the same city. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_address_a8ba0e090654cd23883598182934b6d16}{get\+City}} () const
+\begin{DoxyCompactList}\small\item\em Returns the city name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a physical postal address for users, publishers, warehouses, and delivery routes. 
+
+\label{class_address_doc-constructors}
+\Hypertarget{class_address_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}\index{Address@{Address}!Address@{Address}}
+\index{Address@{Address}!Address@{Address}}
+\doxysubsubsection{\texorpdfstring{Address()}{Address()}}
+{\footnotesize\ttfamily \label{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33} 
+Address::\+\+Address (\begin{DoxyParamCaption}\item[{std::\+string}]{street}{ = {\ttfamily "{}"{}}, }\item[{std::\+string}]{city}{ = {\ttfamily "{}"{}}, }\item[{std::\+string}]{postal}{ = {\ttfamily "{}"{}}, }\item[{std::\+string}]{country}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_address}{Address} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em street} & Street line. \\
+\hline
+{\em city} & City name. \\
+\hline
+{\em postal} & Postal code. \\
+\hline
+{\em country} & Country name. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_address_doc-func-members}
+\Hypertarget{class_address_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_address_a6055a29fc50bbf75bb5c077e243ed61b}\index{Address@{Address}!formatFullAddress@{formatFullAddress}}
+\index{formatFullAddress@{formatFullAddress}!Address@{Address}}
+\doxysubsubsection{\texorpdfstring{formatFullAddress()}{formatFullAddress()}}
+{\footnotesize\ttfamily \label{class_address_a6055a29fc50bbf75bb5c077e243ed61b} 
+std::\+string Address::\+format\+Full\+Address (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Formats all address components into a single human-\/readable string. 
+
+\begin{DoxyReturn}{Returns}
+Formatted full postal address. 
+\end{DoxyReturn}
+\Hypertarget{class_address_a8ba0e090654cd23883598182934b6d16}\index{Address@{Address}!getCity@{getCity}}
+\index{getCity@{getCity}!Address@{Address}}
+\doxysubsubsection{\texorpdfstring{getCity()}{getCity()}}
+{\footnotesize\ttfamily \label{class_address_a8ba0e090654cd23883598182934b6d16} 
+std::\+string Address::\+get\+City (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the city name. 
+
+\begin{DoxyReturn}{Returns}
+City string. 
+\end{DoxyReturn}
+\Hypertarget{class_address_a9ec674c554eee58cd2987e420d9bab83}\index{Address@{Address}!isSameCity@{isSameCity}}
+\index{isSameCity@{isSameCity}!Address@{Address}}
+\doxysubsubsection{\texorpdfstring{isSameCity()}{isSameCity()}}
+{\footnotesize\ttfamily \label{class_address_a9ec674c554eee58cd2987e420d9bab83} 
+bool Address::\+is\+Same\+City (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_address}{Address}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether another address is located in the same city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_address}{Address} instance to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both addresses share a non-\/empty city name. 
+\end{DoxyReturn}
+\Hypertarget{class_address_a77eda7625cb04a92214c2dce100a2381}\index{Address@{Address}!validatePostalCode@{validatePostalCode}}
+\index{validatePostalCode@{validatePostalCode}!Address@{Address}}
+\doxysubsubsection{\texorpdfstring{validatePostalCode()}{validatePostalCode()}}
+{\footnotesize\ttfamily \label{class_address_a77eda7625cb04a92214c2dce100a2381} 
+bool Address::\+validate\+Postal\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Validates whether the postal code length falls within standard bounds (4..10 chars). 
+
+\begin{DoxyReturn}{Returns}
+True if postal code is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

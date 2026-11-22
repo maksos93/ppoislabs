@@ -1,0 +1,94 @@
+\doxysection{Recommendation\+Engine Class Reference}
+\hypertarget{class_recommendation_engine}{}\label{class_recommendation_engine}\index{RecommendationEngine@{RecommendationEngine}}
+
+
+Provides book recommendations based on genre preferences and minimum rating thresholds.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_recommendation_engine_aad26b6cec0d2d88cd08d31761cfc47e1}{Recommendation\+Engine}} (std::\+string strategy="{}Genre\+Match"{}, double threshold=4.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_recommendation_engine}{Recommendation\+Engine}. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_book}{Book}} $>$ \doxymbox{\hyperlink{class_recommendation_engine_acba9c2df2b7d9f369a39ba188e8521dc}{recommend\+By\+Genre}} (const \doxymbox{\hyperlink{class_catalog_manager}{Catalog\+Manager}} \&catalog, const \doxymbox{\hyperlink{class_genre}{Genre}} \&preferred) const
+\begin{DoxyCompactList}\small\item\em Queries the catalog for recommended books matching a preferred \doxylink{class_genre}{Genre}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_recommendation_engine_a2e05dc6ee0dfa73caabcb0c5a0b6550c}{should\+Recommend\+Rating}} (const \doxymbox{\hyperlink{class_rating}{Rating}} \&rating) const
+\begin{DoxyCompactList}\small\item\em Evaluates whether a book\textquotesingle{}s \doxylink{class_rating}{Rating} meets the minimum recommendation threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides book recommendations based on genre preferences and minimum rating thresholds. 
+
+\label{class_recommendation_engine_doc-constructors}
+\Hypertarget{class_recommendation_engine_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_recommendation_engine_aad26b6cec0d2d88cd08d31761cfc47e1}\index{RecommendationEngine@{RecommendationEngine}!RecommendationEngine@{RecommendationEngine}}
+\index{RecommendationEngine@{RecommendationEngine}!RecommendationEngine@{RecommendationEngine}}
+\doxysubsubsection{\texorpdfstring{RecommendationEngine()}{RecommendationEngine()}}
+{\footnotesize\ttfamily \label{class_recommendation_engine_aad26b6cec0d2d88cd08d31761cfc47e1} 
+Recommendation\+Engine::\+\+Recommendation\+Engine (\begin{DoxyParamCaption}\item[{std::\+string}]{strategy}{ = {\ttfamily "{}GenreMatch"{}}, }\item[{double}]{threshold}{ = {\ttfamily 4.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_recommendation_engine}{Recommendation\+Engine}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em strategy} & Algorithm strategy label. \\
+\hline
+{\em threshold} & Minimum star rating threshold. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_recommendation_engine_doc-func-members}
+\Hypertarget{class_recommendation_engine_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_recommendation_engine_acba9c2df2b7d9f369a39ba188e8521dc}\index{RecommendationEngine@{RecommendationEngine}!recommendByGenre@{recommendByGenre}}
+\index{recommendByGenre@{recommendByGenre}!RecommendationEngine@{RecommendationEngine}}
+\doxysubsubsection{\texorpdfstring{recommendByGenre()}{recommendByGenre()}}
+{\footnotesize\ttfamily \label{class_recommendation_engine_acba9c2df2b7d9f369a39ba188e8521dc} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_book}{Book}} $>$ Recommendation\+Engine::\+recommend\+By\+Genre (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_catalog_manager}{Catalog\+Manager}} \&}]{catalog}{, }\item[{const \doxymbox{\hyperlink{class_genre}{Genre}} \&}]{preferred}{}\end{DoxyParamCaption}) const}
+
+
+
+Queries the catalog for recommended books matching a preferred \doxylink{class_genre}{Genre}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em catalog} & Source \doxylink{class_catalog_manager}{Catalog\+Manager}. \\
+\hline
+{\em preferred} & Preferred \doxylink{class_genre}{Genre}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of recommended \doxylink{class_book}{Book} objects. 
+\end{DoxyReturn}
+\Hypertarget{class_recommendation_engine_a2e05dc6ee0dfa73caabcb0c5a0b6550c}\index{RecommendationEngine@{RecommendationEngine}!shouldRecommendRating@{shouldRecommendRating}}
+\index{shouldRecommendRating@{shouldRecommendRating}!RecommendationEngine@{RecommendationEngine}}
+\doxysubsubsection{\texorpdfstring{shouldRecommendRating()}{shouldRecommendRating()}}
+{\footnotesize\ttfamily \label{class_recommendation_engine_a2e05dc6ee0dfa73caabcb0c5a0b6550c} 
+bool Recommendation\+Engine::\+should\+Recommend\+Rating (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_rating}{Rating}} \&}]{rating}{}\end{DoxyParamCaption}) const}
+
+
+
+Evaluates whether a book\textquotesingle{}s \doxylink{class_rating}{Rating} meets the minimum recommendation threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rating} & Aggregated \doxylink{class_rating}{Rating} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if average stars \texorpdfstring{$>$}{>}= min\+Score\+Threshold. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

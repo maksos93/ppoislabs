@@ -1,0 +1,329 @@
+\doxysection{Book Class Reference}
+\hypertarget{class_book}{}\label{class_book}\index{Book@{Book}}
+
+
+Core domain entity representing a book in the library and bookstore catalog.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+Inheritance diagram for Book:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_book}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}} (const std::\+string \&isbn="{}"{}, const std::\+string \&title="{}"{}, const \doxymbox{\hyperlink{class_author}{Author}} \&author=\doxymbox{\hyperlink{class_author}{Author}}(), const \doxymbox{\hyperlink{class_publisher}{Publisher}} \&publisher=\doxymbox{\hyperlink{class_publisher}{Publisher}}(), const \doxymbox{\hyperlink{class_genre}{Genre}} \&genre=\doxymbox{\hyperlink{class_genre}{Genre}}(), double price=0.\+0, int stock=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book}{Book} and validates price and stock non-\/negativity. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_book_a2093c9d67fc5f170ee281d9df5cb9036}{\texorpdfstring{$\sim$}{\string~}\+Book}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic book subclasses. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_a2541b8cd253471ecf942bf99d4c65bf2}{get\+Isbn}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a604066cfc14211ded8b21afbde600467}{get\+Title}} () const
+\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a296c97ef556a3132648a823c4a091674}{get\+Author}} () const
+\item 
+double \doxymbox{\hyperlink{class_book_a337e2c053be4b6333bf104d16b78669b}{get\+Price}} () const
+\item 
+int \doxymbox{\hyperlink{class_book_a03624dd5855ac5dcddf0770492a465e5}{get\+Stock\+Quantity}} () const
+\item 
+void \doxymbox{\hyperlink{class_book_a99129292306d8c38b592dc28aebac17c}{update\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Updates the retail price of the book. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a306f56b4342cda0971b45e860e4c2e1b}{restock}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases available stock by a positive number of copies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a16c1021f6d24022196162e59432b0d40}{reserve\+Copies}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reserves and deducts copies from stock for borrowing or purchase. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_aaf858563d5e47afeb79f602e6aebcdb3}{calculate\+Discounted\+Price}} (double percent) const
+\begin{DoxyCompactList}\small\item\em Calculates the book price after applying a percentage discount. \end{DoxyCompactList}\item 
+virtual std::\+string \doxymbox{\hyperlink{class_book_a35e9ae89775c2c59b699b738faa1b3dc}{describe\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Returns a human-\/readable description of the book format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}}
+\begin{DoxyCompactList}\small\item\em International Standard \doxylink{class_book}{Book} Number. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_book}{Book} title. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_author}{Author} of the book. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_publisher}{Publisher}} \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}}
+\begin{DoxyCompactList}\small\item\em Publishing house. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_genre}{Genre}} \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}}
+\begin{DoxyCompactList}\small\item\em Literary genre. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}}
+\begin{DoxyCompactList}\small\item\em Retail unit price. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stock\+Quantity}}
+\begin{DoxyCompactList}\small\item\em Available copies in stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core domain entity representing a book in the library and bookstore catalog. 
+
+\label{class_book_doc-constructors}
+\Hypertarget{class_book_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_book_a0c62ff6012a58f404e5549985d4bf46a}\index{Book@{Book}!Book@{Book}}
+\index{Book@{Book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{Book()}{Book()}}
+{\footnotesize\ttfamily \label{class_book_a0c62ff6012a58f404e5549985d4bf46a} 
+Book::\+\+Book (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{isbn}{ = {\ttfamily "{}"{}}, }\item[{const std::\+string \&}]{title}{ = {\ttfamily "{}"{}}, }\item[{const \doxymbox{\hyperlink{class_author}{Author}} \&}]{author}{ = {\ttfamily \doxymbox{\hyperlink{class_author}{Author}}()}, }\item[{const \doxymbox{\hyperlink{class_publisher}{Publisher}} \&}]{publisher}{ = {\ttfamily \doxymbox{\hyperlink{class_publisher}{Publisher}}()}, }\item[{const \doxymbox{\hyperlink{class_genre}{Genre}} \&}]{genre}{ = {\ttfamily \doxymbox{\hyperlink{class_genre}{Genre}}()}, }\item[{double}]{price}{ = {\ttfamily 0.0}, }\item[{int}]{stock}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_book}{Book} and validates price and stock non-\/negativity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & Unique ISBN string. \\
+\hline
+{\em title} & \doxylink{class_book}{Book} title. \\
+\hline
+{\em author} & \doxylink{class_book}{Book} \doxylink{class_author}{Author} object. \\
+\hline
+{\em publisher} & \doxylink{class_book}{Book} \doxylink{class_publisher}{Publisher} object. \\
+\hline
+{\em genre} & \doxylink{class_book}{Book} \doxylink{class_genre}{Genre} object. \\
+\hline
+{\em price} & Retail price (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+{\em stock} & Initial stock count (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if price or stock is negative. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_book_a2093c9d67fc5f170ee281d9df5cb9036}\index{Book@{Book}!````~Book@{\texorpdfstring{$\sim$}{\string~}Book}}
+\index{````~Book@{\texorpdfstring{$\sim$}{\string~}Book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Book()}{\string~Book()}}
+{\footnotesize\ttfamily \label{class_book_a2093c9d67fc5f170ee281d9df5cb9036} 
+virtual Book::\+\texorpdfstring{$\sim$}{\string~}\+Book (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for polymorphic book subclasses. 
+
+
+
+\label{class_book_doc-func-members}
+\Hypertarget{class_book_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_book_aaf858563d5e47afeb79f602e6aebcdb3}\index{Book@{Book}!calculateDiscountedPrice@{calculateDiscountedPrice}}
+\index{calculateDiscountedPrice@{calculateDiscountedPrice}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{calculateDiscountedPrice()}{calculateDiscountedPrice()}}
+{\footnotesize\ttfamily \label{class_book_aaf858563d5e47afeb79f602e6aebcdb3} 
+double Book::\+calculate\+Discounted\+Price (\begin{DoxyParamCaption}\item[{double}]{percent}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the book price after applying a percentage discount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em percent} & \doxylink{class_discount}{Discount} percentage in range \+[0, 100]. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Discounted price. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_discount_exception}{Invalid\+Discount\+Exception}} & if percent is outside \+[0, 100]. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_book_a35e9ae89775c2c59b699b738faa1b3dc}\index{Book@{Book}!describeFormat@{describeFormat}}
+\index{describeFormat@{describeFormat}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{describeFormat()}{describeFormat()}}
+{\footnotesize\ttfamily \label{class_book_a35e9ae89775c2c59b699b738faa1b3dc} 
+std::\+string Book::\+describe\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a human-\/readable description of the book format. 
+
+\begin{DoxyReturn}{Returns}
+Format description string. 
+\end{DoxyReturn}
+
+
+Reimplemented in \doxymbox{\hyperlink{class_audio_book_a51667c6f38b5aea3d2ce0b8cab01dab7}{Audio\+Book}}, \doxymbox{\hyperlink{class_e_book_a170b7e7ed82cc32c88577ce1425564f5}{EBook}}, \doxymbox{\hyperlink{class_edition_a552deed3baba44f0d9715a4e22bb137b}{Edition}}, and \doxymbox{\hyperlink{class_rare_book_a9c91732e67816fb51df4b83e08e3aa21}{Rare\+Book}}.
+
+\Hypertarget{class_book_a296c97ef556a3132648a823c4a091674}\index{Book@{Book}!getAuthor@{getAuthor}}
+\index{getAuthor@{getAuthor}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{getAuthor()}{getAuthor()}}
+{\footnotesize\ttfamily \label{class_book_a296c97ef556a3132648a823c4a091674} 
+\doxymbox{\hyperlink{class_author}{Author}} Book::\+get\+Author (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_book_a2541b8cd253471ecf942bf99d4c65bf2}\index{Book@{Book}!getIsbn@{getIsbn}}
+\index{getIsbn@{getIsbn}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{getIsbn()}{getIsbn()}}
+{\footnotesize\ttfamily \label{class_book_a2541b8cd253471ecf942bf99d4c65bf2} 
+std::\+string Book::\+get\+Isbn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_book_a337e2c053be4b6333bf104d16b78669b}\index{Book@{Book}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily \label{class_book_a337e2c053be4b6333bf104d16b78669b} 
+double Book::\+get\+Price (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_book_a03624dd5855ac5dcddf0770492a465e5}\index{Book@{Book}!getStockQuantity@{getStockQuantity}}
+\index{getStockQuantity@{getStockQuantity}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{getStockQuantity()}{getStockQuantity()}}
+{\footnotesize\ttfamily \label{class_book_a03624dd5855ac5dcddf0770492a465e5} 
+int Book::\+get\+Stock\+Quantity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_book_a604066cfc14211ded8b21afbde600467}\index{Book@{Book}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily \label{class_book_a604066cfc14211ded8b21afbde600467} 
+std::\+string Book::\+get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_book_a16c1021f6d24022196162e59432b0d40}\index{Book@{Book}!reserveCopies@{reserveCopies}}
+\index{reserveCopies@{reserveCopies}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{reserveCopies()}{reserveCopies()}}
+{\footnotesize\ttfamily \label{class_book_a16c1021f6d24022196162e59432b0d40} 
+void Book::\+reserve\+Copies (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Reserves and deducts copies from stock for borrowing or purchase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Number of copies to reserve (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if amount \texorpdfstring{$<$}{<}= 0. \\
+\hline
+{\em \doxylink{class_out_of_stock_exception}{Out\+Of\+Stock\+Exception}} & if stock\+Quantity \texorpdfstring{$<$}{<} amount. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_book_a306f56b4342cda0971b45e860e4c2e1b}\index{Book@{Book}!restock@{restock}}
+\index{restock@{restock}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{restock()}{restock()}}
+{\footnotesize\ttfamily \label{class_book_a306f56b4342cda0971b45e860e4c2e1b} 
+void Book::\+restock (\begin{DoxyParamCaption}\item[{int}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Increases available stock by a positive number of copies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Number of copies to add (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if amount \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_book_a99129292306d8c38b592dc28aebac17c}\index{Book@{Book}!updatePrice@{updatePrice}}
+\index{updatePrice@{updatePrice}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{updatePrice()}{updatePrice()}}
+{\footnotesize\ttfamily \label{class_book_a99129292306d8c38b592dc28aebac17c} 
+void Book::\+update\+Price (\begin{DoxyParamCaption}\item[{double}]{new\+Price}{}\end{DoxyParamCaption})}
+
+
+
+Updates the retail price of the book. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Price} & New retail price (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if new\+Price is negative. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_book_doc-variable-members}
+\Hypertarget{class_book_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_book_a1c84f2a0d3db51a0c65f061c91096053}\index{Book@{Book}!author@{author}}
+\index{author@{author}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{author}{author}}
+{\footnotesize\ttfamily \label{class_book_a1c84f2a0d3db51a0c65f061c91096053} 
+\doxymbox{\hyperlink{class_author}{Author}} Book::\+author\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_author}{Author} of the book. 
+
+\Hypertarget{class_book_af6a2c9fdd799a0a30ddd9b461033c782}\index{Book@{Book}!genre@{genre}}
+\index{genre@{genre}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{genre}{genre}}
+{\footnotesize\ttfamily \label{class_book_af6a2c9fdd799a0a30ddd9b461033c782} 
+\doxymbox{\hyperlink{class_genre}{Genre}} Book::\+genre\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Literary genre. 
+
+\Hypertarget{class_book_a4801ef77b3878e363935f09ebb15a213}\index{Book@{Book}!isbn@{isbn}}
+\index{isbn@{isbn}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{isbn}{isbn}}
+{\footnotesize\ttfamily \label{class_book_a4801ef77b3878e363935f09ebb15a213} 
+std::\+string Book::\+isbn\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+International Standard \doxylink{class_book}{Book} Number. 
+
+\Hypertarget{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}\index{Book@{Book}!price@{price}}
+\index{price@{price}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7} 
+double Book::\+price\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Retail unit price. 
+
+\Hypertarget{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}\index{Book@{Book}!publisher@{publisher}}
+\index{publisher@{publisher}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{publisher}{publisher}}
+{\footnotesize\ttfamily \label{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c} 
+\doxymbox{\hyperlink{class_publisher}{Publisher}} Book::\+publisher\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Publishing house. 
+
+\Hypertarget{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}\index{Book@{Book}!stockQuantity@{stockQuantity}}
+\index{stockQuantity@{stockQuantity}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{stockQuantity}{stockQuantity}}
+{\footnotesize\ttfamily \label{class_book_a7957c60a3cd6c7f57d6640f35e233ca4} 
+int Book::\+stock\+Quantity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Available copies in stock. 
+
+\Hypertarget{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}\index{Book@{Book}!title@{title}}
+\index{title@{title}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily \label{class_book_af2e58fdc67a5ed97d213ba4834b00e9e} 
+std::\+string Book::\+title\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_book}{Book} title. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

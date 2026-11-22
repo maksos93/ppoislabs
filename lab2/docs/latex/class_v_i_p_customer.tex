@@ -1,0 +1,164 @@
+\doxysection{VIPCustomer Class Reference}
+\hypertarget{class_v_i_p_customer}{}\label{class_v_i_p_customer}\index{VIPCustomer@{VIPCustomer}}
+
+
+Premium bookstore customer with personal discount rate, loyalty account, and manager.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+Inheritance diagram for VIPCustomer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_i_p_customer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_v_i_p_customer_a2821761c18888b8e995f7010a091b8ee}{VIPCustomer}} (const \doxymbox{\hyperlink{class_user}{User}} \&base, double discount\+Rate=0.\+15, std::\+string manager="{}Anna"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_v_i_p_customer}{VIPCustomer} profile. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_v_i_p_customer_a2e3e4af2c6731d753d183e56931606cc}{apply\+Vip\+Pricing}} (double original\+Price) const
+\begin{DoxyCompactList}\small\item\em Applies the customer\textquotesingle{}s personal VIP discount to a price. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_v_i_p_customer_a5fb094dd89b0d0a040b26527c88e4710}{reward\+Bonus\+Points}} (int points)
+\begin{DoxyCompactList}\small\item\em Awards bonus loyalty points to the VIP customer\textquotesingle{}s account. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_v_i_p_customer_a10a337e509a35d96359f089c8802a0c2}{qualifies\+For\+Free\+Express}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the customer qualifies for complimentary express delivery. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_v_i_p_customer_addc7b48ed64528fd8a82bd2ddbcab93a}{get\+Access\+Tier}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the VIP access tier label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_user}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}} (int id=0, std::\+string name="{}"{}, std::\+string email="{}"{}, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_user}{User} account. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_user_a634d7ad22c3d2b5fed35f71e10d98628}{\texorpdfstring{$\sim$}{\string~}\+User}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for user hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_user_ac5a839e8c9b3bb68858d8c206a32885d}{get\+User\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a41aaa8d1f105ff225353dfe895306fde}{get\+Full\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a68c520e78268ba63c97ff04b6fb210a1}{get\+Email}} () const
+\item 
+bool \doxymbox{\hyperlink{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf}{validate\+Email\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Validates basic email syntax (\textquotesingle{}@\textquotesingle{} and \textquotesingle{}.\textquotesingle{} presence). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_afd788345e0a135166880f3827025b962}{relocate}} (const \doxymbox{\hyperlink{class_address}{Address}} \&new\+Address)
+\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_a16ebaa37e193ab4e11a70d850560b8ee}{apply\+Notification\+Preferences}} (const \doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \&prefs)
+\begin{DoxyCompactList}\small\item\em Applies updated notification preferences to the user profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_user}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_user_a5986b220d29c26d9f8bcd8a31b404a76}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique numeric user ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_a0cf4d35683a5bbfb232721eb5877690d}{full\+Name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_user_af340678819489cd891b44490fc799cfa}{address}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \doxymbox{\hyperlink{class_user_ac3df1beda00cc0c2265a2b7f152419fc}{preferences}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s notification settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Premium bookstore customer with personal discount rate, loyalty account, and manager. 
+
+\label{class_v_i_p_customer_doc-constructors}
+\Hypertarget{class_v_i_p_customer_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_v_i_p_customer_a2821761c18888b8e995f7010a091b8ee}\index{VIPCustomer@{VIPCustomer}!VIPCustomer@{VIPCustomer}}
+\index{VIPCustomer@{VIPCustomer}!VIPCustomer@{VIPCustomer}}
+\doxysubsubsection{\texorpdfstring{VIPCustomer()}{VIPCustomer()}}
+{\footnotesize\ttfamily \label{class_v_i_p_customer_a2821761c18888b8e995f7010a091b8ee} 
+VIPCustomer::\+\+VIPCustomer (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_user}{User}} \&}]{base}{, }\item[{double}]{discount\+Rate}{ = {\ttfamily 0.15}, }\item[{std::\+string}]{manager}{ = {\ttfamily "{}Anna"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_v_i_p_customer}{VIPCustomer} profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_user}{User} account. \\
+\hline
+{\em discount\+Rate} & Personal discount fraction. \\
+\hline
+{\em manager} & Dedicated manager name. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_v_i_p_customer_doc-func-members}
+\Hypertarget{class_v_i_p_customer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_v_i_p_customer_a2e3e4af2c6731d753d183e56931606cc}\index{VIPCustomer@{VIPCustomer}!applyVipPricing@{applyVipPricing}}
+\index{applyVipPricing@{applyVipPricing}!VIPCustomer@{VIPCustomer}}
+\doxysubsubsection{\texorpdfstring{applyVipPricing()}{applyVipPricing()}}
+{\footnotesize\ttfamily \label{class_v_i_p_customer_a2e3e4af2c6731d753d183e56931606cc} 
+double VIPCustomer::\+apply\+Vip\+Pricing (\begin{DoxyParamCaption}\item[{double}]{original\+Price}{}\end{DoxyParamCaption}) const}
+
+
+
+Applies the customer\textquotesingle{}s personal VIP discount to a price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\+Price} & Base item or order price. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Discounted VIP price. 
+\end{DoxyReturn}
+\Hypertarget{class_v_i_p_customer_addc7b48ed64528fd8a82bd2ddbcab93a}\index{VIPCustomer@{VIPCustomer}!getAccessTier@{getAccessTier}}
+\index{getAccessTier@{getAccessTier}!VIPCustomer@{VIPCustomer}}
+\doxysubsubsection{\texorpdfstring{getAccessTier()}{getAccessTier()}}
+{\footnotesize\ttfamily \label{class_v_i_p_customer_addc7b48ed64528fd8a82bd2ddbcab93a} 
+std::\+string VIPCustomer::\+get\+Access\+Tier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the VIP access tier label. 
+
+\begin{DoxyReturn}{Returns}
+"{}\+VIPCustomer"{} string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_user_ac007e6f7428dba19fd3bbe11d45efef4}{User}}.
+
+\Hypertarget{class_v_i_p_customer_a10a337e509a35d96359f089c8802a0c2}\index{VIPCustomer@{VIPCustomer}!qualifiesForFreeExpress@{qualifiesForFreeExpress}}
+\index{qualifiesForFreeExpress@{qualifiesForFreeExpress}!VIPCustomer@{VIPCustomer}}
+\doxysubsubsection{\texorpdfstring{qualifiesForFreeExpress()}{qualifiesForFreeExpress()}}
+{\footnotesize\ttfamily \label{class_v_i_p_customer_a10a337e509a35d96359f089c8802a0c2} 
+bool VIPCustomer::\+qualifies\+For\+Free\+Express (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the customer qualifies for complimentary express delivery. 
+
+\begin{DoxyReturn}{Returns}
+True if personal\+Discount\+Rate \texorpdfstring{$>$}{>}= 0.\+10. 
+\end{DoxyReturn}
+\Hypertarget{class_v_i_p_customer_a5fb094dd89b0d0a040b26527c88e4710}\index{VIPCustomer@{VIPCustomer}!rewardBonusPoints@{rewardBonusPoints}}
+\index{rewardBonusPoints@{rewardBonusPoints}!VIPCustomer@{VIPCustomer}}
+\doxysubsubsection{\texorpdfstring{rewardBonusPoints()}{rewardBonusPoints()}}
+{\footnotesize\ttfamily \label{class_v_i_p_customer_a5fb094dd89b0d0a040b26527c88e4710} 
+void VIPCustomer::\+reward\+Bonus\+Points (\begin{DoxyParamCaption}\item[{int}]{points}{}\end{DoxyParamCaption})}
+
+
+
+Awards bonus loyalty points to the VIP customer\textquotesingle{}s account. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Bonus points to credit. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

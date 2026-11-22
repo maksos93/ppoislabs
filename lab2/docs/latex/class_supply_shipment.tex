@@ -1,0 +1,98 @@
+\doxysection{Supply\+Shipment Class Reference}
+\hypertarget{class_supply_shipment}{}\label{class_supply_shipment}\index{SupplyShipment@{SupplyShipment}}
+
+
+Tracks an inbound book shipment from a \doxylink{class_supplier}{Supplier} to a destination \doxylink{class_warehouse}{Warehouse}.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_supply_shipment_af671e5458c043867ac05103d21c712d3}{Supply\+Shipment}} (std::\+string id, const \doxymbox{\hyperlink{class_supplier}{Supplier}} \&sup, const \doxymbox{\hyperlink{class_warehouse}{Warehouse}} \&dest, int units)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_supply_shipment}{Supply\+Shipment}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_supply_shipment_a4f8644de8dd33ddd8d4e7715d33bd0f2}{dispatch\+Shipment}} ()
+\begin{DoxyCompactList}\small\item\em Validates and dispatches the shipment. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_supply_shipment_a9b1f014555d1aeb1f1b12ed6fa14317c}{complete\+Delivery}} (const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Completes shipment delivery and registers the inventory item at the warehouse. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_supply_shipment_a57845b124a65087b3e1f91df4f08c037}{is\+Received}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks an inbound book shipment from a \doxylink{class_supplier}{Supplier} to a destination \doxylink{class_warehouse}{Warehouse}. 
+
+\label{class_supply_shipment_doc-constructors}
+\Hypertarget{class_supply_shipment_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_supply_shipment_af671e5458c043867ac05103d21c712d3}\index{SupplyShipment@{SupplyShipment}!SupplyShipment@{SupplyShipment}}
+\index{SupplyShipment@{SupplyShipment}!SupplyShipment@{SupplyShipment}}
+\doxysubsubsection{\texorpdfstring{SupplyShipment()}{SupplyShipment()}}
+{\footnotesize\ttfamily \label{class_supply_shipment_af671e5458c043867ac05103d21c712d3} 
+Supply\+Shipment::\+\+Supply\+Shipment (\begin{DoxyParamCaption}\item[{std::\+string}]{id}{, }\item[{const \doxymbox{\hyperlink{class_supplier}{Supplier}} \&}]{sup}{, }\item[{const \doxymbox{\hyperlink{class_warehouse}{Warehouse}} \&}]{dest}{, }\item[{int}]{units}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_supply_shipment}{Supply\+Shipment}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Shipment ID. \\
+\hline
+{\em sup} & Originating \doxylink{class_supplier}{Supplier}. \\
+\hline
+{\em dest} & Destination \doxylink{class_warehouse}{Warehouse}. \\
+\hline
+{\em units} & Total units shipped. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_supply_shipment_doc-func-members}
+\Hypertarget{class_supply_shipment_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_supply_shipment_a9b1f014555d1aeb1f1b12ed6fa14317c}\index{SupplyShipment@{SupplyShipment}!completeDelivery@{completeDelivery}}
+\index{completeDelivery@{completeDelivery}!SupplyShipment@{SupplyShipment}}
+\doxysubsubsection{\texorpdfstring{completeDelivery()}{completeDelivery()}}
+{\footnotesize\ttfamily \label{class_supply_shipment_a9b1f014555d1aeb1f1b12ed6fa14317c} 
+void Supply\+Shipment::\+complete\+Delivery (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Completes shipment delivery and registers the inventory item at the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \doxylink{class_inventory_item}{Inventory\+Item} received. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supply_shipment_a4f8644de8dd33ddd8d4e7715d33bd0f2}\index{SupplyShipment@{SupplyShipment}!dispatchShipment@{dispatchShipment}}
+\index{dispatchShipment@{dispatchShipment}!SupplyShipment@{SupplyShipment}}
+\doxysubsubsection{\texorpdfstring{dispatchShipment()}{dispatchShipment()}}
+{\footnotesize\ttfamily \label{class_supply_shipment_a4f8644de8dd33ddd8d4e7715d33bd0f2} 
+void Supply\+Shipment::\+dispatch\+Shipment (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Validates and dispatches the shipment. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_delivery_exception}{Delivery\+Exception}} & if total\+Units \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_supply_shipment_a57845b124a65087b3e1f91df4f08c037}\index{SupplyShipment@{SupplyShipment}!isReceived@{isReceived}}
+\index{isReceived@{isReceived}!SupplyShipment@{SupplyShipment}}
+\doxysubsubsection{\texorpdfstring{isReceived()}{isReceived()}}
+{\footnotesize\ttfamily \label{class_supply_shipment_a57845b124a65087b3e1f91df4f08c037} 
+bool Supply\+Shipment::\+is\+Received (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

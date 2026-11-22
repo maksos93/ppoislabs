@@ -1,0 +1,88 @@
+\doxysection{Salary Class Reference}
+\hypertarget{class_salary}{}\label{class_salary}\index{Salary@{Salary}}
+
+
+Represents a payroll calculation record with gross pay, tax deductions, and bonuses.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_salary_a037ddd4cbe65da6fd0bae05160efd07f}{Salary}} (int emp\+Id=1, double gross=2000.\+0, double tax=300.\+0, double bonus=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_salary}{Salary} payroll record. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_salary_a50c8bc9f36da14f6a63dddca536f7b63}{compute\+Net\+Pay}} () const
+\begin{DoxyCompactList}\small\item\em Computes net take-\/home pay (gross\+Pay -\/ tax\+Deduction + bonus). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_salary_a400bcec0e125c5f28254ce20a6a157e8}{add\+Performance\+Bonus}} (double amount)
+\begin{DoxyCompactList}\small\item\em Adds a positive performance bonus to the salary record. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a payroll calculation record with gross pay, tax deductions, and bonuses. 
+
+\label{class_salary_doc-constructors}
+\Hypertarget{class_salary_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_salary_a037ddd4cbe65da6fd0bae05160efd07f}\index{Salary@{Salary}!Salary@{Salary}}
+\index{Salary@{Salary}!Salary@{Salary}}
+\doxysubsubsection{\texorpdfstring{Salary()}{Salary()}}
+{\footnotesize\ttfamily \label{class_salary_a037ddd4cbe65da6fd0bae05160efd07f} 
+Salary::\+\+Salary (\begin{DoxyParamCaption}\item[{int}]{emp\+Id}{ = {\ttfamily 1}, }\item[{double}]{gross}{ = {\ttfamily 2000.0}, }\item[{double}]{tax}{ = {\ttfamily 300.0}, }\item[{double}]{bonus}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_salary}{Salary} payroll record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emp\+Id} & \doxylink{class_employee}{Employee} ID. \\
+\hline
+{\em gross} & Gross pay. \\
+\hline
+{\em tax} & Tax deduction. \\
+\hline
+{\em bonus} & Bonus amount. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_salary_doc-func-members}
+\Hypertarget{class_salary_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_salary_a400bcec0e125c5f28254ce20a6a157e8}\index{Salary@{Salary}!addPerformanceBonus@{addPerformanceBonus}}
+\index{addPerformanceBonus@{addPerformanceBonus}!Salary@{Salary}}
+\doxysubsubsection{\texorpdfstring{addPerformanceBonus()}{addPerformanceBonus()}}
+{\footnotesize\ttfamily \label{class_salary_a400bcec0e125c5f28254ce20a6a157e8} 
+void Salary::\+add\+Performance\+Bonus (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Adds a positive performance bonus to the salary record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Bonus increment. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_salary_a50c8bc9f36da14f6a63dddca536f7b63}\index{Salary@{Salary}!computeNetPay@{computeNetPay}}
+\index{computeNetPay@{computeNetPay}!Salary@{Salary}}
+\doxysubsubsection{\texorpdfstring{computeNetPay()}{computeNetPay()}}
+{\footnotesize\ttfamily \label{class_salary_a50c8bc9f36da14f6a63dddca536f7b63} 
+double Salary::\+compute\+Net\+Pay (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes net take-\/home pay (gross\+Pay -\/ tax\+Deduction + bonus). 
+
+\begin{DoxyReturn}{Returns}
+Net pay amount. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,288 @@
+\doxysection{book.\+hpp}
+\hypertarget{book_8hpp_source}{}\label{book_8hpp_source}\index{include/book.hpp@{include/book.hpp}}
+\doxymbox{\hyperlink{book_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ street;\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ city;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ postalCode;\ }
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ country;\ \ \ \ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}(std::string\ street\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ city\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ postal\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ country\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_address_a6055a29fc50bbf75bb5c077e243ed61b}{formatFullAddress}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_address_a77eda7625cb04a92214c2dce100a2381}{validatePostalCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_address_a9ec674c554eee58cd2987e420d9bab83}{isSameCity}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_address_a8ba0e090654cd23883598182934b6d16}{getCity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ city;\ \}}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}}\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ name;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ description;\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}General"{}},\ std::string\ desc\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_genre_aedcd2419ad45706bc043df5df0697f7f}{matchesKeyword}}(\textcolor{keyword}{const}\ std::string\&\ keyword)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_genre_a8642603abffbb2b7bc4ec0534257fa00}{generateTag}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_genre_ae65281d5e620764003daad44202cb8d4}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ name;\ \}}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_category_afaf82d863dea4ba99e64864850b9f06a}{Category}}\ \{}
+\DoxyCodeLine{00099\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ std::string\ title;\ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \doxymbox{\hyperlink{class_genre}{Genre}}\ primaryGenre;\ \ \ \ \ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00110\ \ \ \ \ \doxymbox{\hyperlink{class_category_afaf82d863dea4ba99e64864850b9f06a}{Category}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0,\ std::string\ title\ =\ \textcolor{stringliteral}{"{}Uncategorized"{}},\ \doxymbox{\hyperlink{class_genre}{Genre}}\ genre\ =\ \doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}}());}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_category_af6a34e981d8002f2e918c7af2b5cbf05}{assignGenre}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_genre}{Genre}}\&\ genre);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_category_ae7a47a615ae66d483ee7f7b9c81c2758}{buildBreadcrumb}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00128\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_category_a9f028da8cdcbf55cfa9b7008385ac7a0}{getTitle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ title;\ \}}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_author_a61fda35b0af8567f9168eb591ed1ba24}{Author}}\ \{}
+\DoxyCodeLine{00136\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ std::string\ fullName;\ }
+\DoxyCodeLine{00139\ \ \ \ \ std::string\ country;\ \ }
+\DoxyCodeLine{00140\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00147\ \ \ \ \ \doxymbox{\hyperlink{class_author_a61fda35b0af8567f9168eb591ed1ba24}{Author}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0,\ std::string\ name\ =\ \textcolor{stringliteral}{"{}Unknown"{}},\ std::string\ country\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00153\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_author_af4312630e4bc52a01f4787de5970aaa6}{formatCitation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_author_a05f0739802e4469bfe1b2fe8d675c002}{isFromCountry}}(\textcolor{keyword}{const}\ std::string\&\ targetCountry)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_author_aba451bc160cc9746dcc6d02011474ebe}{updateBiographyCountry}}(\textcolor{keyword}{const}\ std::string\&\ newCountry);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_author_ad38e7c581b4fb3509d28b7fa2ba473bb}{getFullName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ fullName;\ \}}
+\DoxyCodeLine{00173\ \};}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00179\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_publisher_aa8b3e694488852deb5f4c9474fea50d9}{Publisher}}\ \{}
+\DoxyCodeLine{00180\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00181\ \ \ \ \ std::string\ name;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ std::string\ registrationCode;\ }
+\DoxyCodeLine{00183\ \ \ \ \ \doxymbox{\hyperlink{class_address}{Address}}\ officeAddress;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00191\ \ \ \ \ \doxymbox{\hyperlink{class_publisher_aa8b3e694488852deb5f4c9474fea50d9}{Publisher}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}Independent"{}},\ std::string\ code\ =\ \textcolor{stringliteral}{"{}000"{}},\ \doxymbox{\hyperlink{class_address}{Address}}\ addr\ =\ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}());}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_publisher_a6395b83156cfd4330048b24f0b082c92}{verifyLicense}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00203\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_publisher_ab5e2bc6aed8ac93635e190843949307d}{generateImprintHeader}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_publisher_a0b2fa67191000b9a3917afc75f20b0cd}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ name;\ \}}
+\DoxyCodeLine{00210\ \};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\ \{}
+\DoxyCodeLine{00217\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00218\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \ \ \doxymbox{\hyperlink{class_author}{Author}}\ \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00221\ \ \ \ \ \doxymbox{\hyperlink{class_publisher}{Publisher}}\ \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}};\ \ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \ \ \doxymbox{\hyperlink{class_genre}{Genre}}\ \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stockQuantity}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00225\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00237\ \ \ \ \ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}(\textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}}\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}}\ =\ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_author}{Author}}\&\ \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}}\ =\ \doxymbox{\hyperlink{class_author_a61fda35b0af8567f9168eb591ed1ba24}{Author}}(),\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_publisher}{Publisher}}\&\ \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}}\ =\ \doxymbox{\hyperlink{class_publisher_aa8b3e694488852deb5f4c9474fea50d9}{Publisher}}(),}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_genre}{Genre}}\&\ \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}}\ =\ \doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}}(),\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}}\ =\ 0.0,\ \textcolor{keywordtype}{int}\ stock\ =\ 0);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_book_a2093c9d67fc5f170ee281d9df5cb9036}{\string~Book}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_book_a2541b8cd253471ecf942bf99d4c65bf2}{getIsbn}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}};\ \}}
+\DoxyCodeLine{00247\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_book_a604066cfc14211ded8b21afbde600467}{getTitle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}};\ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \doxymbox{\hyperlink{class_author}{Author}}\ \doxymbox{\hyperlink{class_book_a296c97ef556a3132648a823c4a091674}{getAuthor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}};\ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_book_a337e2c053be4b6333bf104d16b78669b}{getPrice}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}};\ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_book_a03624dd5855ac5dcddf0770492a465e5}{getStockQuantity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stockQuantity}};\ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_book_a99129292306d8c38b592dc28aebac17c}{updatePrice}}(\textcolor{keywordtype}{double}\ newPrice);}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_book_a306f56b4342cda0971b45e860e4c2e1b}{restock}}(\textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_book_a16c1021f6d24022196162e59432b0d40}{reserveCopies}}(\textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_book_aaf858563d5e47afeb79f602e6aebcdb3}{calculateDiscountedPrice}}(\textcolor{keywordtype}{double}\ percent)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_book_a35e9ae89775c2c59b699b738faa1b3dc}{describeFormat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00287\ \};}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00293\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_edition_a708d47290d64e9ea5df68c79991e2a2a}{Edition}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\ \{}
+\DoxyCodeLine{00294\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordtype}{int}\ editionNumber;\ \ \ \ \ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{int}\ releaseYear;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00297\ \ \ \ \ std::string\ coverType;\ }
+\DoxyCodeLine{00298\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00306\ \ \ \ \ \doxymbox{\hyperlink{class_edition_a708d47290d64e9ea5df68c79991e2a2a}{Edition}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\&\ base,\ \textcolor{keywordtype}{int}\ editionNum\ =\ 1,\ \textcolor{keywordtype}{int}\ year\ =\ 2024,\ std::string\ cover\ =\ \textcolor{stringliteral}{"{}Hardcover"{}});}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_edition_a22414e746f818d7215fecf354b97fe17}{isFirstEdition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_edition_a5d6c09c032343670b998cd3e8a7a8d15}{calculateAge}}(\textcolor{keywordtype}{int}\ currentYear)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00325\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_edition_a552deed3baba44f0d9715a4e22bb137b}{describeFormat}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00326\ \};}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00332\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_e_book_a26f3da2e3759753b768dd1027156f3e5}{EBook}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\ \{}
+\DoxyCodeLine{00333\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00334\ \ \ \ \ std::string\ fileFormat;\ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{double}\ fileSizeMb;\ \ \ \ \ \ }
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordtype}{bool}\ drmProtected;\ \ \ \ \ \ }
+\DoxyCodeLine{00337\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00345\ \ \ \ \ \doxymbox{\hyperlink{class_e_book_a26f3da2e3759753b768dd1027156f3e5}{EBook}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\&\ base,\ std::string\ format\ =\ \textcolor{stringliteral}{"{}EPUB"{}},\ \textcolor{keywordtype}{double}\ sizeMb\ =\ 2.5,\ \textcolor{keywordtype}{bool}\ drm\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_e_book_a0d40176fc9af3e2b0a551c07f8506106}{estimateDownloadSeconds}}(\textcolor{keywordtype}{double}\ speedMbps)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_e_book_a97ba70771b12d27c03b07f0e6f43b093}{toggleDrmProtection}}(\textcolor{keywordtype}{bool}\ enabled);}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00364\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_e_book_a170b7e7ed82cc32c88577ce1425564f5}{describeFormat}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00365\ \};}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00371\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_audio_book_a0678ee9e8f939d7847ba9769fbc12db0}{AudioBook}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\ \{}
+\DoxyCodeLine{00372\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00373\ \ \ \ \ std::string\ narrator;\ }
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordtype}{int}\ durationMinutes;\ \ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{int}\ bitrateKbps;\ \ \ \ \ \ }
+\DoxyCodeLine{00376\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00384\ \ \ \ \ \doxymbox{\hyperlink{class_audio_book_a0678ee9e8f939d7847ba9769fbc12db0}{AudioBook}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\&\ base,\ std::string\ narrator\ =\ \textcolor{stringliteral}{"{}Narrator"{}},\ \textcolor{keywordtype}{int}\ minutes\ =\ 300,\ \textcolor{keywordtype}{int}\ bitrate\ =\ 128);}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_audio_book_a152e9333a0153c86dcb59ca0837afd74}{calculateListeningHours}}(\textcolor{keywordtype}{double}\ playbackSpeed)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_audio_book_af87cd84ef974ce990fd7fe6fdf9612d0}{estimateStorageMegabytes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00403\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_audio_book_a51667c6f38b5aea3d2ce0b8cab01dab7}{describeFormat}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00404\ \};}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00410\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_rare_book_a53ca148c5d03e381102d0e53ef8d7424}{RareBook}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\ \{}
+\DoxyCodeLine{00411\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keywordtype}{int}\ publicationYear;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00413\ \ \ \ \ std::string\ conditionGrade;}
+\DoxyCodeLine{00414\ \ \ \ \ \textcolor{keywordtype}{double}\ appraisedValue;\ \ \ \ \ }
+\DoxyCodeLine{00415\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00423\ \ \ \ \ \doxymbox{\hyperlink{class_rare_book_a53ca148c5d03e381102d0e53ef8d7424}{RareBook}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}\&\ base,\ \textcolor{keywordtype}{int}\ year\ =\ 1900,\ std::string\ grade\ =\ \textcolor{stringliteral}{"{}Fine"{}},\ \textcolor{keywordtype}{double}\ value\ =\ 500.0);}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00430\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_rare_book_ab1d8afd4fc20c958a9083dea5b04bca9}{computeInsurancePremium}}(\textcolor{keywordtype}{double}\ rate)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rare_book_a926768b7420d1e2d5d21454b6c021a59}{reappraise}}(\textcolor{keywordtype}{double}\ newValue,\ \textcolor{keyword}{const}\ std::string\&\ newGrade);}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00444\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_rare_book_a9c91732e67816fb51df4b83e08e3aa21}{describeFormat}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00445\ \};}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00451\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_inventory_item_a0189b2463303a4b9d38bc022fbf1d177}{InventoryItem}}\ \{}
+\DoxyCodeLine{00452\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00453\ \ \ \ \ std::string\ sku;\ \ \ \ \ \ }
+\DoxyCodeLine{00454\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\ book;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00455\ \ \ \ \ \textcolor{keywordtype}{int}\ quantityOnHand;\ \ \ }
+\DoxyCodeLine{00456\ \ \ \ \ \textcolor{keywordtype}{int}\ reorderThreshold;\ }
+\DoxyCodeLine{00457\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00465\ \ \ \ \ \doxymbox{\hyperlink{class_inventory_item_a0189b2463303a4b9d38bc022fbf1d177}{InventoryItem}}(std::string\ sku\ =\ \textcolor{stringliteral}{"{}"{}},\ \doxymbox{\hyperlink{class_book}{Book}}\ book\ =\ \doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}}(),\ \textcolor{keywordtype}{int}\ qty\ =\ 0,\ \textcolor{keywordtype}{int}\ threshold\ =\ 5);}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00471\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_inventory_item_a9137974e10d923c95e0c2ba57ab86667}{needsReorder}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00472\ }
+\DoxyCodeLine{00478\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_inventory_item_a1cd6c21d62117f3113c1cedf3dedaaab}{adjustStock}}(\textcolor{keywordtype}{int}\ delta);}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_inventory_item_a913357c51edaad1781aac6924d0ffea8}{calculateTotalValuation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_inventory_item_a807b249d98f8876b9de5fa77811942b5}{getSku}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ sku;\ \}}
+\DoxyCodeLine{00487\ \};}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00493\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_stock_a980b1ea82ebf1d872f43a2121b3960cb}{Stock}}\ \{}
+\DoxyCodeLine{00494\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00495\ \ \ \ \ std::string\ batchCode;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00496\ \ \ \ \ std::vector<InventoryItem>\ items;\ }
+\DoxyCodeLine{00497\ \ \ \ \ \textcolor{keywordtype}{int}\ totalUnits;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00498\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00503\ \ \ \ \ \doxymbox{\hyperlink{class_stock_a980b1ea82ebf1d872f43a2121b3960cb}{Stock}}(std::string\ batch\ =\ \textcolor{stringliteral}{"{}BATCH-\/01"{}});}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_stock_a31be52465fd329c2e3b2d3e381019dc0}{registerItem}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_inventory_item}{InventoryItem}}\&\ item);}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_stock_ac1ac39960567a973660b585c8c2a7a42}{countLowStockItems}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00521\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_stock_acfa48cfdabf26c1fde72445cebf40556}{computeBatchValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00522\ \};}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00528\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_shelf_a218362770e48d9783352818f2521843a}{Shelf}}\ \{}
+\DoxyCodeLine{00529\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00530\ \ \ \ \ std::string\ shelfCode;\ }
+\DoxyCodeLine{00531\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00532\ \ \ \ \ \textcolor{keywordtype}{int}\ currentLoad;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00533\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00539\ \ \ \ \ \doxymbox{\hyperlink{class_shelf_a218362770e48d9783352818f2521843a}{Shelf}}(std::string\ code\ =\ \textcolor{stringliteral}{"{}A1"{}},\ \textcolor{keywordtype}{int}\ capacity\ =\ 100);}
+\DoxyCodeLine{00540\ }
+\DoxyCodeLine{00546\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_shelf_a2500b2d145d9e47c32673cea865861d6}{allocateSpace}}(\textcolor{keywordtype}{int}\ units);}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00552\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_shelf_a7179460c0503923467ea3bbfdcb9df4c}{releaseSpace}}(\textcolor{keywordtype}{int}\ units);}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00558\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_shelf_a39522cec90bad98516c715ecbf29149b}{getOccupancyRate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00559\ \};}
+\DoxyCodeLine{00560\ }
+\DoxyCodeLine{00565\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_section_aab313d4479272368ab472f59c4df9fc0}{Section}}\ \{}
+\DoxyCodeLine{00566\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00567\ \ \ \ \ std::string\ sectionName;\ \ \ }
+\DoxyCodeLine{00568\ \ \ \ \ std::vector<Shelf>\ shelves;}
+\DoxyCodeLine{00569\ \ \ \ \ \doxymbox{\hyperlink{class_genre}{Genre}}\ assignedGenre;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00570\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00576\ \ \ \ \ \doxymbox{\hyperlink{class_section_aab313d4479272368ab472f59c4df9fc0}{Section}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}Main"{}},\ \doxymbox{\hyperlink{class_genre}{Genre}}\ genre\ =\ \doxymbox{\hyperlink{class_genre_aa6b11d8a376c53dc4bdc0e944c442a95}{Genre}}());}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00582\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_section_a8e02c23959801c4287acbb8de5578cf6}{addShelf}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_shelf}{Shelf}}\&\ shelf);}
+\DoxyCodeLine{00583\ }
+\DoxyCodeLine{00588\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_section_a09d3eab6b35bdecd84b5d7b3b25a63ec}{calculateAverageOccupancy}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00589\ \};}
+\DoxyCodeLine{00590\ }
+\DoxyCodeLine{00595\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_warehouse_adea40957a0fee758aaea44104951eae1}{Warehouse}}\ \{}
+\DoxyCodeLine{00596\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00597\ \ \ \ \ std::string\ warehouseId;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00598\ \ \ \ \ \doxymbox{\hyperlink{class_address}{Address}}\ location;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00599\ \ \ \ \ std::vector<Section>\ sections;\ }
+\DoxyCodeLine{00600\ \ \ \ \ \doxymbox{\hyperlink{class_stock}{Stock}}\ activeStock;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00601\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00607\ \ \ \ \ \doxymbox{\hyperlink{class_warehouse_adea40957a0fee758aaea44104951eae1}{Warehouse}}(std::string\ \textcolor{keywordtype}{id}\ =\ \textcolor{stringliteral}{"{}WH-\/01"{}},\ \doxymbox{\hyperlink{class_address}{Address}}\ addr\ =\ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}());}
+\DoxyCodeLine{00608\ }
+\DoxyCodeLine{00613\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_warehouse_ac5ef7f5697978767b61d27bb85b31368}{addSection}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_section}{Section}}\&\ section);}
+\DoxyCodeLine{00614\ }
+\DoxyCodeLine{00619\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_warehouse_a72c2b6bd500af41102ab3116114fe0ba}{receiveInventory}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_inventory_item}{InventoryItem}}\&\ item);}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00626\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_warehouse_aca272ac4ddf836ef8d43cdabee52a91b}{isLocatedInCity}}(\textcolor{keyword}{const}\ std::string\&\ city)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00632\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_warehouse_abb11098c37970b791d5d8781a2645d91}{evaluateTotalAssetValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00633\ \};}
+\DoxyCodeLine{00634\ }
+\DoxyCodeLine{00639\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_catalog_manager_a25f6a7df2607ead0009494963fb54f1c}{CatalogManager}}\ \{}
+\DoxyCodeLine{00640\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00641\ \ \ \ \ std::map<std::string,\ Book>\ books;\ \ \ \ }
+\DoxyCodeLine{00642\ \ \ \ \ std::vector<Author>\ featuredAuthors;\ \ }
+\DoxyCodeLine{00643\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00644\ \ \ \ \ \doxymbox{\hyperlink{class_catalog_manager_a25f6a7df2607ead0009494963fb54f1c}{CatalogManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00645\ }
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catalog_manager_ae906b58465360336579223c90f8f2360}{addBook}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00652\ }
+\DoxyCodeLine{00658\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catalog_manager_a71bbbf1fdf045ef1c4f5a4e4cb4cdabf}{removeBook}}(\textcolor{keyword}{const}\ std::string\&\ isbn);}
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00666\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\&\ \doxymbox{\hyperlink{class_catalog_manager_ad8360a306dcb1fc401ea112fb96d10ae}{getBook}}(\textcolor{keyword}{const}\ std::string\&\ isbn);}
+\DoxyCodeLine{00667\ }
+\DoxyCodeLine{00674\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ \doxymbox{\hyperlink{class_catalog_manager_ad8360a306dcb1fc401ea112fb96d10ae}{getBook}}(\textcolor{keyword}{const}\ std::string\&\ isbn)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00681\ \ \ \ \ std::vector<Book>\ \doxymbox{\hyperlink{class_catalog_manager_adddfdbf663dfcd8958ae64952f595b59}{searchByAuthor}}(\textcolor{keyword}{const}\ std::string\&\ authorName)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00682\ }
+\DoxyCodeLine{00687\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_catalog_manager_a8f2aa552369fc73022aec5316dccb33b}{registerFeaturedAuthor}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_author}{Author}}\&\ author);}
+\DoxyCodeLine{00688\ }
+\DoxyCodeLine{00693\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_catalog_manager_aa38a51710e97abf6066d2173525936e9}{getBookCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ books.size();\ \}}
+\DoxyCodeLine{00694\ \};}
+\DoxyCodeLine{00695\ }
+\DoxyCodeLine{00696\ \textcolor{keyword}{using\ }\doxymbox{\hyperlink{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}{Catalog}}\ =\ \doxymbox{\hyperlink{class_catalog_manager}{CatalogManager}};}
+
+\end{DoxyCode}

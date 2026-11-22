@@ -1,0 +1,122 @@
+\doxysection{Order\+Item Class Reference}
+\hypertarget{class_order_item}{}\label{class_order_item}\index{OrderItem@{OrderItem}}
+
+
+Represents a single line item (\doxylink{class_book}{Book} + quantity + unit price) within an \doxylink{class_order}{Order}.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_order_item_af869e0f57e7e144d4c78ee7348370241}{Order\+Item}} (const \doxymbox{\hyperlink{class_book}{Book}} \&book, int qty=1)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_order_item}{Order\+Item} with positive quantity validation. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_order_item_aa819420697e2692c8f1fc4a5e48ace68}{calculate\+Subtotal}} () const
+\begin{DoxyCompactList}\small\item\em Calculates line subtotal (unit\+Price \texorpdfstring{$\ast$}{*} quantity). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_order_item_abfd7d5d77ff54761e475d1b67426543a}{change\+Quantity}} (int new\+Qty)
+\begin{DoxyCompactList}\small\item\em Updates the ordered quantity for this line item. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_order_item_a86a2145914f8035ac69ddc5845d25fa4}{matches\+Isbn}} (const std::\+string \&isbn) const
+\begin{DoxyCompactList}\small\item\em Checks whether this line item corresponds to a specific ISBN. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_book}{Book}} \doxymbox{\hyperlink{class_order_item_a18fb4e7176349287f6f131bb093a29c0}{get\+Book}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single line item (\doxylink{class_book}{Book} + quantity + unit price) within an \doxylink{class_order}{Order}. 
+
+\label{class_order_item_doc-constructors}
+\Hypertarget{class_order_item_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_item_af869e0f57e7e144d4c78ee7348370241}\index{OrderItem@{OrderItem}!OrderItem@{OrderItem}}
+\index{OrderItem@{OrderItem}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{OrderItem()}{OrderItem()}}
+{\footnotesize\ttfamily \label{class_order_item_af869e0f57e7e144d4c78ee7348370241} 
+Order\+Item::\+\+Order\+Item (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{book}{, }\item[{int}]{qty}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_order_item}{Order\+Item} with positive quantity validation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & \doxylink{class_book}{Book} being ordered. \\
+\hline
+{\em qty} & Quantity (must be \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if qty \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_order_item_doc-func-members}
+\Hypertarget{class_order_item_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_item_aa819420697e2692c8f1fc4a5e48ace68}\index{OrderItem@{OrderItem}!calculateSubtotal@{calculateSubtotal}}
+\index{calculateSubtotal@{calculateSubtotal}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{calculateSubtotal()}{calculateSubtotal()}}
+{\footnotesize\ttfamily \label{class_order_item_aa819420697e2692c8f1fc4a5e48ace68} 
+double Order\+Item::\+calculate\+Subtotal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates line subtotal (unit\+Price \texorpdfstring{$\ast$}{*} quantity). 
+
+\begin{DoxyReturn}{Returns}
+Subtotal amount. 
+\end{DoxyReturn}
+\Hypertarget{class_order_item_abfd7d5d77ff54761e475d1b67426543a}\index{OrderItem@{OrderItem}!changeQuantity@{changeQuantity}}
+\index{changeQuantity@{changeQuantity}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{changeQuantity()}{changeQuantity()}}
+{\footnotesize\ttfamily \label{class_order_item_abfd7d5d77ff54761e475d1b67426543a} 
+void Order\+Item::\+change\+Quantity (\begin{DoxyParamCaption}\item[{int}]{new\+Qty}{}\end{DoxyParamCaption})}
+
+
+
+Updates the ordered quantity for this line item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Qty} & New positive quantity. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if new\+Qty \texorpdfstring{$<$}{<}= 0. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_order_item_a18fb4e7176349287f6f131bb093a29c0}\index{OrderItem@{OrderItem}!getBook@{getBook}}
+\index{getBook@{getBook}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{getBook()}{getBook()}}
+{\footnotesize\ttfamily \label{class_order_item_a18fb4e7176349287f6f131bb093a29c0} 
+\doxymbox{\hyperlink{class_book}{Book}} Order\+Item::\+get\+Book (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_order_item_a86a2145914f8035ac69ddc5845d25fa4}\index{OrderItem@{OrderItem}!matchesIsbn@{matchesIsbn}}
+\index{matchesIsbn@{matchesIsbn}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{matchesIsbn()}{matchesIsbn()}}
+{\footnotesize\ttfamily \label{class_order_item_a86a2145914f8035ac69ddc5845d25fa4} 
+bool Order\+Item::\+matches\+Isbn (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{isbn}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether this line item corresponds to a specific ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & ISBN string to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if book ISBN matches. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

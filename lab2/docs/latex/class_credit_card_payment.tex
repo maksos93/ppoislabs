@@ -1,0 +1,136 @@
+\doxysection{Credit\+Card\+Payment Class Reference}
+\hypertarget{class_credit_card_payment}{}\label{class_credit_card_payment}\index{CreditCardPayment@{CreditCardPayment}}
+
+
+\doxylink{class_payment}{Payment} implementation using a credit card with available credit limit verification.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+Inheritance diagram for Credit\+Card\+Payment:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_credit_card_payment}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_credit_card_payment_aa43825e8126d4a31661ccba15823b5e9}{Credit\+Card\+Payment}} (std::\+string tx\+Id, double amount, std::\+string card, std::\+string exp, double credit)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_credit_card_payment}{Credit\+Card\+Payment}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_credit_card_payment_af3d7d3a311d75b94601a41688c49228d}{verify\+Card\+Expiry}} (int current\+Year) const
+\begin{DoxyCompactList}\small\item\em Verifies card expiration against the current year. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_credit_card_payment_af47989555373faea2a8e94bcd0ce1287}{process\+Payment}} (\doxymbox{\hyperlink{class_invoice}{Invoice}} \&invoice) override
+\begin{DoxyCompactList}\small\item\em Charges the credit card limit and settles the \doxylink{class_invoice}{Invoice}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_payment}{Payment}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}} (std::\+string tx\+Id="{}TX-\/000"{}, double amount=0.\+0, std::\+string currency="{}USD"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_payment}{Payment} transaction. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_payment_ac63639c11cc30a8f91473d174e9657a9}{\texorpdfstring{$\sim$}{\string~}\+Payment}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic payment methods. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_payment_ae34cc9de1f4351cb8ecdf864df4dfe2a}{refund\+Payment}} ()
+\begin{DoxyCompactList}\small\item\em Reverts the payment completion status for refunds. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_payment_a220b6f3e4ed68db12cabeea31cb6c9b8}{is\+Completed}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_payment}{Payment}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_payment_a85e4a58460cd17ea52ebbb56d045a646}{transaction\+Id}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_payment}{Payment} gateway transaction ID. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_payment}{Payment} amount. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_payment_a6ec74d11aef140509d105e23c325797c}{currency}}
+\begin{DoxyCompactList}\small\item\em Three-\/letter currency code. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_payment_a1c73d2aed5aee42bf4b9019d8fc22f63}{completed}}
+\begin{DoxyCompactList}\small\item\em Completion status flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_payment}{Payment} implementation using a credit card with available credit limit verification. 
+
+\label{class_credit_card_payment_doc-constructors}
+\Hypertarget{class_credit_card_payment_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_credit_card_payment_aa43825e8126d4a31661ccba15823b5e9}\index{CreditCardPayment@{CreditCardPayment}!CreditCardPayment@{CreditCardPayment}}
+\index{CreditCardPayment@{CreditCardPayment}!CreditCardPayment@{CreditCardPayment}}
+\doxysubsubsection{\texorpdfstring{CreditCardPayment()}{CreditCardPayment()}}
+{\footnotesize\ttfamily \label{class_credit_card_payment_aa43825e8126d4a31661ccba15823b5e9} 
+Credit\+Card\+Payment::\+\+Credit\+Card\+Payment (\begin{DoxyParamCaption}\item[{std::\+string}]{tx\+Id}{, }\item[{double}]{amount}{, }\item[{std::\+string}]{card}{, }\item[{std::\+string}]{exp}{, }\item[{double}]{credit}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_credit_card_payment}{Credit\+Card\+Payment}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+Id} & Transaction ID. \\
+\hline
+{\em amount} & \doxylink{class_payment}{Payment} amount. \\
+\hline
+{\em card} & Masked card number. \\
+\hline
+{\em exp} & Expiration date. \\
+\hline
+{\em credit} & Available credit limit. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_credit_card_payment_doc-func-members}
+\Hypertarget{class_credit_card_payment_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_credit_card_payment_af47989555373faea2a8e94bcd0ce1287}\index{CreditCardPayment@{CreditCardPayment}!processPayment@{processPayment}}
+\index{processPayment@{processPayment}!CreditCardPayment@{CreditCardPayment}}
+\doxysubsubsection{\texorpdfstring{processPayment()}{processPayment()}}
+{\footnotesize\ttfamily \label{class_credit_card_payment_af47989555373faea2a8e94bcd0ce1287} 
+bool Credit\+Card\+Payment::\+process\+Payment (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_invoice}{Invoice}} \&}]{invoice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Charges the credit card limit and settles the \doxylink{class_invoice}{Invoice}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invoice} & \doxylink{class_invoice}{Invoice} to pay. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if charged successfully. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception}} & if available\+Credit \texorpdfstring{$<$}{<} invoice grand total. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_payment_a44996dfc42dbd43b3cbff4467bb044db}{Payment}}.
+
+\Hypertarget{class_credit_card_payment_af3d7d3a311d75b94601a41688c49228d}\index{CreditCardPayment@{CreditCardPayment}!verifyCardExpiry@{verifyCardExpiry}}
+\index{verifyCardExpiry@{verifyCardExpiry}!CreditCardPayment@{CreditCardPayment}}
+\doxysubsubsection{\texorpdfstring{verifyCardExpiry()}{verifyCardExpiry()}}
+{\footnotesize\ttfamily \label{class_credit_card_payment_af3d7d3a311d75b94601a41688c49228d} 
+bool Credit\+Card\+Payment::\+verify\+Card\+Expiry (\begin{DoxyParamCaption}\item[{int}]{current\+Year}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifies card expiration against the current year. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Year} & Current calendar year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if card is not expired. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

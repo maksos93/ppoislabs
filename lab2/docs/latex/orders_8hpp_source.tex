@@ -1,0 +1,175 @@
+\doxysection{orders.\+hpp}
+\hypertarget{orders_8hpp_source}{}\label{orders_8hpp_source}\index{include/orders.hpp@{include/orders.hpp}}
+\doxymbox{\hyperlink{orders_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{book_8hpp}{book.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{users_8hpp}{users.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_order_item_af869e0f57e7e144d4c78ee7348370241}{OrderItem}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\ book;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ quantity;\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ unitPrice;\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \doxymbox{\hyperlink{class_order_item_af869e0f57e7e144d4c78ee7348370241}{OrderItem}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book,\ \textcolor{keywordtype}{int}\ qty\ =\ 1);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_order_item_aa819420697e2692c8f1fc4a5e48ace68}{calculateSubtotal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_order_item_abfd7d5d77ff54761e475d1b67426543a}{changeQuantity}}(\textcolor{keywordtype}{int}\ newQty);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_order_item_a86a2145914f8035ac69ddc5845d25fa4}{matchesIsbn}}(\textcolor{keyword}{const}\ std::string\&\ isbn)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\ \doxymbox{\hyperlink{class_order_item_a18fb4e7176349287f6f131bb093a29c0}{getBook}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ book;\ \}}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_discount_a500810016a61f4640e7f07c36eca9dd9}{Discount}}\ \{}
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ std::string\ code;\ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{double}\ percentage;\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ minOrderAmount;\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ \doxymbox{\hyperlink{class_discount_a500810016a61f4640e7f07c36eca9dd9}{Discount}}(std::string\ code\ =\ \textcolor{stringliteral}{"{}NONE"{}},\ \textcolor{keywordtype}{double}\ pct\ =\ 0.0,\ \textcolor{keywordtype}{double}\ minAmount\ =\ 0.0);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_discount_aff6f0183fd97080091a432f1e73b3631}{isApplicable}}(\textcolor{keywordtype}{double}\ orderTotal)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_discount_aeb52d5b1b3f4f00c33d2a5a0be3795a4}{computeSavings}}(\textcolor{keywordtype}{double}\ orderTotal)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_discount_ae866609b6502da9e17968fbdc3128a68}{getCode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ code;\ \}}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_promotion_ae07a66b33c251159445e5cbaf2dce54c}{Promotion}}\ \{}
+\DoxyCodeLine{00095\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00096\ \ \ \ \ std::string\ campaignName;\ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \doxymbox{\hyperlink{class_discount}{Discount}}\ attachedDiscount;\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{bool}\ active;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}\ usageLimit;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00108\ \ \ \ \ \doxymbox{\hyperlink{class_promotion_ae07a66b33c251159445e5cbaf2dce54c}{Promotion}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}Seasonal"{}},\ \doxymbox{\hyperlink{class_discount}{Discount}}\ disc\ =\ \doxymbox{\hyperlink{class_discount_a500810016a61f4640e7f07c36eca9dd9}{Discount}}(),\ \textcolor{keywordtype}{bool}\ active\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{int}\ limit\ =\ 100);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_promotion_a6078fba6bb0f389e56d1b395f15523b5}{applyPromotion}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_promotion_ac8de8261056ca38a4464f7f6b657d99e}{deactivateCampaign}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_promotion_a6692cd1cb67fcfa35f2fddb50a4e3249}{hasRemainingQuota}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_order_a4ace726aeacf24b1f6952786d72efe9d}{Order}}\ \{}
+\DoxyCodeLine{00134\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ orderId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \doxymbox{\hyperlink{class_user}{User}}\ customer;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ std::vector<OrderItem>\ items;\ }
+\DoxyCodeLine{00138\ \ \ \ \ std::string\ status;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{double}\ discountAmount;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00140\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00146\ \ \ \ \ \doxymbox{\hyperlink{class_order_a4ace726aeacf24b1f6952786d72efe9d}{Order}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 1,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_user}{User}}\&\ customer\ =\ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}());}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_order_a0a1e04e5e0739de062cf59128e55ae6f}{getOrderId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ orderId;\ \}}
+\DoxyCodeLine{00149\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_order_abababdc3b90d482d807766e5fbad5100}{getStatus}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ status;\ \}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_order_aec20832a5ff4edc2c02e75fd9f500bbe}{addItem}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_order_ab9b3ca002f5cc70cdd5003f3b3db52f2}{applyDiscount}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_discount}{Discount}}\&\ discount);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_order_aeb00ef146206a1bc181ba69e4a6bda0e}{calculateTotal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_order_ace0a59d1e9ec42a028d67706336c1268}{confirmOrder}}();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_order_a9bd686646dbea1b257c6f7ed906e1916}{cancelOrder}}();}
+\DoxyCodeLine{00182\ \};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00188\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_invoice_a5545cee62099af50011a501b0b7844f3}{Invoice}}\ \{}
+\DoxyCodeLine{00189\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00190\ \ \ \ \ std::string\ invoiceNumber;\ }
+\DoxyCodeLine{00191\ \ \ \ \ \doxymbox{\hyperlink{class_order}{Order}}\ order;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{double}\ taxRate;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{bool}\ paid;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00201\ \ \ \ \ \doxymbox{\hyperlink{class_invoice_a5545cee62099af50011a501b0b7844f3}{Invoice}}(std::string\ number\ =\ \textcolor{stringliteral}{"{}INV-\/001"{}},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order\ =\ \doxymbox{\hyperlink{class_order_a4ace726aeacf24b1f6952786d72efe9d}{Order}}(),\ \textcolor{keywordtype}{double}\ tax\ =\ 0.20);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_invoice_ab472426eb7018c5b7d0b9f3e0e18efab}{calculateTaxAmount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_invoice_a1d0c4a6025cb57fbe902d5acd5fca3be}{calculateGrandTotal}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_invoice_a725a7aeb7ae3486c3bfec76a92df230d}{markAsPaid}}();}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_invoice_a9398e4c8ea2ee8598855818c7255d140}{isPaid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ paid;\ \}}
+\DoxyCodeLine{00221\ \};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}}\ \{}
+\DoxyCodeLine{00228\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00229\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_payment_a85e4a58460cd17ea52ebbb56d045a646}{transactionId}};\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00231\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_payment_a6ec74d11aef140509d105e23c325797c}{currency}};\ \ \ \ \ \ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_payment_a1c73d2aed5aee42bf4b9019d8fc22f63}{completed}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00233\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00240\ \ \ \ \ \doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}}(std::string\ txId\ =\ \textcolor{stringliteral}{"{}TX-\/000"{}},\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}}\ =\ 0.0,\ std::string\ \doxymbox{\hyperlink{class_payment_a6ec74d11aef140509d105e23c325797c}{currency}}\ =\ \textcolor{stringliteral}{"{}USD"{}});}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_payment_ac63639c11cc30a8f91473d174e9657a9}{\string~Payment}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_payment_a44996dfc42dbd43b3cbff4467bb044db}{processPayment}}(\doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice);}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_payment_ae34cc9de1f4351cb8ecdf864df4dfe2a}{refundPayment}}();}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_payment_a220b6f3e4ed68db12cabeea31cb6c9b8}{isCompleted}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_payment_a1c73d2aed5aee42bf4b9019d8fc22f63}{completed}};\ \}}
+\DoxyCodeLine{00261\ \};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00267\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_credit_card_payment_aa43825e8126d4a31661ccba15823b5e9}{CreditCardPayment}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}}\ \{}
+\DoxyCodeLine{00268\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00269\ \ \ \ \ std::string\ maskedCardNumber;\ }
+\DoxyCodeLine{00270\ \ \ \ \ std::string\ expiryDate;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{double}\ availableCredit;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00281\ \ \ \ \ \doxymbox{\hyperlink{class_credit_card_payment_aa43825e8126d4a31661ccba15823b5e9}{CreditCardPayment}}(std::string\ txId,\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}},\ std::string\ card,\ std::string\ exp,\ \textcolor{keywordtype}{double}\ credit);}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_credit_card_payment_af3d7d3a311d75b94601a41688c49228d}{verifyCardExpiry}}(\textcolor{keywordtype}{int}\ currentYear)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_credit_card_payment_af47989555373faea2a8e94bcd0ce1287}{processPayment}}(\doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00297\ \};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00303\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_cash_payment_a61bab7692b874110a52158109a1ef0e2}{CashPayment}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}}\ \{}
+\DoxyCodeLine{00304\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{double}\ cashTendered;\ \ \ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordtype}{double}\ changeReturned;\ }
+\DoxyCodeLine{00307\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00314\ \ \ \ \ \doxymbox{\hyperlink{class_cash_payment_a61bab7692b874110a52158109a1ef0e2}{CashPayment}}(std::string\ txId,\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}},\ \textcolor{keywordtype}{double}\ tendered);}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_cash_payment_a41037cd0b800b8a3e962904a6f845405}{calculateChange}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_cash_payment_a307cf1041f7987796598f0644453286e}{processPayment}}(\doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00329\ \};}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00335\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_pay_pal_payment_aa8b9138408cbb22b00f2b75aeec9378b}{PayPalPayment}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_payment_abab0594175d0ae054f7d30f8e2561675}{Payment}}\ \{}
+\DoxyCodeLine{00336\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00337\ \ \ \ \ std::string\ payerEmail;\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordtype}{bool}\ twoFactorVerified;\ }
+\DoxyCodeLine{00339\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00347\ \ \ \ \ \doxymbox{\hyperlink{class_pay_pal_payment_aa8b9138408cbb22b00f2b75aeec9378b}{PayPalPayment}}(std::string\ txId,\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_payment_ab21353668e0057522fc33fabfbaabf05}{amount}},\ std::string\ email,\ \textcolor{keywordtype}{bool}\ verified);}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00353\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pay_pal_payment_a505d389f19a03c13c328ed18e51fbe16}{verifyAccountSecurity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00362\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pay_pal_payment_a041e5e0cdd1f3c3d22e1e26f642c270d}{processPayment}}(\doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00363\ \};}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00369\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_transaction_manager_ac5ced818a8f63f5981ab0e1e2dbf2e5c}{TransactionManager}}\ \{}
+\DoxyCodeLine{00370\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00371\ \ \ \ \ std::vector<Invoice>\ invoices;\ }
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{double}\ totalRevenue;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00373\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00374\ \ \ \ \ \doxymbox{\hyperlink{class_transaction_manager_ac5ced818a8f63f5981ab0e1e2dbf2e5c}{TransactionManager}}();}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_transaction_manager_ae79a75b0f52f28314d975c8d57ca039e}{registerInvoice}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice);}
+\DoxyCodeLine{00381\ }
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_transaction_manager_a895f6bf1586d66df28da1bb0117b9ee4}{settleOrderPayment}}(\doxymbox{\hyperlink{class_order}{Order}}\&\ order,\ \doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice,\ \doxymbox{\hyperlink{class_payment}{Payment}}\&\ payment);}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_transaction_manager_a15f69a8d4af7f21d7e4b7190c7daa227}{getTotalRevenue}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ totalRevenue;\ \}}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_transaction_manager_a822a98ded613f90b72859e26fe455058}{countPaidInvoices}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00398\ \};}
+
+\end{DoxyCode}

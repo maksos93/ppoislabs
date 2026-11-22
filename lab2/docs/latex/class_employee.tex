@@ -1,0 +1,222 @@
+\doxysection{Employee Class Reference}
+\hypertarget{class_employee}{}\label{class_employee}\index{Employee@{Employee}}
+
+
+Base class representing a staff member with role, salary, and home address.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+Inheritance diagram for Employee:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_employee}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}} (int id=1, std::\+string name="{}Staff"{}, std::\+string role="{}General"{}, double salary=2000.\+0, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_employee}{Employee} record. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}{\texorpdfstring{$\sim$}{\string~}\+Employee}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for staff hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_employee_adc96c05f46592d40685154159f1f6520}{get\+Employee\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf}{get\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc}{get\+Role}} () const
+\item 
+void \doxymbox{\hyperlink{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa}{promote}} (const std::\+string \&new\+Role, double raise\+Amount)
+\begin{DoxyCompactList}\small\item\em Updates the employee\textquotesingle{}s role and applies a salary raise. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_a984a6803bd2f5564874f0d2b372754c4}{calculate\+Annual\+Compensation}} () const
+\begin{DoxyCompactList}\small\item\em Calculates annual gross compensation (base\+Salary \texorpdfstring{$\ast$}{*} 12). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_employee_af7f827037017807c93e8b5b43a160c45}{authorize\+Action}} (const std::\+string \&required\+Role) const
+\begin{DoxyCompactList}\small\item\em Checks whether the employee is authorized for a required role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}{employee\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique staff ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_employee}{Employee} full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}}
+\begin{DoxyCompactList}\small\item\em Job title / role. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_ab01497423d689ff200f66bdb47639286}{base\+Salary}}
+\begin{DoxyCompactList}\small\item\em Monthly base salary. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_employee_afb986057b9e105b46ad781c3feb7a645}{home\+Address}}
+\begin{DoxyCompactList}\small\item\em Residential address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a staff member with role, salary, and home address. 
+
+\label{class_employee_doc-constructors}
+\Hypertarget{class_employee_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_employee_a561a7548dc90a90a6152628768d728ed}\index{Employee@{Employee}!Employee@{Employee}}
+\index{Employee@{Employee}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{Employee()}{Employee()}}
+{\footnotesize\ttfamily \label{class_employee_a561a7548dc90a90a6152628768d728ed} 
+Employee::\+\+Employee (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 1}, }\item[{std::\+string}]{name}{ = {\ttfamily "{}Staff"{}}, }\item[{std::\+string}]{role}{ = {\ttfamily "{}General"{}}, }\item[{double}]{salary}{ = {\ttfamily 2000.0}, }\item[{\doxymbox{\hyperlink{class_address}{Address}}}]{addr}{ = {\ttfamily \doxymbox{\hyperlink{class_address}{Address}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_employee}{Employee} record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{class_employee}{Employee} ID. \\
+\hline
+{\em name} & Full name. \\
+\hline
+{\em role} & Job role. \\
+\hline
+{\em salary} & Monthly salary. \\
+\hline
+{\em addr} & Home \doxylink{class_address}{Address}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}\index{Employee@{Employee}!````~Employee@{\texorpdfstring{$\sim$}{\string~}Employee}}
+\index{````~Employee@{\texorpdfstring{$\sim$}{\string~}Employee}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Employee()}{\string~Employee()}}
+{\footnotesize\ttfamily \label{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1} 
+virtual Employee::\+\texorpdfstring{$\sim$}{\string~}\+Employee (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for staff hierarchy. 
+
+
+
+\label{class_employee_doc-func-members}
+\Hypertarget{class_employee_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_employee_af7f827037017807c93e8b5b43a160c45}\index{Employee@{Employee}!authorizeAction@{authorizeAction}}
+\index{authorizeAction@{authorizeAction}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{authorizeAction()}{authorizeAction()}}
+{\footnotesize\ttfamily \label{class_employee_af7f827037017807c93e8b5b43a160c45} 
+bool Employee::\+authorize\+Action (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{required\+Role}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the employee is authorized for a required role. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em required\+Role} & Role needed for the action. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if employee role matches or is "{}\+Administrator"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_employee_a984a6803bd2f5564874f0d2b372754c4}\index{Employee@{Employee}!calculateAnnualCompensation@{calculateAnnualCompensation}}
+\index{calculateAnnualCompensation@{calculateAnnualCompensation}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{calculateAnnualCompensation()}{calculateAnnualCompensation()}}
+{\footnotesize\ttfamily \label{class_employee_a984a6803bd2f5564874f0d2b372754c4} 
+double Employee::\+calculate\+Annual\+Compensation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates annual gross compensation (base\+Salary \texorpdfstring{$\ast$}{*} 12). 
+
+\begin{DoxyReturn}{Returns}
+Annual salary. 
+\end{DoxyReturn}
+\Hypertarget{class_employee_adc96c05f46592d40685154159f1f6520}\index{Employee@{Employee}!getEmployeeId@{getEmployeeId}}
+\index{getEmployeeId@{getEmployeeId}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getEmployeeId()}{getEmployeeId()}}
+{\footnotesize\ttfamily \label{class_employee_adc96c05f46592d40685154159f1f6520} 
+int Employee::\+get\+Employee\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf}\index{Employee@{Employee}!getName@{getName}}
+\index{getName@{getName}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf} 
+std::\+string Employee::\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc}\index{Employee@{Employee}!getRole@{getRole}}
+\index{getRole@{getRole}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{getRole()}{getRole()}}
+{\footnotesize\ttfamily \label{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc} 
+std::\+string Employee::\+get\+Role (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa}\index{Employee@{Employee}!promote@{promote}}
+\index{promote@{promote}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{promote()}{promote()}}
+{\footnotesize\ttfamily \label{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa} 
+void Employee::\+promote (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Role}{, }\item[{double}]{raise\+Amount}{}\end{DoxyParamCaption})}
+
+
+
+Updates the employee\textquotesingle{}s role and applies a salary raise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Role} & New job role. \\
+\hline
+{\em raise\+Amount} & Monthly raise increment (applied if \texorpdfstring{$>$}{>} 0). \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_employee_doc-variable-members}
+\Hypertarget{class_employee_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_employee_ab01497423d689ff200f66bdb47639286}\index{Employee@{Employee}!baseSalary@{baseSalary}}
+\index{baseSalary@{baseSalary}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{baseSalary}{baseSalary}}
+{\footnotesize\ttfamily \label{class_employee_ab01497423d689ff200f66bdb47639286} 
+double Employee::\+base\+Salary\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Monthly base salary. 
+
+\Hypertarget{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}\index{Employee@{Employee}!employeeId@{employeeId}}
+\index{employeeId@{employeeId}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{employeeId}{employeeId}}
+{\footnotesize\ttfamily \label{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534} 
+int Employee::\+employee\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Unique staff ID. 
+
+\Hypertarget{class_employee_afb986057b9e105b46ad781c3feb7a645}\index{Employee@{Employee}!homeAddress@{homeAddress}}
+\index{homeAddress@{homeAddress}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{homeAddress}{homeAddress}}
+{\footnotesize\ttfamily \label{class_employee_afb986057b9e105b46ad781c3feb7a645} 
+\doxymbox{\hyperlink{class_address}{Address}} Employee::\+home\+Address\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Residential address. 
+
+\Hypertarget{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}\index{Employee@{Employee}!name@{name}}
+\index{name@{name}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_employee_a3ba103222f2451bf4d34c05ca28a1bed} 
+std::\+string Employee::\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_employee}{Employee} full name. 
+
+\Hypertarget{class_employee_a3d82032c7d5e923b168d7d97770809f6}\index{Employee@{Employee}!role@{role}}
+\index{role@{role}!Employee@{Employee}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily \label{class_employee_a3d82032c7d5e923b168d7d97770809f6} 
+std::\+string Employee::\+role\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Job title / role. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

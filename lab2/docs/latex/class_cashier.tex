@@ -1,0 +1,135 @@
+\doxysection{Cashier Class Reference}
+\hypertarget{class_cashier}{}\label{class_cashier}\index{Cashier@{Cashier}}
+
+
+Bookstore point-\/of-\/sale operator managing register drawer balance.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+Inheritance diagram for Cashier:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cashier}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cashier_a9d18d0366a1b5c1527886b6584b45c07}{Cashier}} (const \doxymbox{\hyperlink{class_employee}{Employee}} \&base, int reg\+Num=1, double opening\+Float=200.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_cashier}{Cashier} from a base \doxylink{class_employee}{Employee}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cashier_adb60421fac64b3b58f3c5842ce26103b}{record\+Cash\+Sale}} (double amount)
+\begin{DoxyCompactList}\small\item\em Records a cash sale into the register drawer. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_cashier_a6a082a074fc552be11b8bcc0b5322752}{close\+Shift\+Reconciliation}} (double counted\+Cash) const
+\begin{DoxyCompactList}\small\item\em Computes cash variance at shift close (counted\+Cash -\/ drawer\+Balance). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_employee}{Employee}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}} (int id=1, std::\+string name="{}Staff"{}, std::\+string role="{}General"{}, double salary=2000.\+0, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_employee}{Employee} record. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}{\texorpdfstring{$\sim$}{\string~}\+Employee}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for staff hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_employee_adc96c05f46592d40685154159f1f6520}{get\+Employee\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf}{get\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc}{get\+Role}} () const
+\item 
+void \doxymbox{\hyperlink{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa}{promote}} (const std::\+string \&new\+Role, double raise\+Amount)
+\begin{DoxyCompactList}\small\item\em Updates the employee\textquotesingle{}s role and applies a salary raise. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_a984a6803bd2f5564874f0d2b372754c4}{calculate\+Annual\+Compensation}} () const
+\begin{DoxyCompactList}\small\item\em Calculates annual gross compensation (base\+Salary \texorpdfstring{$\ast$}{*} 12). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_employee_af7f827037017807c93e8b5b43a160c45}{authorize\+Action}} (const std::\+string \&required\+Role) const
+\begin{DoxyCompactList}\small\item\em Checks whether the employee is authorized for a required role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_employee}{Employee}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}{employee\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique staff ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_employee}{Employee} full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}}
+\begin{DoxyCompactList}\small\item\em Job title / role. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_ab01497423d689ff200f66bdb47639286}{base\+Salary}}
+\begin{DoxyCompactList}\small\item\em Monthly base salary. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_employee_afb986057b9e105b46ad781c3feb7a645}{home\+Address}}
+\begin{DoxyCompactList}\small\item\em Residential address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bookstore point-\/of-\/sale operator managing register drawer balance. 
+
+\label{class_cashier_doc-constructors}
+\Hypertarget{class_cashier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cashier_a9d18d0366a1b5c1527886b6584b45c07}\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\index{Cashier@{Cashier}!Cashier@{Cashier}}
+\doxysubsubsection{\texorpdfstring{Cashier()}{Cashier()}}
+{\footnotesize\ttfamily \label{class_cashier_a9d18d0366a1b5c1527886b6584b45c07} 
+Cashier::\+\+Cashier (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_employee}{Employee}} \&}]{base}{, }\item[{int}]{reg\+Num}{ = {\ttfamily 1}, }\item[{double}]{opening\+Float}{ = {\ttfamily 200.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_cashier}{Cashier} from a base \doxylink{class_employee}{Employee}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_employee}{Employee} profile. \\
+\hline
+{\em reg\+Num} & Register number. \\
+\hline
+{\em opening\+Float} & Initial cash float in drawer. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_cashier_doc-func-members}
+\Hypertarget{class_cashier_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cashier_a6a082a074fc552be11b8bcc0b5322752}\index{Cashier@{Cashier}!closeShiftReconciliation@{closeShiftReconciliation}}
+\index{closeShiftReconciliation@{closeShiftReconciliation}!Cashier@{Cashier}}
+\doxysubsubsection{\texorpdfstring{closeShiftReconciliation()}{closeShiftReconciliation()}}
+{\footnotesize\ttfamily \label{class_cashier_a6a082a074fc552be11b8bcc0b5322752} 
+double Cashier::\+close\+Shift\+Reconciliation (\begin{DoxyParamCaption}\item[{double}]{counted\+Cash}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes cash variance at shift close (counted\+Cash -\/ drawer\+Balance). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counted\+Cash} & Actual physical cash counted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Over/\+short difference. 
+\end{DoxyReturn}
+\Hypertarget{class_cashier_adb60421fac64b3b58f3c5842ce26103b}\index{Cashier@{Cashier}!recordCashSale@{recordCashSale}}
+\index{recordCashSale@{recordCashSale}!Cashier@{Cashier}}
+\doxysubsubsection{\texorpdfstring{recordCashSale()}{recordCashSale()}}
+{\footnotesize\ttfamily \label{class_cashier_adb60421fac64b3b58f3c5842ce26103b} 
+void Cashier::\+record\+Cash\+Sale (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Records a cash sale into the register drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Sale amount (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_payment_exception}{Invalid\+Payment\+Exception}} & if amount \texorpdfstring{$<$}{<} 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\doxysection{Section Class Reference}
+\hypertarget{class_section}{}\label{class_section}\index{Section@{Section}}
+
+
+Groups multiple \doxylink{class_shelf}{Shelf} units under a specific literary \doxylink{class_genre}{Genre} inside a warehouse or hall.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_section_aab313d4479272368ab472f59c4df9fc0}{Section}} (std::\+string name="{}Main"{}, \doxymbox{\hyperlink{class_genre}{Genre}} genre=\doxymbox{\hyperlink{class_genre}{Genre}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_section}{Section} with a name and assigned \doxylink{class_genre}{Genre}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_section_a8e02c23959801c4287acbb8de5578cf6}{add\+Shelf}} (const \doxymbox{\hyperlink{class_shelf}{Shelf}} \&shelf)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{class_shelf}{Shelf} to the section. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_section_a09d3eab6b35bdecd84b5d7b3b25a63ec}{calculate\+Average\+Occupancy}} () const
+\begin{DoxyCompactList}\small\item\em Computes the average occupancy rate across all shelves in the section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Groups multiple \doxylink{class_shelf}{Shelf} units under a specific literary \doxylink{class_genre}{Genre} inside a warehouse or hall. 
+
+\label{class_section_doc-constructors}
+\Hypertarget{class_section_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_section_aab313d4479272368ab472f59c4df9fc0}\index{Section@{Section}!Section@{Section}}
+\index{Section@{Section}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{Section()}{Section()}}
+{\footnotesize\ttfamily \label{class_section_aab313d4479272368ab472f59c4df9fc0} 
+Section::\+\+Section (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}Main"{}}, }\item[{\doxymbox{\hyperlink{class_genre}{Genre}}}]{genre}{ = {\ttfamily \doxymbox{\hyperlink{class_genre}{Genre}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_section}{Section} with a name and assigned \doxylink{class_genre}{Genre}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_section}{Section} name. \\
+\hline
+{\em genre} & Assigned \doxylink{class_genre}{Genre}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_section_doc-func-members}
+\Hypertarget{class_section_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_section_a8e02c23959801c4287acbb8de5578cf6}\index{Section@{Section}!addShelf@{addShelf}}
+\index{addShelf@{addShelf}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{addShelf()}{addShelf()}}
+{\footnotesize\ttfamily \label{class_section_a8e02c23959801c4287acbb8de5578cf6} 
+void Section::\+add\+Shelf (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_shelf}{Shelf}} \&}]{shelf}{}\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{class_shelf}{Shelf} to the section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shelf} & \doxylink{class_shelf}{Shelf} instance to append. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_section_a09d3eab6b35bdecd84b5d7b3b25a63ec}\index{Section@{Section}!calculateAverageOccupancy@{calculateAverageOccupancy}}
+\index{calculateAverageOccupancy@{calculateAverageOccupancy}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{calculateAverageOccupancy()}{calculateAverageOccupancy()}}
+{\footnotesize\ttfamily \label{class_section_a09d3eab6b35bdecd84b5d7b3b25a63ec} 
+double Section::\+calculate\+Average\+Occupancy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes the average occupancy rate across all shelves in the section. 
+
+\begin{DoxyReturn}{Returns}
+Average occupancy ratio (0.\+0 if no shelves exist). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\doxysection{Financial\+Auditor Class Reference}
+\hypertarget{class_financial_auditor}{}\label{class_financial_auditor}\index{FinancialAuditor@{FinancialAuditor}}
+
+
+Audits invoice accuracy against order totals and computes net profit margins.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_financial_auditor_a4deb8a8d9a445c2f9f3aa6d7819a745b}{Financial\+Auditor}} (std::\+string name="{}Audit\+Bot"{}, double tolerance=0.\+01)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_financial_auditor}{Financial\+Auditor}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_financial_auditor_aa27c7988fda97b1b1f19884b9e8fbdab}{verify\+Invoice\+Matches\+Order}} (const \doxymbox{\hyperlink{class_invoice}{Invoice}} \&invoice, const \doxymbox{\hyperlink{class_order}{Order}} \&order) const
+\begin{DoxyCompactList}\small\item\em Verifies that an \doxylink{class_invoice}{Invoice} grand total matches its \doxylink{class_order}{Order} total plus tax within tolerance. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_financial_auditor_ad816328fe166c22dbadf369f31e01095}{calculate\+Net\+Margin}} (double revenue, double expenses) const
+\begin{DoxyCompactList}\small\item\em Calculates net profit margin ratio ((revenue -\/ expenses) / revenue). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Audits invoice accuracy against order totals and computes net profit margins. 
+
+\label{class_financial_auditor_doc-constructors}
+\Hypertarget{class_financial_auditor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_financial_auditor_a4deb8a8d9a445c2f9f3aa6d7819a745b}\index{FinancialAuditor@{FinancialAuditor}!FinancialAuditor@{FinancialAuditor}}
+\index{FinancialAuditor@{FinancialAuditor}!FinancialAuditor@{FinancialAuditor}}
+\doxysubsubsection{\texorpdfstring{FinancialAuditor()}{FinancialAuditor()}}
+{\footnotesize\ttfamily \label{class_financial_auditor_a4deb8a8d9a445c2f9f3aa6d7819a745b} 
+Financial\+Auditor::\+\+Financial\+Auditor (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}AuditBot"{}}, }\item[{double}]{tolerance}{ = {\ttfamily 0.01}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_financial_auditor}{Financial\+Auditor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Auditor name. \\
+\hline
+{\em tolerance} & Maximum allowable rounding discrepancy. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_financial_auditor_doc-func-members}
+\Hypertarget{class_financial_auditor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_financial_auditor_ad816328fe166c22dbadf369f31e01095}\index{FinancialAuditor@{FinancialAuditor}!calculateNetMargin@{calculateNetMargin}}
+\index{calculateNetMargin@{calculateNetMargin}!FinancialAuditor@{FinancialAuditor}}
+\doxysubsubsection{\texorpdfstring{calculateNetMargin()}{calculateNetMargin()}}
+{\footnotesize\ttfamily \label{class_financial_auditor_ad816328fe166c22dbadf369f31e01095} 
+double Financial\+Auditor::\+calculate\+Net\+Margin (\begin{DoxyParamCaption}\item[{double}]{revenue}{, }\item[{double}]{expenses}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates net profit margin ratio ((revenue -\/ expenses) / revenue). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em revenue} & Total revenue. \\
+\hline
+{\em expenses} & Total expenses. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Net margin ratio (0.\+0 if revenue \texorpdfstring{$<$}{<}= 0). 
+\end{DoxyReturn}
+\Hypertarget{class_financial_auditor_aa27c7988fda97b1b1f19884b9e8fbdab}\index{FinancialAuditor@{FinancialAuditor}!verifyInvoiceMatchesOrder@{verifyInvoiceMatchesOrder}}
+\index{verifyInvoiceMatchesOrder@{verifyInvoiceMatchesOrder}!FinancialAuditor@{FinancialAuditor}}
+\doxysubsubsection{\texorpdfstring{verifyInvoiceMatchesOrder()}{verifyInvoiceMatchesOrder()}}
+{\footnotesize\ttfamily \label{class_financial_auditor_aa27c7988fda97b1b1f19884b9e8fbdab} 
+bool Financial\+Auditor::\+verify\+Invoice\+Matches\+Order (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_invoice}{Invoice}} \&}]{invoice}{, }\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifies that an \doxylink{class_invoice}{Invoice} grand total matches its \doxylink{class_order}{Order} total plus tax within tolerance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invoice} & \doxylink{class_invoice}{Invoice} to audit. \\
+\hline
+{\em order} & Underlying \doxylink{class_order}{Order}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if numbers reconcile within discrepancy\+Tolerance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

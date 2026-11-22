@@ -1,0 +1,38 @@
+\doxysection{include/\+users.hpp File Reference}
+\hypertarget{users_8hpp}{}\label{users_8hpp}\index{include/users.hpp@{include/users.hpp}}
+
+
+Users, Readers, Membership, and Loyalty management definitions.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}book.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}}
+\begin{DoxyCompactList}\small\item\em Stores communication channel preferences for a user account. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_user}{User}}
+\begin{DoxyCompactList}\small\item\em Base class representing a registered system user with contact info and preferences. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_membership_card}{Membership\+Card}}
+\begin{DoxyCompactList}\small\item\em Represents a library reader card governing active loans and suspension state. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_reader}{Reader}}
+\begin{DoxyCompactList}\small\item\em Represents a library patron capable of borrowing and returning books and paying fines. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_student}{Student}}
+\begin{DoxyCompactList}\small\item\em Specialized \doxylink{class_reader}{Reader} representing an enrolled university student eligible for fee discounts. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_professor}{Professor}}
+\begin{DoxyCompactList}\small\item\em Specialized \doxylink{class_reader}{Reader} representing faculty members with extended loan periods. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_loyalty_account}{Loyalty\+Account}}
+\begin{DoxyCompactList}\small\item\em Tracks reward points, tier status, and cumulative spend for bookstore customers. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_v_i_p_customer}{VIPCustomer}}
+\begin{DoxyCompactList}\small\item\em Premium bookstore customer with personal discount rate, loyalty account, and manager. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_guest}{Guest}}
+\begin{DoxyCompactList}\small\item\em Represents an unauthenticated visitor browsing the online catalog. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_user_registry}{User\+Registry}}
+\begin{DoxyCompactList}\small\item\em Manages registration, uniqueness validation, and lookup of system users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Users, Readers, Membership, and Loyalty management definitions. 
+

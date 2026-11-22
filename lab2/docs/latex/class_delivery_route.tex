@@ -1,0 +1,91 @@
+\doxysection{Delivery\+Route Class Reference}
+\hypertarget{class_delivery_route}{}\label{class_delivery_route}\index{DeliveryRoute@{DeliveryRoute}}
+
+
+Represents a multi-\/stop delivery route assigned to a \doxylink{class_courier}{Courier}.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_delivery_route_aece0f27d7fdc6b8c8712e1d0c79a5cc0}{Delivery\+Route}} (std::\+string code, const \doxymbox{\hyperlink{class_courier}{Courier}} \&courier, double km=15.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_delivery_route}{Delivery\+Route}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_delivery_route_af457ecf8d14a6d8887f0b3bd761280af}{add\+Stop}} (const \doxymbox{\hyperlink{class_address}{Address}} \&addr)
+\begin{DoxyCompactList}\small\item\em Appends a delivery stop \doxylink{class_address}{Address} to the route. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_delivery_route_ace423af68d0294d1ff95dc71592e6d60}{estimate\+Fuel\+Cost}} (double cost\+Per\+Km) const
+\begin{DoxyCompactList}\small\item\em Estimates fuel cost for the route given a per-\/kilometer rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a multi-\/stop delivery route assigned to a \doxylink{class_courier}{Courier}. 
+
+\label{class_delivery_route_doc-constructors}
+\Hypertarget{class_delivery_route_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_delivery_route_aece0f27d7fdc6b8c8712e1d0c79a5cc0}\index{DeliveryRoute@{DeliveryRoute}!DeliveryRoute@{DeliveryRoute}}
+\index{DeliveryRoute@{DeliveryRoute}!DeliveryRoute@{DeliveryRoute}}
+\doxysubsubsection{\texorpdfstring{DeliveryRoute()}{DeliveryRoute()}}
+{\footnotesize\ttfamily \label{class_delivery_route_aece0f27d7fdc6b8c8712e1d0c79a5cc0} 
+Delivery\+Route::\+\+Delivery\+Route (\begin{DoxyParamCaption}\item[{std::\+string}]{code}{, }\item[{const \doxymbox{\hyperlink{class_courier}{Courier}} \&}]{courier}{, }\item[{double}]{km}{ = {\ttfamily 15.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_delivery_route}{Delivery\+Route}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Route identifier. \\
+\hline
+{\em courier} & Assigned \doxylink{class_courier}{Courier}. \\
+\hline
+{\em km} & Estimated distance in km. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_delivery_route_doc-func-members}
+\Hypertarget{class_delivery_route_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_delivery_route_af457ecf8d14a6d8887f0b3bd761280af}\index{DeliveryRoute@{DeliveryRoute}!addStop@{addStop}}
+\index{addStop@{addStop}!DeliveryRoute@{DeliveryRoute}}
+\doxysubsubsection{\texorpdfstring{addStop()}{addStop()}}
+{\footnotesize\ttfamily \label{class_delivery_route_af457ecf8d14a6d8887f0b3bd761280af} 
+void Delivery\+Route::\+add\+Stop (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_address}{Address}} \&}]{addr}{}\end{DoxyParamCaption})}
+
+
+
+Appends a delivery stop \doxylink{class_address}{Address} to the route. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & Stop address. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_delivery_route_ace423af68d0294d1ff95dc71592e6d60}\index{DeliveryRoute@{DeliveryRoute}!estimateFuelCost@{estimateFuelCost}}
+\index{estimateFuelCost@{estimateFuelCost}!DeliveryRoute@{DeliveryRoute}}
+\doxysubsubsection{\texorpdfstring{estimateFuelCost()}{estimateFuelCost()}}
+{\footnotesize\ttfamily \label{class_delivery_route_ace423af68d0294d1ff95dc71592e6d60} 
+double Delivery\+Route::\+estimate\+Fuel\+Cost (\begin{DoxyParamCaption}\item[{double}]{cost\+Per\+Km}{}\end{DoxyParamCaption}) const}
+
+
+
+Estimates fuel cost for the route given a per-\/kilometer rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cost\+Per\+Km} & Fuel cost per kilometer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total estimated fuel expense. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

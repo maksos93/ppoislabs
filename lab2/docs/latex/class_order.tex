@@ -1,0 +1,158 @@
+\doxysection{Order Class Reference}
+\hypertarget{class_order}{}\label{class_order}\index{Order@{Order}}
+
+
+Represents a customer purchase order containing items, discounts, and lifecycle status.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_order_a4ace726aeacf24b1f6952786d72efe9d}{Order}} (int id=1, const \doxymbox{\hyperlink{class_user}{User}} \&customer=\doxymbox{\hyperlink{class_user}{User}}())
+\begin{DoxyCompactList}\small\item\em Constructs a Draft \doxylink{class_order}{Order} for a customer. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_order_a0a1e04e5e0739de062cf59128e55ae6f}{get\+Order\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_order_abababdc3b90d482d807766e5fbad5100}{get\+Status}} () const
+\item 
+void \doxymbox{\hyperlink{class_order_aec20832a5ff4edc2c02e75fd9f500bbe}{add\+Item}} (const \doxymbox{\hyperlink{class_book}{Book}} \&book, int quantity)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{class_book}{Book} line item to the order after verifying stock availability. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_order_ab9b3ca002f5cc70cdd5003f3b3db52f2}{apply\+Discount}} (const \doxymbox{\hyperlink{class_discount}{Discount}} \&discount)
+\begin{DoxyCompactList}\small\item\em Validates and applies a \doxylink{class_discount}{Discount} to the order. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_order_aeb00ef146206a1bc181ba69e4a6bda0e}{calculate\+Total}} () const
+\begin{DoxyCompactList}\small\item\em Calculates final order total after subtracting applied discounts. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_order_ace0a59d1e9ec42a028d67706336c1268}{confirm\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Transitions the order status to "{}\+Confirmed"{} if items are present. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_order_a9bd686646dbea1b257c6f7ed906e1916}{cancel\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Transitions the order status to "{}\+Cancelled"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a customer purchase order containing items, discounts, and lifecycle status. 
+
+\label{class_order_doc-constructors}
+\Hypertarget{class_order_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_order_a4ace726aeacf24b1f6952786d72efe9d}\index{Order@{Order}!Order@{Order}}
+\index{Order@{Order}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{Order()}{Order()}}
+{\footnotesize\ttfamily \label{class_order_a4ace726aeacf24b1f6952786d72efe9d} 
+Order::\+\+Order (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 1}, }\item[{const \doxymbox{\hyperlink{class_user}{User}} \&}]{customer}{ = {\ttfamily \doxymbox{\hyperlink{class_user}{User}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a Draft \doxylink{class_order}{Order} for a customer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique order ID. \\
+\hline
+{\em customer} & Purchasing \doxylink{class_user}{User}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_order_doc-func-members}
+\Hypertarget{class_order_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_order_aec20832a5ff4edc2c02e75fd9f500bbe}\index{Order@{Order}!addItem@{addItem}}
+\index{addItem@{addItem}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily \label{class_order_aec20832a5ff4edc2c02e75fd9f500bbe} 
+void Order::\+add\+Item (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{book}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{class_book}{Book} line item to the order after verifying stock availability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & \doxylink{class_book}{Book} to add. \\
+\hline
+{\em quantity} & Number of copies. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_out_of_stock_exception}{Out\+Of\+Stock\+Exception}} & if book stock is insufficient. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_order_ab9b3ca002f5cc70cdd5003f3b3db52f2}\index{Order@{Order}!applyDiscount@{applyDiscount}}
+\index{applyDiscount@{applyDiscount}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{applyDiscount()}{applyDiscount()}}
+{\footnotesize\ttfamily \label{class_order_ab9b3ca002f5cc70cdd5003f3b3db52f2} 
+void Order::\+apply\+Discount (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_discount}{Discount}} \&}]{discount}{}\end{DoxyParamCaption})}
+
+
+
+Validates and applies a \doxylink{class_discount}{Discount} to the order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em discount} & \doxylink{class_discount}{Discount} rule to apply. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_discount_exception}{Invalid\+Discount\+Exception}} & if the order does not meet discount criteria. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_order_aeb00ef146206a1bc181ba69e4a6bda0e}\index{Order@{Order}!calculateTotal@{calculateTotal}}
+\index{calculateTotal@{calculateTotal}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{calculateTotal()}{calculateTotal()}}
+{\footnotesize\ttfamily \label{class_order_aeb00ef146206a1bc181ba69e4a6bda0e} 
+double Order::\+calculate\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates final order total after subtracting applied discounts. 
+
+\begin{DoxyReturn}{Returns}
+Net order total. 
+\end{DoxyReturn}
+\Hypertarget{class_order_a9bd686646dbea1b257c6f7ed906e1916}\index{Order@{Order}!cancelOrder@{cancelOrder}}
+\index{cancelOrder@{cancelOrder}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{cancelOrder()}{cancelOrder()}}
+{\footnotesize\ttfamily \label{class_order_a9bd686646dbea1b257c6f7ed906e1916} 
+void Order::\+cancel\+Order (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Transitions the order status to "{}\+Cancelled"{}. 
+
+\Hypertarget{class_order_ace0a59d1e9ec42a028d67706336c1268}\index{Order@{Order}!confirmOrder@{confirmOrder}}
+\index{confirmOrder@{confirmOrder}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{confirmOrder()}{confirmOrder()}}
+{\footnotesize\ttfamily \label{class_order_ace0a59d1e9ec42a028d67706336c1268} 
+void Order::\+confirm\+Order (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Transitions the order status to "{}\+Confirmed"{} if items are present. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_order_not_found_exception}{Order\+Not\+Found\+Exception}} & if the order contains no items. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_order_a0a1e04e5e0739de062cf59128e55ae6f}\index{Order@{Order}!getOrderId@{getOrderId}}
+\index{getOrderId@{getOrderId}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getOrderId()}{getOrderId()}}
+{\footnotesize\ttfamily \label{class_order_a0a1e04e5e0739de062cf59128e55ae6f} 
+int Order::\+get\+Order\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_order_abababdc3b90d482d807766e5fbad5100}\index{Order@{Order}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \label{class_order_abababdc3b90d482d807766e5fbad5100} 
+std::\+string Order::\+get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

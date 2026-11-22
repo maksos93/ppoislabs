@@ -1,0 +1,27 @@
+var staff_8hpp =
+[
+    [ "Employee", "class_employee.html", "class_employee" ],
+    [ "Librarian", "class_librarian.html", "class_librarian" ],
+    [ "Cataloger", "class_cataloger.html", "class_cataloger" ],
+    [ "Cashier", "class_cashier.html", "class_cashier" ],
+    [ "Manager", "class_manager.html", "class_manager" ],
+    [ "Administrator", "class_administrator.html", "class_administrator" ],
+    [ "ShiftSchedule", "class_shift_schedule.html", "class_shift_schedule" ],
+    [ "Salary", "class_salary.html", "class_salary" ],
+    [ "HRDepartment", "class_h_r_department.html", "class_h_r_department" ],
+    [ "Supplier", "class_supplier.html", "class_supplier" ],
+    [ "SupplyShipment", "class_supply_shipment.html", "class_supply_shipment" ],
+    [ "Courier", "class_courier.html", "class_courier" ],
+    [ "DeliveryRoute", "class_delivery_route.html", "class_delivery_route" ],
+    [ "TrackingSystem", "class_tracking_system.html", "class_tracking_system" ],
+    [ "ReturnRequest", "class_return_request.html", "class_return_request" ],
+    [ "RefundProcessor", "class_refund_processor.html", "class_refund_processor" ],
+    [ "SalesAnalytics", "class_sales_analytics.html", "class_sales_analytics" ],
+    [ "PopularityRating", "class_popularity_rating.html", "class_popularity_rating" ],
+    [ "InventoryReport", "class_inventory_report.html", "class_inventory_report" ],
+    [ "FinancialAuditor", "class_financial_auditor.html", "class_financial_auditor" ],
+    [ "ReviewSystem", "class_review_system.html", "class_review_system" ],
+    [ "Rating", "class_rating.html", "class_rating" ],
+    [ "RecommendationEngine", "class_recommendation_engine.html", "class_recommendation_engine" ],
+    [ "ActivityLog", "class_activity_log.html", "class_activity_log" ]
+];

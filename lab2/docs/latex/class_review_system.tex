@@ -1,0 +1,108 @@
+\doxysection{Review\+System Class Reference}
+\hypertarget{class_review_system}{}\label{class_review_system}\index{ReviewSystem@{ReviewSystem}}
+
+
+Represents an individual customer or reader review with star rating and text comment.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_review_system_a2010e10fd1b5f566bbde6303a046ef15}{Review\+System}} (int id=1, std::\+string isbn="{}"{}, std::\+string author="{}"{}, int stars=5, std::\+string comment="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_review_system}{Review\+System} entry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_review_system_ab2783a13b83b4a3a336fecd2f7ed9f29}{update\+Rating}} (int new\+Stars, const std::\+string \&new\+Comment)
+\begin{DoxyCompactList}\small\item\em Updates the star rating and comment text of the review. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_review_system_a5efd72f970b8a6535d0f2420d4abe5b7}{is\+Positive\+Review}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the review is considered positive (4 or more stars). \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_review_system_a3e6e498394076c15419961142247835b}{get\+Stars}} () const
+\item 
+int \doxymbox{\hyperlink{class_review_system_a6cca1dd81c9876c3c0481d3167c5753c}{get\+Review\+Id}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an individual customer or reader review with star rating and text comment. 
+
+\label{class_review_system_doc-constructors}
+\Hypertarget{class_review_system_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_review_system_a2010e10fd1b5f566bbde6303a046ef15}\index{ReviewSystem@{ReviewSystem}!ReviewSystem@{ReviewSystem}}
+\index{ReviewSystem@{ReviewSystem}!ReviewSystem@{ReviewSystem}}
+\doxysubsubsection{\texorpdfstring{ReviewSystem()}{ReviewSystem()}}
+{\footnotesize\ttfamily \label{class_review_system_a2010e10fd1b5f566bbde6303a046ef15} 
+Review\+System::\+\+Review\+System (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 1}, }\item[{std::\+string}]{isbn}{ = {\ttfamily "{}"{}}, }\item[{std::\+string}]{author}{ = {\ttfamily "{}"{}}, }\item[{int}]{stars}{ = {\ttfamily 5}, }\item[{std::\+string}]{comment}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_review_system}{Review\+System} entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique review ID. \\
+\hline
+{\em isbn} & \doxylink{class_book}{Book} ISBN. \\
+\hline
+{\em author} & Reviewer name. \\
+\hline
+{\em stars} & Star score. \\
+\hline
+{\em comment} & Review text. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_review_system_doc-func-members}
+\Hypertarget{class_review_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_review_system_a6cca1dd81c9876c3c0481d3167c5753c}\index{ReviewSystem@{ReviewSystem}!getReviewId@{getReviewId}}
+\index{getReviewId@{getReviewId}!ReviewSystem@{ReviewSystem}}
+\doxysubsubsection{\texorpdfstring{getReviewId()}{getReviewId()}}
+{\footnotesize\ttfamily \label{class_review_system_a6cca1dd81c9876c3c0481d3167c5753c} 
+int Review\+System::\+get\+Review\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_review_system_a3e6e498394076c15419961142247835b}\index{ReviewSystem@{ReviewSystem}!getStars@{getStars}}
+\index{getStars@{getStars}!ReviewSystem@{ReviewSystem}}
+\doxysubsubsection{\texorpdfstring{getStars()}{getStars()}}
+{\footnotesize\ttfamily \label{class_review_system_a3e6e498394076c15419961142247835b} 
+int Review\+System::\+get\+Stars (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_review_system_a5efd72f970b8a6535d0f2420d4abe5b7}\index{ReviewSystem@{ReviewSystem}!isPositiveReview@{isPositiveReview}}
+\index{isPositiveReview@{isPositiveReview}!ReviewSystem@{ReviewSystem}}
+\doxysubsubsection{\texorpdfstring{isPositiveReview()}{isPositiveReview()}}
+{\footnotesize\ttfamily \label{class_review_system_a5efd72f970b8a6535d0f2420d4abe5b7} 
+bool Review\+System::\+is\+Positive\+Review (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the review is considered positive (4 or more stars). 
+
+\begin{DoxyReturn}{Returns}
+True if stars \texorpdfstring{$>$}{>}= 4. 
+\end{DoxyReturn}
+\Hypertarget{class_review_system_ab2783a13b83b4a3a336fecd2f7ed9f29}\index{ReviewSystem@{ReviewSystem}!updateRating@{updateRating}}
+\index{updateRating@{updateRating}!ReviewSystem@{ReviewSystem}}
+\doxysubsubsection{\texorpdfstring{updateRating()}{updateRating()}}
+{\footnotesize\ttfamily \label{class_review_system_ab2783a13b83b4a3a336fecd2f7ed9f29} 
+void Review\+System::\+update\+Rating (\begin{DoxyParamCaption}\item[{int}]{new\+Stars}{, }\item[{const std::\+string \&}]{new\+Comment}{}\end{DoxyParamCaption})}
+
+
+
+Updates the star rating and comment text of the review. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Stars} & Updated star count. \\
+\hline
+{\em new\+Comment} & Updated comment text. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

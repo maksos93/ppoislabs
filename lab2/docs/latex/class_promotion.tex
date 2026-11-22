@@ -1,0 +1,103 @@
+\doxysection{Promotion Class Reference}
+\hypertarget{class_promotion}{}\label{class_promotion}\index{Promotion@{Promotion}}
+
+
+Represents a time-\/ or quota-\/limited promotional campaign wrapping a \doxylink{class_discount}{Discount}.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_promotion_ae07a66b33c251159445e5cbaf2dce54c}{Promotion}} (std::\+string name="{}Seasonal"{}, \doxymbox{\hyperlink{class_discount}{Discount}} disc=\doxymbox{\hyperlink{class_discount}{Discount}}(), bool active=true, int limit=100)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_promotion}{Promotion} campaign. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_promotion_a6078fba6bb0f389e56d1b395f15523b5}{apply\+Promotion}} (double amount)
+\begin{DoxyCompactList}\small\item\em Applies the promotion to an amount and decrements remaining quota if used. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_promotion_ac8de8261056ca38a4464f7f6b657d99e}{deactivate\+Campaign}} ()
+\begin{DoxyCompactList}\small\item\em Deactivates the promotional campaign immediately. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_promotion_a6692cd1cb67fcfa35f2fddb50a4e3249}{has\+Remaining\+Quota}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the promotion is active and has remaining redemptions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a time-\/ or quota-\/limited promotional campaign wrapping a \doxylink{class_discount}{Discount}. 
+
+\label{class_promotion_doc-constructors}
+\Hypertarget{class_promotion_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_promotion_ae07a66b33c251159445e5cbaf2dce54c}\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\index{Promotion@{Promotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{Promotion()}{Promotion()}}
+{\footnotesize\ttfamily \label{class_promotion_ae07a66b33c251159445e5cbaf2dce54c} 
+Promotion::\+\+Promotion (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{ = {\ttfamily "{}Seasonal"{}}, }\item[{\doxymbox{\hyperlink{class_discount}{Discount}}}]{disc}{ = {\ttfamily \doxymbox{\hyperlink{class_discount}{Discount}}()}, }\item[{bool}]{active}{ = {\ttfamily true}, }\item[{int}]{limit}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_promotion}{Promotion} campaign. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Campaign name. \\
+\hline
+{\em disc} & Attached \doxylink{class_discount}{Discount}. \\
+\hline
+{\em active} & Initial active status. \\
+\hline
+{\em limit} & Maximum redemptions allowed. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_promotion_doc-func-members}
+\Hypertarget{class_promotion_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_promotion_a6078fba6bb0f389e56d1b395f15523b5}\index{Promotion@{Promotion}!applyPromotion@{applyPromotion}}
+\index{applyPromotion@{applyPromotion}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{applyPromotion()}{applyPromotion()}}
+{\footnotesize\ttfamily \label{class_promotion_a6078fba6bb0f389e56d1b395f15523b5} 
+double Promotion::\+apply\+Promotion (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Applies the promotion to an amount and decrements remaining quota if used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Original monetary amount. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final amount after promotional savings. 
+\end{DoxyReturn}
+\Hypertarget{class_promotion_ac8de8261056ca38a4464f7f6b657d99e}\index{Promotion@{Promotion}!deactivateCampaign@{deactivateCampaign}}
+\index{deactivateCampaign@{deactivateCampaign}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{deactivateCampaign()}{deactivateCampaign()}}
+{\footnotesize\ttfamily \label{class_promotion_ac8de8261056ca38a4464f7f6b657d99e} 
+void Promotion::\+deactivate\+Campaign (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Deactivates the promotional campaign immediately. 
+
+\Hypertarget{class_promotion_a6692cd1cb67fcfa35f2fddb50a4e3249}\index{Promotion@{Promotion}!hasRemainingQuota@{hasRemainingQuota}}
+\index{hasRemainingQuota@{hasRemainingQuota}!Promotion@{Promotion}}
+\doxysubsubsection{\texorpdfstring{hasRemainingQuota()}{hasRemainingQuota()}}
+{\footnotesize\ttfamily \label{class_promotion_a6692cd1cb67fcfa35f2fddb50a4e3249} 
+bool Promotion::\+has\+Remaining\+Quota (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the promotion is active and has remaining redemptions. 
+
+\begin{DoxyReturn}{Returns}
+True if usable. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

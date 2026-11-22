@@ -1,0 +1,84 @@
+\doxysection{Tracking\+System Class Reference}
+\hypertarget{class_tracking_system}{}\label{class_tracking_system}\index{TrackingSystem@{TrackingSystem}}
+
+
+Tracks real-\/time checkpoint location and status notes for shipments and orders.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_tracking_system_a718a2a873a13555dc3a7d4c6da65b68a}{Tracking\+System}} (std::\+string track\+Num="{}TRK-\/001"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_tracking_system}{Tracking\+System} entry. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tracking_system_ab9edfaa8151656e0d418843702ffe353}{update\+Checkpoint}} (const std::\+string \&location, const std::\+string \&note)
+\begin{DoxyCompactList}\small\item\em Updates the current checkpoint location and status description. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_tracking_system_a80fe3a082ea7bf187ce1ab7c267b8fcf}{format\+Tracking\+Summary}} () const
+\begin{DoxyCompactList}\small\item\em Formats a concise summary of current tracking status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks real-\/time checkpoint location and status notes for shipments and orders. 
+
+\label{class_tracking_system_doc-constructors}
+\Hypertarget{class_tracking_system_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tracking_system_a718a2a873a13555dc3a7d4c6da65b68a}\index{TrackingSystem@{TrackingSystem}!TrackingSystem@{TrackingSystem}}
+\index{TrackingSystem@{TrackingSystem}!TrackingSystem@{TrackingSystem}}
+\doxysubsubsection{\texorpdfstring{TrackingSystem()}{TrackingSystem()}}
+{\footnotesize\ttfamily \label{class_tracking_system_a718a2a873a13555dc3a7d4c6da65b68a} 
+Tracking\+System::\+\+Tracking\+System (\begin{DoxyParamCaption}\item[{std::\+string}]{track\+Num}{ = {\ttfamily "{}TRK-\/001"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_tracking_system}{Tracking\+System} entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+Num} & Tracking number string. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_tracking_system_doc-func-members}
+\Hypertarget{class_tracking_system_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tracking_system_a80fe3a082ea7bf187ce1ab7c267b8fcf}\index{TrackingSystem@{TrackingSystem}!formatTrackingSummary@{formatTrackingSummary}}
+\index{formatTrackingSummary@{formatTrackingSummary}!TrackingSystem@{TrackingSystem}}
+\doxysubsubsection{\texorpdfstring{formatTrackingSummary()}{formatTrackingSummary()}}
+{\footnotesize\ttfamily \label{class_tracking_system_a80fe3a082ea7bf187ce1ab7c267b8fcf} 
+std::\+string Tracking\+System::\+format\+Tracking\+Summary (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Formats a concise summary of current tracking status. 
+
+\begin{DoxyReturn}{Returns}
+Formatted tracking line. 
+\end{DoxyReturn}
+\Hypertarget{class_tracking_system_ab9edfaa8151656e0d418843702ffe353}\index{TrackingSystem@{TrackingSystem}!updateCheckpoint@{updateCheckpoint}}
+\index{updateCheckpoint@{updateCheckpoint}!TrackingSystem@{TrackingSystem}}
+\doxysubsubsection{\texorpdfstring{updateCheckpoint()}{updateCheckpoint()}}
+{\footnotesize\ttfamily \label{class_tracking_system_ab9edfaa8151656e0d418843702ffe353} 
+void Tracking\+System::\+update\+Checkpoint (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{location}{, }\item[{const std::\+string \&}]{note}{}\end{DoxyParamCaption})}
+
+
+
+Updates the current checkpoint location and status description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em location} & New checkpoint location. \\
+\hline
+{\em note} & Status update note. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\doxysection{Warehouse Class Reference}
+\hypertarget{class_warehouse}{}\label{class_warehouse}\index{Warehouse@{Warehouse}}
+
+
+Represents a physical storage facility holding sections and active stock batches.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_warehouse_adea40957a0fee758aaea44104951eae1}{Warehouse}} (std::\+string id="{}WH-\/01"{}, Address addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_warehouse}{Warehouse} at a given \doxylink{class_address}{Address}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_warehouse_ac5ef7f5697978767b61d27bb85b31368}{add\+Section}} (const \doxymbox{\hyperlink{class_section}{Section}} \&section)
+\begin{DoxyCompactList}\small\item\em Adds a storage \doxylink{class_section}{Section} to the warehouse. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_warehouse_a72c2b6bd500af41102ab3116114fe0ba}{receive\+Inventory}} (const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Registers incoming inventory into the warehouse\textquotesingle{}s active stock. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_warehouse_aca272ac4ddf836ef8d43cdabee52a91b}{is\+Located\+In\+City}} (const std::\+string \&city) const
+\begin{DoxyCompactList}\small\item\em Checks whether the warehouse is situated in the specified city. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_warehouse_abb11098c37970b791d5d8781a2645d91}{evaluate\+Total\+Asset\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Evaluates total monetary value of all stock stored in the warehouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a physical storage facility holding sections and active stock batches. 
+
+\label{class_warehouse_doc-constructors}
+\Hypertarget{class_warehouse_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_warehouse_adea40957a0fee758aaea44104951eae1}\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\index{Warehouse@{Warehouse}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{Warehouse()}{Warehouse()}}
+{\footnotesize\ttfamily \label{class_warehouse_adea40957a0fee758aaea44104951eae1} 
+Warehouse::\+\+Warehouse (\begin{DoxyParamCaption}\item[{std::\+string}]{id}{ = {\ttfamily "{}WH-\/01"{}}, }\item[{\doxymbox{\hyperlink{class_address}{Address}}}]{addr}{ = {\ttfamily \doxymbox{\hyperlink{class_address}{Address}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_warehouse}{Warehouse} at a given \doxylink{class_address}{Address}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{class_warehouse}{Warehouse} code. \\
+\hline
+{\em addr} & Physical \doxylink{class_address}{Address}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_warehouse_doc-func-members}
+\Hypertarget{class_warehouse_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_warehouse_ac5ef7f5697978767b61d27bb85b31368}\index{Warehouse@{Warehouse}!addSection@{addSection}}
+\index{addSection@{addSection}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{addSection()}{addSection()}}
+{\footnotesize\ttfamily \label{class_warehouse_ac5ef7f5697978767b61d27bb85b31368} 
+void Warehouse::\+add\+Section (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_section}{Section}} \&}]{section}{}\end{DoxyParamCaption})}
+
+
+
+Adds a storage \doxylink{class_section}{Section} to the warehouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & \doxylink{class_section}{Section} to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_warehouse_abb11098c37970b791d5d8781a2645d91}\index{Warehouse@{Warehouse}!evaluateTotalAssetValue@{evaluateTotalAssetValue}}
+\index{evaluateTotalAssetValue@{evaluateTotalAssetValue}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{evaluateTotalAssetValue()}{evaluateTotalAssetValue()}}
+{\footnotesize\ttfamily \label{class_warehouse_abb11098c37970b791d5d8781a2645d91} 
+double Warehouse::\+evaluate\+Total\+Asset\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Evaluates total monetary value of all stock stored in the warehouse. 
+
+\begin{DoxyReturn}{Returns}
+Total asset valuation. 
+\end{DoxyReturn}
+\Hypertarget{class_warehouse_aca272ac4ddf836ef8d43cdabee52a91b}\index{Warehouse@{Warehouse}!isLocatedInCity@{isLocatedInCity}}
+\index{isLocatedInCity@{isLocatedInCity}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{isLocatedInCity()}{isLocatedInCity()}}
+{\footnotesize\ttfamily \label{class_warehouse_aca272ac4ddf836ef8d43cdabee52a91b} 
+bool Warehouse::\+is\+Located\+In\+City (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{city}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the warehouse is situated in the specified city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & City name to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if located in city. 
+\end{DoxyReturn}
+\Hypertarget{class_warehouse_a72c2b6bd500af41102ab3116114fe0ba}\index{Warehouse@{Warehouse}!receiveInventory@{receiveInventory}}
+\index{receiveInventory@{receiveInventory}!Warehouse@{Warehouse}}
+\doxysubsubsection{\texorpdfstring{receiveInventory()}{receiveInventory()}}
+{\footnotesize\ttfamily \label{class_warehouse_a72c2b6bd500af41102ab3116114fe0ba} 
+void Warehouse::\+receive\+Inventory (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}} \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Registers incoming inventory into the warehouse\textquotesingle{}s active stock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Incoming \doxylink{class_inventory_item}{Inventory\+Item}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

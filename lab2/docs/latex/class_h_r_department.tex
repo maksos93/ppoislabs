@@ -1,0 +1,98 @@
+\doxysection{HRDepartment Class Reference}
+\hypertarget{class_h_r_department}{}\label{class_h_r_department}\index{HRDepartment@{HRDepartment}}
+
+
+Manages staff roster, shift scheduling, and monthly payroll aggregation.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_h_r_department_a7cbe127b5d420016274bdab83d4b0497}{HRDepartment}} ()=default
+\item 
+void \doxymbox{\hyperlink{class_h_r_department_aceae69e9bcb59c7a5b133e4a022e870a}{hire\+Employee}} (const \doxymbox{\hyperlink{class_employee}{Employee}} \&emp)
+\begin{DoxyCompactList}\small\item\em Adds a newly hired \doxylink{class_employee}{Employee} to the staff roster. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_h_r_department_a967f5d474cc50c9f475d886d5dca77b1}{assign\+Shift}} (const \doxymbox{\hyperlink{class_shift_schedule}{Shift\+Schedule}} \&schedule)
+\begin{DoxyCompactList}\small\item\em Records a work \doxylink{class_shift_schedule}{Shift\+Schedule}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_h_r_department_abd9d20d7d6645b225af26a852426a383}{calculate\+Monthly\+Payroll}} () const
+\begin{DoxyCompactList}\small\item\em Calculates total monthly base payroll across all staff. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_h_r_department_a6914aa48bbd2b98d0ca6b05a2ae38181}{get\+Headcount}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages staff roster, shift scheduling, and monthly payroll aggregation. 
+
+\label{class_h_r_department_doc-constructors}
+\Hypertarget{class_h_r_department_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_h_r_department_a7cbe127b5d420016274bdab83d4b0497}\index{HRDepartment@{HRDepartment}!HRDepartment@{HRDepartment}}
+\index{HRDepartment@{HRDepartment}!HRDepartment@{HRDepartment}}
+\doxysubsubsection{\texorpdfstring{HRDepartment()}{HRDepartment()}}
+{\footnotesize\ttfamily \label{class_h_r_department_a7cbe127b5d420016274bdab83d4b0497} 
+HRDepartment::\+\+HRDepartment (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{class_h_r_department_doc-func-members}
+\Hypertarget{class_h_r_department_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_h_r_department_a967f5d474cc50c9f475d886d5dca77b1}\index{HRDepartment@{HRDepartment}!assignShift@{assignShift}}
+\index{assignShift@{assignShift}!HRDepartment@{HRDepartment}}
+\doxysubsubsection{\texorpdfstring{assignShift()}{assignShift()}}
+{\footnotesize\ttfamily \label{class_h_r_department_a967f5d474cc50c9f475d886d5dca77b1} 
+void HRDepartment::\+assign\+Shift (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_shift_schedule}{Shift\+Schedule}} \&}]{schedule}{}\end{DoxyParamCaption})}
+
+
+
+Records a work \doxylink{class_shift_schedule}{Shift\+Schedule}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em schedule} & \doxylink{class_shift_schedule}{Shift\+Schedule} to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_h_r_department_abd9d20d7d6645b225af26a852426a383}\index{HRDepartment@{HRDepartment}!calculateMonthlyPayroll@{calculateMonthlyPayroll}}
+\index{calculateMonthlyPayroll@{calculateMonthlyPayroll}!HRDepartment@{HRDepartment}}
+\doxysubsubsection{\texorpdfstring{calculateMonthlyPayroll()}{calculateMonthlyPayroll()}}
+{\footnotesize\ttfamily \label{class_h_r_department_abd9d20d7d6645b225af26a852426a383} 
+double HRDepartment::\+calculate\+Monthly\+Payroll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates total monthly base payroll across all staff. 
+
+\begin{DoxyReturn}{Returns}
+Monthly payroll expense. 
+\end{DoxyReturn}
+\Hypertarget{class_h_r_department_a6914aa48bbd2b98d0ca6b05a2ae38181}\index{HRDepartment@{HRDepartment}!getHeadcount@{getHeadcount}}
+\index{getHeadcount@{getHeadcount}!HRDepartment@{HRDepartment}}
+\doxysubsubsection{\texorpdfstring{getHeadcount()}{getHeadcount()}}
+{\footnotesize\ttfamily \label{class_h_r_department_a6914aa48bbd2b98d0ca6b05a2ae38181} 
+size\+\_\+t HRDepartment::\+get\+Headcount (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_h_r_department_aceae69e9bcb59c7a5b133e4a022e870a}\index{HRDepartment@{HRDepartment}!hireEmployee@{hireEmployee}}
+\index{hireEmployee@{hireEmployee}!HRDepartment@{HRDepartment}}
+\doxysubsubsection{\texorpdfstring{hireEmployee()}{hireEmployee()}}
+{\footnotesize\ttfamily \label{class_h_r_department_aceae69e9bcb59c7a5b133e4a022e870a} 
+void HRDepartment::\+hire\+Employee (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_employee}{Employee}} \&}]{emp}{}\end{DoxyParamCaption})}
+
+
+
+Adds a newly hired \doxylink{class_employee}{Employee} to the staff roster. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emp} & \doxylink{class_employee}{Employee} to hire. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\doxysection{Author Class Reference}
+\hypertarget{class_author}{}\label{class_author}\index{Author@{Author}}
+
+
+Represents a book author with biographical metadata.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_author_a61fda35b0af8567f9168eb591ed1ba24}{Author}} (int id=0, std::\+string name="{}Unknown"{}, std::\+string country="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_author}{Author} object. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_author_af4312630e4bc52a01f4787de5970aaa6}{format\+Citation}} () const
+\begin{DoxyCompactList}\small\item\em Formats a bibliographic citation string for the author. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_author_a05f0739802e4469bfe1b2fe8d675c002}{is\+From\+Country}} (const std::\+string \&target\+Country) const
+\begin{DoxyCompactList}\small\item\em Checks whether the author originates from a specific country. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_author_aba451bc160cc9746dcc6d02011474ebe}{update\+Biography\+Country}} (const std::\+string \&new\+Country)
+\begin{DoxyCompactList}\small\item\em Updates the author\textquotesingle{}s recorded country. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_author_ad38e7c581b4fb3509d28b7fa2ba473bb}{get\+Full\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the author\textquotesingle{}s full name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a book author with biographical metadata. 
+
+\label{class_author_doc-constructors}
+\Hypertarget{class_author_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_author_a61fda35b0af8567f9168eb591ed1ba24}\index{Author@{Author}!Author@{Author}}
+\index{Author@{Author}!Author@{Author}}
+\doxysubsubsection{\texorpdfstring{Author()}{Author()}}
+{\footnotesize\ttfamily \label{class_author_a61fda35b0af8567f9168eb591ed1ba24} 
+Author::\+\+Author (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 0}, }\item[{std::\+string}]{name}{ = {\ttfamily "{}Unknown"{}}, }\item[{std::\+string}]{country}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_author}{Author} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique numeric ID. \\
+\hline
+{\em name} & Full name of the author. \\
+\hline
+{\em country} & Country of origin. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_author_doc-func-members}
+\Hypertarget{class_author_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_author_af4312630e4bc52a01f4787de5970aaa6}\index{Author@{Author}!formatCitation@{formatCitation}}
+\index{formatCitation@{formatCitation}!Author@{Author}}
+\doxysubsubsection{\texorpdfstring{formatCitation()}{formatCitation()}}
+{\footnotesize\ttfamily \label{class_author_af4312630e4bc52a01f4787de5970aaa6} 
+std::\+string Author::\+format\+Citation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Formats a bibliographic citation string for the author. 
+
+\begin{DoxyReturn}{Returns}
+Citation formatted as "{}\+Full Name (\+Country)"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_author_ad38e7c581b4fb3509d28b7fa2ba473bb}\index{Author@{Author}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!Author@{Author}}
+\doxysubsubsection{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily \label{class_author_ad38e7c581b4fb3509d28b7fa2ba473bb} 
+std::\+string Author::\+get\+Full\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the author\textquotesingle{}s full name. 
+
+\begin{DoxyReturn}{Returns}
+Full name string. 
+\end{DoxyReturn}
+\Hypertarget{class_author_a05f0739802e4469bfe1b2fe8d675c002}\index{Author@{Author}!isFromCountry@{isFromCountry}}
+\index{isFromCountry@{isFromCountry}!Author@{Author}}
+\doxysubsubsection{\texorpdfstring{isFromCountry()}{isFromCountry()}}
+{\footnotesize\ttfamily \label{class_author_a05f0739802e4469bfe1b2fe8d675c002} 
+bool Author::\+is\+From\+Country (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{target\+Country}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the author originates from a specific country. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Country} & Country name to verify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the author\textquotesingle{}s country matches target\+Country. 
+\end{DoxyReturn}
+\Hypertarget{class_author_aba451bc160cc9746dcc6d02011474ebe}\index{Author@{Author}!updateBiographyCountry@{updateBiographyCountry}}
+\index{updateBiographyCountry@{updateBiographyCountry}!Author@{Author}}
+\doxysubsubsection{\texorpdfstring{updateBiographyCountry()}{updateBiographyCountry()}}
+{\footnotesize\ttfamily \label{class_author_aba451bc160cc9746dcc6d02011474ebe} 
+void Author::\+update\+Biography\+Country (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{new\+Country}{}\end{DoxyParamCaption})}
+
+
+
+Updates the author\textquotesingle{}s recorded country. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Country} & Updated country name. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

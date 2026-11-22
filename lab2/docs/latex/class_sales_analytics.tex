@@ -1,0 +1,81 @@
+\doxysection{Sales\+Analytics Class Reference}
+\hypertarget{class_sales_analytics}{}\label{class_sales_analytics}\index{SalesAnalytics@{SalesAnalytics}}
+
+
+Aggregates completed orders to compute sales volume and average order value (AOV).  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_sales_analytics_aca9717ef3c9f70774fe436be1165f29d}{Sales\+Analytics}} ()
+\item 
+void \doxymbox{\hyperlink{class_sales_analytics_a98656b2edbe716cba69e73312c2c5e09}{record\+Order}} (const \doxymbox{\hyperlink{class_order}{Order}} \&order)
+\begin{DoxyCompactList}\small\item\em Records a completed \doxylink{class_order}{Order} into analytics metrics. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_sales_analytics_aa9a12d1291cd7574343d01c19047c468}{calculate\+Average\+Order\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the Average \doxylink{class_order}{Order} Value (AOV). \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_sales_analytics_a3180e791762115a32f2880fa2fcb80de}{get\+Order\+Volume}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aggregates completed orders to compute sales volume and average order value (AOV). 
+
+\label{class_sales_analytics_doc-constructors}
+\Hypertarget{class_sales_analytics_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sales_analytics_aca9717ef3c9f70774fe436be1165f29d}\index{SalesAnalytics@{SalesAnalytics}!SalesAnalytics@{SalesAnalytics}}
+\index{SalesAnalytics@{SalesAnalytics}!SalesAnalytics@{SalesAnalytics}}
+\doxysubsubsection{\texorpdfstring{SalesAnalytics()}{SalesAnalytics()}}
+{\footnotesize\ttfamily \label{class_sales_analytics_aca9717ef3c9f70774fe436be1165f29d} 
+Sales\+Analytics::\+\+Sales\+Analytics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_sales_analytics_doc-func-members}
+\Hypertarget{class_sales_analytics_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sales_analytics_aa9a12d1291cd7574343d01c19047c468}\index{SalesAnalytics@{SalesAnalytics}!calculateAverageOrderValue@{calculateAverageOrderValue}}
+\index{calculateAverageOrderValue@{calculateAverageOrderValue}!SalesAnalytics@{SalesAnalytics}}
+\doxysubsubsection{\texorpdfstring{calculateAverageOrderValue()}{calculateAverageOrderValue()}}
+{\footnotesize\ttfamily \label{class_sales_analytics_aa9a12d1291cd7574343d01c19047c468} 
+double Sales\+Analytics::\+calculate\+Average\+Order\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the Average \doxylink{class_order}{Order} Value (AOV). 
+
+\begin{DoxyReturn}{Returns}
+Mean order total (0.\+0 if no orders recorded). 
+\end{DoxyReturn}
+\Hypertarget{class_sales_analytics_a3180e791762115a32f2880fa2fcb80de}\index{SalesAnalytics@{SalesAnalytics}!getOrderVolume@{getOrderVolume}}
+\index{getOrderVolume@{getOrderVolume}!SalesAnalytics@{SalesAnalytics}}
+\doxysubsubsection{\texorpdfstring{getOrderVolume()}{getOrderVolume()}}
+{\footnotesize\ttfamily \label{class_sales_analytics_a3180e791762115a32f2880fa2fcb80de} 
+size\+\_\+t Sales\+Analytics::\+get\+Order\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_sales_analytics_a98656b2edbe716cba69e73312c2c5e09}\index{SalesAnalytics@{SalesAnalytics}!recordOrder@{recordOrder}}
+\index{recordOrder@{recordOrder}!SalesAnalytics@{SalesAnalytics}}
+\doxysubsubsection{\texorpdfstring{recordOrder()}{recordOrder()}}
+{\footnotesize\ttfamily \label{class_sales_analytics_a98656b2edbe716cba69e73312c2c5e09} 
+void Sales\+Analytics::\+record\+Order (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Records a completed \doxylink{class_order}{Order} into analytics metrics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Completed \doxylink{class_order}{Order}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

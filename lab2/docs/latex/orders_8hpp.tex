@@ -1,0 +1,39 @@
+\doxysection{include/\+orders.hpp File Reference}
+\hypertarget{orders_8hpp}{}\label{orders_8hpp}\index{include/orders.hpp@{include/orders.hpp}}
+
+
+Orders, Invoices, Payments, and Promotions definitions.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}book.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}users.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_order_item}{Order\+Item}}
+\begin{DoxyCompactList}\small\item\em Represents a single line item (\doxylink{class_book}{Book} + quantity + unit price) within an \doxylink{class_order}{Order}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_discount}{Discount}}
+\begin{DoxyCompactList}\small\item\em Represents a percentage discount rule with a minimum order threshold. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_promotion}{Promotion}}
+\begin{DoxyCompactList}\small\item\em Represents a time-\/ or quota-\/limited promotional campaign wrapping a \doxylink{class_discount}{Discount}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_order}{Order}}
+\begin{DoxyCompactList}\small\item\em Represents a customer purchase order containing items, discounts, and lifecycle status. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_invoice}{Invoice}}
+\begin{DoxyCompactList}\small\item\em Represents a billing invoice with tax calculation generated for an \doxylink{class_order}{Order}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_payment}{Payment}}
+\begin{DoxyCompactList}\small\item\em Base class for payment transactions settling an \doxylink{class_invoice}{Invoice}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_credit_card_payment}{Credit\+Card\+Payment}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_payment}{Payment} implementation using a credit card with available credit limit verification. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_cash_payment}{Cash\+Payment}}
+\begin{DoxyCompactList}\small\item\em Point-\/of-\/sale cash payment tracking tendered cash and customer change. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_pay_pal_payment}{Pay\+Pal\+Payment}}
+\begin{DoxyCompactList}\small\item\em Electronic wallet payment requiring two-\/factor authentication verification. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_transaction_manager}{Transaction\+Manager}}
+\begin{DoxyCompactList}\small\item\em Coordinates order confirmation, invoice settlement, and cumulative revenue tracking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Orders, Invoices, Payments, and Promotions definitions. 
+

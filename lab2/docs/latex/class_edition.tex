@@ -1,0 +1,159 @@
+\doxysection{Edition Class Reference}
+\hypertarget{class_edition}{}\label{class_edition}\index{Edition@{Edition}}
+
+
+Represents a specific print edition of a \doxylink{class_book}{Book}.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+Inheritance diagram for Edition:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_edition}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_edition_a708d47290d64e9ea5df68c79991e2a2a}{Edition}} (const \doxymbox{\hyperlink{class_book}{Book}} \&base, int edition\+Num=1, int year=2024, std::\+string cover="{}Hardcover"{})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_edition}{Edition} from a base \doxylink{class_book}{Book}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_edition_a22414e746f818d7215fecf354b97fe17}{is\+First\+Edition}} () const
+\begin{DoxyCompactList}\small\item\em Checks if this is a first edition print. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_edition_a5d6c09c032343670b998cd3e8a7a8d15}{calculate\+Age}} (int current\+Year) const
+\begin{DoxyCompactList}\small\item\em Calculates how many years have passed since this edition\textquotesingle{}s release. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_edition_a552deed3baba44f0d9715a4e22bb137b}{describe\+Format}} () const override
+\begin{DoxyCompactList}\small\item\em Describes the edition format and cover binding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}} (const std::\+string \&isbn="{}"{}, const std::\+string \&title="{}"{}, const \doxymbox{\hyperlink{class_author}{Author}} \&author=\doxymbox{\hyperlink{class_author}{Author}}(), const \doxymbox{\hyperlink{class_publisher}{Publisher}} \&publisher=\doxymbox{\hyperlink{class_publisher}{Publisher}}(), const \doxymbox{\hyperlink{class_genre}{Genre}} \&genre=\doxymbox{\hyperlink{class_genre}{Genre}}(), double price=0.\+0, int stock=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book}{Book} and validates price and stock non-\/negativity. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_book_a2093c9d67fc5f170ee281d9df5cb9036}{\texorpdfstring{$\sim$}{\string~}\+Book}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic book subclasses. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_a2541b8cd253471ecf942bf99d4c65bf2}{get\+Isbn}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a604066cfc14211ded8b21afbde600467}{get\+Title}} () const
+\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a296c97ef556a3132648a823c4a091674}{get\+Author}} () const
+\item 
+double \doxymbox{\hyperlink{class_book_a337e2c053be4b6333bf104d16b78669b}{get\+Price}} () const
+\item 
+int \doxymbox{\hyperlink{class_book_a03624dd5855ac5dcddf0770492a465e5}{get\+Stock\+Quantity}} () const
+\item 
+void \doxymbox{\hyperlink{class_book_a99129292306d8c38b592dc28aebac17c}{update\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Updates the retail price of the book. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a306f56b4342cda0971b45e860e4c2e1b}{restock}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases available stock by a positive number of copies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a16c1021f6d24022196162e59432b0d40}{reserve\+Copies}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reserves and deducts copies from stock for borrowing or purchase. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_aaf858563d5e47afeb79f602e6aebcdb3}{calculate\+Discounted\+Price}} (double percent) const
+\begin{DoxyCompactList}\small\item\em Calculates the book price after applying a percentage discount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}}
+\begin{DoxyCompactList}\small\item\em International Standard \doxylink{class_book}{Book} Number. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_book}{Book} title. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_author}{Author} of the book. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_publisher}{Publisher}} \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}}
+\begin{DoxyCompactList}\small\item\em Publishing house. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_genre}{Genre}} \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}}
+\begin{DoxyCompactList}\small\item\em Literary genre. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}}
+\begin{DoxyCompactList}\small\item\em Retail unit price. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stock\+Quantity}}
+\begin{DoxyCompactList}\small\item\em Available copies in stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a specific print edition of a \doxylink{class_book}{Book}. 
+
+\label{class_edition_doc-constructors}
+\Hypertarget{class_edition_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_edition_a708d47290d64e9ea5df68c79991e2a2a}\index{Edition@{Edition}!Edition@{Edition}}
+\index{Edition@{Edition}!Edition@{Edition}}
+\doxysubsubsection{\texorpdfstring{Edition()}{Edition()}}
+{\footnotesize\ttfamily \label{class_edition_a708d47290d64e9ea5df68c79991e2a2a} 
+Edition::\+\+Edition (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{base}{, }\item[{int}]{edition\+Num}{ = {\ttfamily 1}, }\item[{int}]{year}{ = {\ttfamily 2024}, }\item[{std::\+string}]{cover}{ = {\ttfamily "{}Hardcover"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_edition}{Edition} from a base \doxylink{class_book}{Book}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_book}{Book} entity. \\
+\hline
+{\em edition\+Num} & \doxylink{class_edition}{Edition} number. \\
+\hline
+{\em year} & Release year. \\
+\hline
+{\em cover} & Cover binding description. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_edition_doc-func-members}
+\Hypertarget{class_edition_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_edition_a5d6c09c032343670b998cd3e8a7a8d15}\index{Edition@{Edition}!calculateAge@{calculateAge}}
+\index{calculateAge@{calculateAge}!Edition@{Edition}}
+\doxysubsubsection{\texorpdfstring{calculateAge()}{calculateAge()}}
+{\footnotesize\ttfamily \label{class_edition_a5d6c09c032343670b998cd3e8a7a8d15} 
+int Edition::\+calculate\+Age (\begin{DoxyParamCaption}\item[{int}]{current\+Year}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates how many years have passed since this edition\textquotesingle{}s release. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Year} & Reference calendar year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Age in years (0 if current\+Year \texorpdfstring{$<$}{<} release\+Year). 
+\end{DoxyReturn}
+\Hypertarget{class_edition_a552deed3baba44f0d9715a4e22bb137b}\index{Edition@{Edition}!describeFormat@{describeFormat}}
+\index{describeFormat@{describeFormat}!Edition@{Edition}}
+\doxysubsubsection{\texorpdfstring{describeFormat()}{describeFormat()}}
+{\footnotesize\ttfamily \label{class_edition_a552deed3baba44f0d9715a4e22bb137b} 
+std::\+string Edition::\+describe\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Describes the edition format and cover binding. 
+
+\begin{DoxyReturn}{Returns}
+Formatted edition description. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_book_a35e9ae89775c2c59b699b738faa1b3dc}{Book}}.
+
+\Hypertarget{class_edition_a22414e746f818d7215fecf354b97fe17}\index{Edition@{Edition}!isFirstEdition@{isFirstEdition}}
+\index{isFirstEdition@{isFirstEdition}!Edition@{Edition}}
+\doxysubsubsection{\texorpdfstring{isFirstEdition()}{isFirstEdition()}}
+{\footnotesize\ttfamily \label{class_edition_a22414e746f818d7215fecf354b97fe17} 
+bool Edition::\+is\+First\+Edition (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if this is a first edition print. 
+
+\begin{DoxyReturn}{Returns}
+True if edition\+Number == 1. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

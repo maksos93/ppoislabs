@@ -1,0 +1,104 @@
+\doxysection{Rating Class Reference}
+\hypertarget{class_rating}{}\label{class_rating}\index{Rating@{Rating}}
+
+
+Aggregates all \doxylink{class_review_system}{Review\+System} entries for a book and calculates its average rating.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_rating_a650fe9436045fafa9d682c8980c145fd}{Rating}} (std::\+string isbn="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_rating}{Rating} aggregator for a book ISBN. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_rating_ac224f4d687e3fc66c67543b78c6ebda6}{add\+Review}} (const \doxymbox{\hyperlink{class_review_system}{Review\+System}} \&review)
+\begin{DoxyCompactList}\small\item\em Appends a new review to the rating collection. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_rating_a464ad0b8970328c43277320790b1ef23}{remove\+Review\+By\+Id}} (int review\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a review by its unique review\+Id. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_rating_ab37a426de57f0fa6eaf929448aac275f}{calculate\+Average\+Stars}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the arithmetic mean of star ratings across all reviews. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aggregates all \doxylink{class_review_system}{Review\+System} entries for a book and calculates its average rating. 
+
+\label{class_rating_doc-constructors}
+\Hypertarget{class_rating_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rating_a650fe9436045fafa9d682c8980c145fd}\index{Rating@{Rating}!Rating@{Rating}}
+\index{Rating@{Rating}!Rating@{Rating}}
+\doxysubsubsection{\texorpdfstring{Rating()}{Rating()}}
+{\footnotesize\ttfamily \label{class_rating_a650fe9436045fafa9d682c8980c145fd} 
+Rating::\+\+Rating (\begin{DoxyParamCaption}\item[{std::\+string}]{isbn}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_rating}{Rating} aggregator for a book ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & \doxylink{class_book}{Book} ISBN. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_rating_doc-func-members}
+\Hypertarget{class_rating_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rating_ac224f4d687e3fc66c67543b78c6ebda6}\index{Rating@{Rating}!addReview@{addReview}}
+\index{addReview@{addReview}!Rating@{Rating}}
+\doxysubsubsection{\texorpdfstring{addReview()}{addReview()}}
+{\footnotesize\ttfamily \label{class_rating_ac224f4d687e3fc66c67543b78c6ebda6} 
+void Rating::\+add\+Review (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_review_system}{Review\+System}} \&}]{review}{}\end{DoxyParamCaption})}
+
+
+
+Appends a new review to the rating collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em review} & \doxylink{class_review_system}{Review\+System} instance to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rating_ab37a426de57f0fa6eaf929448aac275f}\index{Rating@{Rating}!calculateAverageStars@{calculateAverageStars}}
+\index{calculateAverageStars@{calculateAverageStars}!Rating@{Rating}}
+\doxysubsubsection{\texorpdfstring{calculateAverageStars()}{calculateAverageStars()}}
+{\footnotesize\ttfamily \label{class_rating_ab37a426de57f0fa6eaf929448aac275f} 
+double Rating::\+calculate\+Average\+Stars (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the arithmetic mean of star ratings across all reviews. 
+
+\begin{DoxyReturn}{Returns}
+Average star score (0.\+0 if no reviews exist). 
+\end{DoxyReturn}
+\Hypertarget{class_rating_a464ad0b8970328c43277320790b1ef23}\index{Rating@{Rating}!removeReviewById@{removeReviewById}}
+\index{removeReviewById@{removeReviewById}!Rating@{Rating}}
+\doxysubsubsection{\texorpdfstring{removeReviewById()}{removeReviewById()}}
+{\footnotesize\ttfamily \label{class_rating_a464ad0b8970328c43277320790b1ef23} 
+void Rating::\+remove\+Review\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{review\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a review by its unique review\+Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em review\+Id} & ID of the review to remove. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_review_not_found_exception}{Review\+Not\+Found\+Exception}} & if review\+Id does not exist. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\doxysection{exceptions.\+hpp}
+\hypertarget{exceptions_8hpp_source}{}\label{exceptions_8hpp_source}\index{include/exceptions.hpp@{include/exceptions.hpp}}
+\doxymbox{\hyperlink{exceptions_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ :\ \textcolor{keyword}{public}\ std::runtime\_error\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{keyword}{const}\ std::string\&\ message)\ :\ std::runtime\_error(message)\ \{\}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_book_not_found_exception_a9a5bcf3673f8a351f6ef911590cacedf}{BookNotFoundException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_book_not_found_exception_a9a5bcf3673f8a351f6ef911590cacedf}{BookNotFoundException}}(\textcolor{keyword}{const}\ std::string\&\ isbn)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Book\ not\ found\ with\ ISBN:\ "{}}\ +\ isbn)\ \{\}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_duplicate_book_exception_a6784d9692b5014779201106074a482e3}{DuplicateBookException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_duplicate_book_exception_a6784d9692b5014779201106074a482e3}{DuplicateBookException}}(\textcolor{keyword}{const}\ std::string\&\ isbn)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Duplicate\ book\ with\ ISBN:\ "{}}\ +\ isbn)\ \{\}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_out_of_stock_exception_a9641ac376fcff59d538892b013aa7897}{OutOfStockException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_out_of_stock_exception_a9641ac376fcff59d538892b013aa7897}{OutOfStockException}}(\textcolor{keyword}{const}\ std::string\&\ title)}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Out\ of\ stock\ for\ book:\ "{}}\ +\ title)\ \{\}}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_invalid_book_data_exception_a931f88a88166095d57f5f2d76ede6afe}{InvalidBookDataException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00071\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_invalid_book_data_exception_a931f88a88166095d57f5f2d76ede6afe}{InvalidBookDataException}}(\textcolor{keyword}{const}\ std::string\&\ details)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Invalid\ book\ data:\ "{}}\ +\ details)\ \{\}}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_invalid_user_exception_aeb7e88fc09003dd0767f355aaed0aca8}{InvalidUserException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_invalid_user_exception_aeb7e88fc09003dd0767f355aaed0aca8}{InvalidUserException}}(\textcolor{keyword}{const}\ std::string\&\ user)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Invalid\ user\ data:\ "{}}\ +\ user)\ \{\}}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_order_not_found_exception_ac11dbacdb01d3f38376ff926db9697b4}{OrderNotFoundException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00099\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_order_not_found_exception_ac11dbacdb01d3f38376ff926db9697b4}{OrderNotFoundException}}(\textcolor{keywordtype}{int}\ orderId)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Order\ not\ found\ with\ ID:\ "{}}\ +\ std::to\_string(orderId))\ \{\}}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_invalid_payment_exception_a201f6f5ac9ca301a5477a088def4ceb1}{InvalidPaymentException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00113\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_invalid_payment_exception_a201f6f5ac9ca301a5477a088def4ceb1}{InvalidPaymentException}}(\textcolor{keyword}{const}\ std::string\&\ details)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Invalid\ payment\ processing:\ "{}}\ +\ details)\ \{\}}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_insufficient_funds_exception_a9a20e80f5686a10e09ff946229da7703}{InsufficientFundsException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00127\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_insufficient_funds_exception_a9a20e80f5686a10e09ff946229da7703}{InsufficientFundsException}}(\textcolor{keywordtype}{double}\ required,\ \textcolor{keywordtype}{double}\ available)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Insufficient\ funds.\ Required:\ "{}}\ +\ std::to\_string(required)\ +}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ Available:\ "{}}\ +\ std::to\_string(available))\ \{\}}
+\DoxyCodeLine{00136\ \};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_delivery_exception_a2319ac63dd6f1c9a1bda61a5734b4ce0}{DeliveryException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00143\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_delivery_exception_a2319ac63dd6f1c9a1bda61a5734b4ce0}{DeliveryException}}(\textcolor{keyword}{const}\ std::string\&\ reason)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Delivery\ error:\ "{}}\ +\ reason)\ \{\}}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00156\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_unauthorized_access_exception_a2fed33a8894c2a7f158dd447014b8b55}{UnauthorizedAccessException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00157\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_unauthorized_access_exception_a2fed33a8894c2a7f158dd447014b8b55}{UnauthorizedAccessException}}(\textcolor{keyword}{const}\ std::string\&\ role)}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Unauthorized\ access\ for\ role:\ "{}}\ +\ role)\ \{\}}
+\DoxyCodeLine{00164\ \};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_invalid_discount_exception_a4624c0dc7a9807a0f7e6c8d42eca3e29}{InvalidDiscountException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00171\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_invalid_discount_exception_a4624c0dc7a9807a0f7e6c8d42eca3e29}{InvalidDiscountException}}(\textcolor{keywordtype}{double}\ value)}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Invalid\ discount\ value:\ "{}}\ +\ std::to\_string(value))\ \{\}}
+\DoxyCodeLine{00178\ \};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_review_not_found_exception_a5f7ea6e69987e11aa39d780c2504b057}{ReviewNotFoundException}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}\ \{}
+\DoxyCodeLine{00185\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_review_not_found_exception_a5f7ea6e69987e11aa39d780c2504b057}{ReviewNotFoundException}}(\textcolor{keywordtype}{int}\ reviewId)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{LibraryException}}(\textcolor{stringliteral}{"{}Review\ not\ found\ with\ ID:\ "{}}\ +\ std::to\_string(reviewId))\ \{\}}
+\DoxyCodeLine{00192\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,183 @@
+\doxysection{users.\+hpp}
+\hypertarget{users_8hpp_source}{}\label{users_8hpp_source}\index{include/users.hpp@{include/users.hpp}}
+\doxymbox{\hyperlink{users_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{book_8hpp}{book.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_notification_preferences_a4777cd88ef710b2f6a21048d1aea4e2f}{NotificationPreferences}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ emailEnabled;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ smsEnabled;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ digestFrequency;\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_notification_preferences_a4777cd88ef710b2f6a21048d1aea4e2f}{NotificationPreferences}}(\textcolor{keywordtype}{bool}\ email\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ sms\ =\ \textcolor{keyword}{false},\ std::string\ freq\ =\ \textcolor{stringliteral}{"{}Weekly"{}});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_notification_preferences_adc7972dee340dbd1ff508e272361eacc}{enableAllChannels}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_notification_preferences_a12672f62f0a5c22186ce69d1382b13f6}{disableMarketing}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_notification_preferences_a1002e4fc427c11b2383ca5664fa9fc87}{canSendChannel}}(\textcolor{keyword}{const}\ std::string\&\ channel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}\ \{}
+\DoxyCodeLine{00053\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_user_a5986b220d29c26d9f8bcd8a31b404a76}{userId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_user_a0cf4d35683a5bbfb232721eb5877690d}{fullName}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \doxymbox{\hyperlink{class_address}{Address}}\ \doxymbox{\hyperlink{class_user_af340678819489cd891b44490fc799cfa}{address}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \doxymbox{\hyperlink{class_notification_preferences}{NotificationPreferences}}\ \doxymbox{\hyperlink{class_user_ac3df1beda00cc0c2265a2b7f152419fc}{preferences}};\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0,\ std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}}\ =\ \textcolor{stringliteral}{"{}"{}},\ \doxymbox{\hyperlink{class_address}{Address}}\ addr\ =\ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}());}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_user_a634d7ad22c3d2b5fed35f71e10d98628}{\string~User}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_user_ac5a839e8c9b3bb68858d8c206a32885d}{getUserId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_user_a5986b220d29c26d9f8bcd8a31b404a76}{userId}};\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_user_a41aaa8d1f105ff225353dfe895306fde}{getFullName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_user_a0cf4d35683a5bbfb232721eb5877690d}{fullName}};\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_user_a68c520e78268ba63c97ff04b6fb210a1}{getEmail}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}};\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf}{validateEmailFormat}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_user_afd788345e0a135166880f3827025b962}{relocate}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_address}{Address}}\&\ newAddress);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_user_a16ebaa37e193ab4e11a70d850560b8ee}{applyNotificationPreferences}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_notification_preferences}{NotificationPreferences}}\&\ prefs);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_user_ac007e6f7428dba19fd3bbe11d45efef4}{getAccessTier}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_membership_card_aca1a880a9290f92dd20ae28140e9c223}{MembershipCard}}\ \{}
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ std::string\ cardNumber;\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ borrowLimit;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ activeLoans;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ suspended;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00119\ \ \ \ \ \doxymbox{\hyperlink{class_membership_card_aca1a880a9290f92dd20ae28140e9c223}{MembershipCard}}(std::string\ number\ =\ \textcolor{stringliteral}{"{}CARD-\/000"{}},\ \textcolor{keywordtype}{int}\ limit\ =\ 5);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_membership_card_aacee7a007ea22cf73c26c2ca3c903c4d}{canBorrow}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_membership_card_af0fcdd250b0ea7e2bbad18bd0b8023d7}{recordLoan}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_membership_card_a3a079dab0132c206511bbdd534d86239}{recordReturn}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_membership_card_ac2539dc8250ef81df1bab8934f8a0f9e}{setSuspended}}(\textcolor{keywordtype}{bool}\ state);}
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}\ \{}
+\DoxyCodeLine{00150\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00151\ \ \ \ \ \doxymbox{\hyperlink{class_membership_card}{MembershipCard}}\ \doxymbox{\hyperlink{class_reader_ab9833b44edf4b9ad4a54543bf1ae7406}{card}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00152\ \ \ \ \ std::vector<std::string>\ \doxymbox{\hyperlink{class_reader_a5d868134471329b71a4a875ee79f8acf}{borrowedIsbns}};\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_reader_a59fc334e765a3c89460271ddb860d481}{unpaidFines}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00160\ \ \ \ \ \doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}\&\ base,\ \doxymbox{\hyperlink{class_membership_card}{MembershipCard}}\ \doxymbox{\hyperlink{class_reader_ab9833b44edf4b9ad4a54543bf1ae7406}{card}}\ =\ \doxymbox{\hyperlink{class_membership_card_aca1a880a9290f92dd20ae28140e9c223}{MembershipCard}}());}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_reader_a8693e98619ea5782fdc9542b2282cd37}{borrowBook}}(\doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_reader_a4fa277ed528574528c3d35594894552f}{returnBook}}(\doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_reader_ae0fcf1516e7f00e36e29b67d0546a637}{addFine}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_reader_a37583d39b822b7106e2f8a547162e818}{payFine}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00193\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_reader_a75301c3009eb0cc43adef1e902342256}{getAccessTier}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00194\ \};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00200\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_student_a5167daf7d23a0bd37ea6a74eeea404a9}{Student}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}\ \{}
+\DoxyCodeLine{00201\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00202\ \ \ \ \ std::string\ universityName;\ \ }
+\DoxyCodeLine{00203\ \ \ \ \ std::string\ studentIdNumber;\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{int}\ graduationYear;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00205\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00213\ \ \ \ \ \doxymbox{\hyperlink{class_student_a5167daf7d23a0bd37ea6a74eeea404a9}{Student}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}\&\ base,\ std::string\ uni\ =\ \textcolor{stringliteral}{"{}State\ University"{}},\ std::string\ studId\ =\ \textcolor{stringliteral}{"{}S-\/100"{}},\ \textcolor{keywordtype}{int}\ gradYear\ =\ 2027);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_student_af8d3648875286caad09508d7ba449c6c}{isEligibleForAcademicDiscount}}(\textcolor{keywordtype}{int}\ currentYear)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_student_a03235e6d4d5baf206ad778cea708a402}{calculateAcademicFeeDiscount}}(\textcolor{keywordtype}{double}\ baseFee)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00233\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_student_a023b9ea31f7fc91ea574a06f562eead4}{getAccessTier}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00234\ \};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00240\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_professor_afedfd1fb0d4a90971d7d72977a3af1c2}{Professor}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}\ \{}
+\DoxyCodeLine{00241\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00242\ \ \ \ \ std::string\ department;\ \ \ }
+\DoxyCodeLine{00243\ \ \ \ \ std::string\ academicRank;\ }
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{keywordtype}{int}\ extendedLoanDays;\ \ \ \ \ }
+\DoxyCodeLine{00245\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00253\ \ \ \ \ \doxymbox{\hyperlink{class_professor_afedfd1fb0d4a90971d7d72977a3af1c2}{Professor}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}}\&\ base,\ std::string\ dept\ =\ \textcolor{stringliteral}{"{}Computer\ Science"{}},\ std::string\ rank\ =\ \textcolor{stringliteral}{"{}Associate"{}},\ \textcolor{keywordtype}{int}\ days\ =\ 60);}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_professor_a92b93c46f72bb9dc47dae32a33cfbbbe}{computeDueDays}}(\textcolor{keywordtype}{bool}\ isReferenceMaterial)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_professor_ac9a1ae758cafaf218a48e3b345224e3a}{canRequestInterlibraryLoan}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00272\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_professor_a84b44314cbc7c21e0130bc6de30c34b2}{getAccessTier}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00273\ \};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00279\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_loyalty_account_aa4e4af217e67ef598924454de366bb92}{LoyaltyAccount}}\ \{}
+\DoxyCodeLine{00280\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordtype}{int}\ pointsBalance;\ \ \ \ \ }
+\DoxyCodeLine{00282\ \ \ \ \ std::string\ tierLevel;\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordtype}{double}\ totalSpent;\ \ \ \ \ }
+\DoxyCodeLine{00284\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00291\ \ \ \ \ \doxymbox{\hyperlink{class_loyalty_account_aa4e4af217e67ef598924454de366bb92}{LoyaltyAccount}}(\textcolor{keywordtype}{int}\ points\ =\ 0,\ std::string\ tier\ =\ \textcolor{stringliteral}{"{}Silver"{}},\ \textcolor{keywordtype}{double}\ spent\ =\ 0.0);}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_loyalty_account_abfc5a4248258fa6a08c0f16b9a513a18}{accruePurchase}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_loyalty_account_ad831c7fdf6cf0ce1adb85dcbd147b81e}{redeemPoints}}(\textcolor{keywordtype}{int}\ points);}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_loyalty_account_af3377dcf7f8e47babfadbd2c88479328}{recalculateTier}}();}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_loyalty_account_ae3e79e9b634aa1f9b5dfc6e227776af1}{getPointsBalance}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pointsBalance;\ \}}
+\DoxyCodeLine{00313\ \};}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00319\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_v_i_p_customer_a2821761c18888b8e995f7010a091b8ee}{VIPCustomer}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}\ \{}
+\DoxyCodeLine{00320\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00321\ \ \ \ \ \doxymbox{\hyperlink{class_loyalty_account}{LoyaltyAccount}}\ loyalty;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{double}\ personalDiscountRate;\ \ \ \ \ \ }
+\DoxyCodeLine{00323\ \ \ \ \ std::string\ dedicatedManagerName;\ }
+\DoxyCodeLine{00324\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00331\ \ \ \ \ \doxymbox{\hyperlink{class_v_i_p_customer_a2821761c18888b8e995f7010a091b8ee}{VIPCustomer}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}}\&\ base,\ \textcolor{keywordtype}{double}\ discountRate\ =\ 0.15,\ std::string\ manager\ =\ \textcolor{stringliteral}{"{}Anna"{}});}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_v_i_p_customer_a2e3e4af2c6731d753d183e56931606cc}{applyVipPricing}}(\textcolor{keywordtype}{double}\ originalPrice)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_v_i_p_customer_a5fb094dd89b0d0a040b26527c88e4710}{rewardBonusPoints}}(\textcolor{keywordtype}{int}\ points);}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_v_i_p_customer_a10a337e509a35d96359f089c8802a0c2}{qualifiesForFreeExpress}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00356\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_v_i_p_customer_addc7b48ed64528fd8a82bd2ddbcab93a}{getAccessTier}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00357\ \};}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00363\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_guest_aacabc00ee68cd326f08162f9c7aeb360}{Guest}}\ \{}
+\DoxyCodeLine{00364\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00365\ \ \ \ \ std::string\ sessionToken;\ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordtype}{int}\ viewedPages;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keywordtype}{bool}\ acceptedCookies;\ \ \ \ \ }
+\DoxyCodeLine{00368\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00373\ \ \ \ \ \doxymbox{\hyperlink{class_guest_aacabc00ee68cd326f08162f9c7aeb360}{Guest}}(std::string\ token\ =\ \textcolor{stringliteral}{"{}GUEST-\/TMP"{}});}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_guest_aa69bf171a0790457073942c5b618b19c}{trackPageView}}();}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_guest_ae9da05605eafc6e877dd65cd26da5ff9}{canBrowseCatalog}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00385\ \};}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00391\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_user_registry_a8f94b9c43825cbce65019cabe37ee039}{UserRegistry}}\ \{}
+\DoxyCodeLine{00392\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00393\ \ \ \ \ std::vector<User>\ users;\ }
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordtype}{int}\ nextId;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00395\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00396\ \ \ \ \ \doxymbox{\hyperlink{class_user_registry_a8f94b9c43825cbce65019cabe37ee039}{UserRegistry}}();}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00406\ \ \ \ \ \doxymbox{\hyperlink{class_user}{User}}\ \doxymbox{\hyperlink{class_user_registry_a62f87d97de5441fac7fea97139286ca4}{registerUser}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ email,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_address}{Address}}\&\ addr);}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00413\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_user_registry_addbd65e739caad1bfe554543e7e6221f}{existsByEmail}}(\textcolor{keyword}{const}\ std::string\&\ email)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00421\ \ \ \ \ \doxymbox{\hyperlink{class_user}{User}}\ \doxymbox{\hyperlink{class_user_registry_ae96160b7484538f20d0b55d40ff261dd}{findById}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_user_registry_a5001f21eb1e97597f775809475225fb1}{countActiveUsers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00428\ \};}
+
+\end{DoxyCode}

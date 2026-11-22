@@ -1,0 +1,130 @@
+\doxysection{User\+Registry Class Reference}
+\hypertarget{class_user_registry}{}\label{class_user_registry}\index{UserRegistry@{UserRegistry}}
+
+
+Manages registration, uniqueness validation, and lookup of system users.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_user_registry_a8f94b9c43825cbce65019cabe37ee039}{User\+Registry}} ()
+\item 
+\doxymbox{\hyperlink{class_user}{User}} \doxymbox{\hyperlink{class_user_registry_a62f87d97de5441fac7fea97139286ca4}{register\+User}} (const std::\+string \&name, const std::\+string \&email, const \doxymbox{\hyperlink{class_address}{Address}} \&addr)
+\begin{DoxyCompactList}\small\item\em Registers a new \doxylink{class_user}{User} after validating name and unique email. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_user_registry_addbd65e739caad1bfe554543e7e6221f}{exists\+By\+Email}} (const std::\+string \&email) const
+\begin{DoxyCompactList}\small\item\em Checks whether an email address is already registered. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_user}{User}} \doxymbox{\hyperlink{class_user_registry_ae96160b7484538f20d0b55d40ff261dd}{find\+By\+Id}} (int id) const
+\begin{DoxyCompactList}\small\item\em Finds a registered \doxylink{class_user}{User} by numeric ID. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_user_registry_a5001f21eb1e97597f775809475225fb1}{count\+Active\+Users}} () const
+\begin{DoxyCompactList}\small\item\em Returns total number of registered users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages registration, uniqueness validation, and lookup of system users. 
+
+\label{class_user_registry_doc-constructors}
+\Hypertarget{class_user_registry_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_registry_a8f94b9c43825cbce65019cabe37ee039}\index{UserRegistry@{UserRegistry}!UserRegistry@{UserRegistry}}
+\index{UserRegistry@{UserRegistry}!UserRegistry@{UserRegistry}}
+\doxysubsubsection{\texorpdfstring{UserRegistry()}{UserRegistry()}}
+{\footnotesize\ttfamily \label{class_user_registry_a8f94b9c43825cbce65019cabe37ee039} 
+User\+Registry::\+\+User\+Registry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_user_registry_doc-func-members}
+\Hypertarget{class_user_registry_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_registry_a5001f21eb1e97597f775809475225fb1}\index{UserRegistry@{UserRegistry}!countActiveUsers@{countActiveUsers}}
+\index{countActiveUsers@{countActiveUsers}!UserRegistry@{UserRegistry}}
+\doxysubsubsection{\texorpdfstring{countActiveUsers()}{countActiveUsers()}}
+{\footnotesize\ttfamily \label{class_user_registry_a5001f21eb1e97597f775809475225fb1} 
+size\+\_\+t User\+Registry::\+count\+Active\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns total number of registered users. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_user}{User} count. 
+\end{DoxyReturn}
+\Hypertarget{class_user_registry_addbd65e739caad1bfe554543e7e6221f}\index{UserRegistry@{UserRegistry}!existsByEmail@{existsByEmail}}
+\index{existsByEmail@{existsByEmail}!UserRegistry@{UserRegistry}}
+\doxysubsubsection{\texorpdfstring{existsByEmail()}{existsByEmail()}}
+{\footnotesize\ttfamily \label{class_user_registry_addbd65e739caad1bfe554543e7e6221f} 
+bool User\+Registry::\+exists\+By\+Email (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{email}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether an email address is already registered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email string to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if email exists in registry. 
+\end{DoxyReturn}
+\Hypertarget{class_user_registry_ae96160b7484538f20d0b55d40ff261dd}\index{UserRegistry@{UserRegistry}!findById@{findById}}
+\index{findById@{findById}!UserRegistry@{UserRegistry}}
+\doxysubsubsection{\texorpdfstring{findById()}{findById()}}
+{\footnotesize\ttfamily \label{class_user_registry_ae96160b7484538f20d0b55d40ff261dd} 
+\doxymbox{\hyperlink{class_user}{User}} User\+Registry::\+find\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption}) const}
+
+
+
+Finds a registered \doxylink{class_user}{User} by numeric ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Target user ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matching \doxylink{class_user}{User} object. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_user_exception}{Invalid\+User\+Exception}} & if no user has the given ID. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_user_registry_a62f87d97de5441fac7fea97139286ca4}\index{UserRegistry@{UserRegistry}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!UserRegistry@{UserRegistry}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily \label{class_user_registry_a62f87d97de5441fac7fea97139286ca4} 
+\doxymbox{\hyperlink{class_user}{User}} User\+Registry::\+register\+User (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{name}{, }\item[{const std::\+string \&}]{email}{, }\item[{const \doxymbox{\hyperlink{class_address}{Address}} \&}]{addr}{}\end{DoxyParamCaption})}
+
+
+
+Registers a new \doxylink{class_user}{User} after validating name and unique email. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_user}{User}\textquotesingle{}s full name. \\
+\hline
+{\em email} & \doxylink{class_user}{User}\textquotesingle{}s unique email address. \\
+\hline
+{\em addr} & \doxylink{class_user}{User}\textquotesingle{}s \doxylink{class_address}{Address}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly created \doxylink{class_user}{User} instance. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_user_exception}{Invalid\+User\+Exception}} & if name/\+email is invalid or email already exists. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

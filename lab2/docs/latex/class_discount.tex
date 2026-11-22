@@ -1,0 +1,107 @@
+\doxysection{Discount Class Reference}
+\hypertarget{class_discount}{}\label{class_discount}\index{Discount@{Discount}}
+
+
+Represents a percentage discount rule with a minimum order threshold.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_discount_a500810016a61f4640e7f07c36eca9dd9}{Discount}} (std::\+string code="{}NONE"{}, double pct=0.\+0, double min\+Amount=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_discount}{Discount} and validates percentage bounds. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_discount_aff6f0183fd97080091a432f1e73b3631}{is\+Applicable}} (double order\+Total) const
+\begin{DoxyCompactList}\small\item\em Checks whether the discount applies to a given order total. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_discount_aeb52d5b1b3f4f00c33d2a5a0be3795a4}{compute\+Savings}} (double order\+Total) const
+\begin{DoxyCompactList}\small\item\em Calculates monetary savings for a given order total. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_discount_ae866609b6502da9e17968fbdc3128a68}{get\+Code}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a percentage discount rule with a minimum order threshold. 
+
+\label{class_discount_doc-constructors}
+\Hypertarget{class_discount_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_discount_a500810016a61f4640e7f07c36eca9dd9}\index{Discount@{Discount}!Discount@{Discount}}
+\index{Discount@{Discount}!Discount@{Discount}}
+\doxysubsubsection{\texorpdfstring{Discount()}{Discount()}}
+{\footnotesize\ttfamily \label{class_discount_a500810016a61f4640e7f07c36eca9dd9} 
+Discount::\+\+Discount (\begin{DoxyParamCaption}\item[{std::\+string}]{code}{ = {\ttfamily "{}NONE"{}}, }\item[{double}]{pct}{ = {\ttfamily 0.0}, }\item[{double}]{min\+Amount}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_discount}{Discount} and validates percentage bounds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Promo code. \\
+\hline
+{\em pct} & Percentage in \+[0, 100]. \\
+\hline
+{\em min\+Amount} & Minimum order total threshold. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_discount_exception}{Invalid\+Discount\+Exception}} & if pct \texorpdfstring{$<$}{<} 0 or pct \texorpdfstring{$>$}{>} 100. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_discount_doc-func-members}
+\Hypertarget{class_discount_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_discount_aeb52d5b1b3f4f00c33d2a5a0be3795a4}\index{Discount@{Discount}!computeSavings@{computeSavings}}
+\index{computeSavings@{computeSavings}!Discount@{Discount}}
+\doxysubsubsection{\texorpdfstring{computeSavings()}{computeSavings()}}
+{\footnotesize\ttfamily \label{class_discount_aeb52d5b1b3f4f00c33d2a5a0be3795a4} 
+double Discount::\+compute\+Savings (\begin{DoxyParamCaption}\item[{double}]{order\+Total}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates monetary savings for a given order total. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Total} & Raw order subtotal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_discount}{Discount} amount saved (0.\+0 if not applicable). 
+\end{DoxyReturn}
+\Hypertarget{class_discount_ae866609b6502da9e17968fbdc3128a68}\index{Discount@{Discount}!getCode@{getCode}}
+\index{getCode@{getCode}!Discount@{Discount}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily \label{class_discount_ae866609b6502da9e17968fbdc3128a68} 
+std::\+string Discount::\+get\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_discount_aff6f0183fd97080091a432f1e73b3631}\index{Discount@{Discount}!isApplicable@{isApplicable}}
+\index{isApplicable@{isApplicable}!Discount@{Discount}}
+\doxysubsubsection{\texorpdfstring{isApplicable()}{isApplicable()}}
+{\footnotesize\ttfamily \label{class_discount_aff6f0183fd97080091a432f1e73b3631} 
+bool Discount::\+is\+Applicable (\begin{DoxyParamCaption}\item[{double}]{order\+Total}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the discount applies to a given order total. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+Total} & Raw order subtotal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if order\+Total \texorpdfstring{$>$}{>}= min\+Order\+Amount and percentage \texorpdfstring{$>$}{>} 0. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

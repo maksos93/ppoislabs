@@ -1,0 +1,361 @@
+\doxysection{staff.\+hpp}
+\hypertarget{staff_8hpp_source}{}\label{staff_8hpp_source}\index{include/staff.hpp@{include/staff.hpp}}
+\doxymbox{\hyperlink{staff_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{book_8hpp}{book.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{users_8hpp}{users.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{orders_8hpp}{orders.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}{employeeId}};\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}};\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}};\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_employee_ab01497423d689ff200f66bdb47639286}{baseSalary}};\ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_address}{Address}}\ \doxymbox{\hyperlink{class_employee_afb986057b9e105b46ad781c3feb7a645}{homeAddress}};\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 1,\ std::string\ \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}}\ =\ \textcolor{stringliteral}{"{}Staff"{}},\ std::string\ \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}}\ =\ \textcolor{stringliteral}{"{}General"{}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ salary\ =\ 2000.0,\ \doxymbox{\hyperlink{class_address}{Address}}\ addr\ =\ \doxymbox{\hyperlink{class_address_ac3c9d9ea49703e55ccd90b5e907c2a33}{Address}}());}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}{\string~Employee}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_employee_adc96c05f46592d40685154159f1f6520}{getEmployeeId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}{employeeId}};\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}};\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc}{getRole}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}};\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa}{promote}}(\textcolor{keyword}{const}\ std::string\&\ newRole,\ \textcolor{keywordtype}{double}\ raiseAmount);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_employee_a984a6803bd2f5564874f0d2b372754c4}{calculateAnnualCompensation}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_employee_af7f827037017807c93e8b5b43a160c45}{authorizeAction}}(\textcolor{keyword}{const}\ std::string\&\ requiredRole)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_librarian_a0c7fc50c1982fcb0301bb7ac799145a3}{Librarian}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ deskZone;\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ booksProcessed;\ \ \ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00081\ \ \ \ \ \doxymbox{\hyperlink{class_librarian_a0c7fc50c1982fcb0301bb7ac799145a3}{Librarian}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\&\ base,\ std::string\ zone\ =\ \textcolor{stringliteral}{"{}Main\ Hall"{}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_librarian_ad46a5e68a80facae273046e35d47f859}{issueBookToReader}}(\doxymbox{\hyperlink{class_reader}{Reader}}\&\ reader,\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_librarian_a67f3a02e42f4586283ace7cf40388509}{acceptReturnedBook}}(\doxymbox{\hyperlink{class_reader}{Reader}}\&\ reader,\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_librarian_aa90b10a8a98cbf115c78c55c2522ba47}{getBooksProcessed}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ booksProcessed;\ \}}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_cataloger_a0e78d08dfce7209b3d37225ec13491fd}{Cataloger}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00105\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ std::string\ classificationStandard;\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ recordsCreated;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114\ \ \ \ \ \doxymbox{\hyperlink{class_cataloger_a0e78d08dfce7209b3d37225ec13491fd}{Cataloger}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\&\ base,\ std::string\ standard\ =\ \textcolor{stringliteral}{"{}UDC"{}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_cataloger_aa9ba857204ad81b118730155d0f080fe}{indexNewBook}}(\doxymbox{\hyperlink{class_catalog_manager}{CatalogManager}}\&\ catalog,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_cataloger_ac39ca42e7be52958e3daefa3ac5d6ed2}{generateCallNumber}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_cashier_a9d18d0366a1b5c1527886b6584b45c07}{Cashier}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00136\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ registerNumber;\ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{double}\ drawerBalance;\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00146\ \ \ \ \ \doxymbox{\hyperlink{class_cashier_a9d18d0366a1b5c1527886b6584b45c07}{Cashier}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\&\ base,\ \textcolor{keywordtype}{int}\ regNum\ =\ 1,\ \textcolor{keywordtype}{double}\ openingFloat\ =\ 200.0);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_cashier_adb60421fac64b3b58f3c5842ce26103b}{recordCashSale}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_cashier_a6a082a074fc552be11b8bcc0b5322752}{closeShiftReconciliation}}(\textcolor{keywordtype}{double}\ countedCash)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_manager_a0a3963c57d92fc053203002757222486}{Manager}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00168\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00169\ \ \ \ \ std::string\ departmentName;\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{double}\ approvalLimit;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00171\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00178\ \ \ \ \ \doxymbox{\hyperlink{class_manager_a0a3963c57d92fc053203002757222486}{Manager}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\&\ base,\ std::string\ dept\ =\ \textcolor{stringliteral}{"{}Operations"{}},\ \textcolor{keywordtype}{double}\ limit\ =\ 5000.0);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_manager_a9fff35221b763f8263e58f41d9d2526e}{approveHighValueOrder}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_manager_a3d124f62cdeec539a62bfdb29b3bc4c9}{overrideOrderDiscount}}(\doxymbox{\hyperlink{class_order}{Order}}\&\ order,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_discount}{Discount}}\&\ discount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00193\ \};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00199\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_administrator_a86bf9406429bd855028d69287013c4de}{Administrator}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\ \{}
+\DoxyCodeLine{00200\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{int}\ securityClearance;\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{bool}\ twoFactorActive;\ \ }
+\DoxyCodeLine{00203\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00210\ \ \ \ \ \doxymbox{\hyperlink{class_administrator_a86bf9406429bd855028d69287013c4de}{Administrator}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}}\&\ base,\ \textcolor{keywordtype}{int}\ clearance\ =\ 5,\ \textcolor{keywordtype}{bool}\ twoFactor\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_administrator_aab48e079394c70a0c9c4db527fc8d8a0}{suspendReaderCard}}(\doxymbox{\hyperlink{class_membership_card}{MembershipCard}}\&\ card)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_administrator_af4894ae980fe0fb12b65b95881fc36e5}{restoreReaderCard}}(\doxymbox{\hyperlink{class_membership_card}{MembershipCard}}\&\ card)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00225\ \};}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00231\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d}{ShiftSchedule}}\ \{}
+\DoxyCodeLine{00232\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ employeeId;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00234\ \ \ \ \ std::string\ shiftDay;\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{int}\ startHour;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{int}\ endHour;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00237\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00245\ \ \ \ \ \doxymbox{\hyperlink{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d}{ShiftSchedule}}(\textcolor{keywordtype}{int}\ empId\ =\ 1,\ std::string\ day\ =\ \textcolor{stringliteral}{"{}Monday"{}},\ \textcolor{keywordtype}{int}\ start\ =\ 9,\ \textcolor{keywordtype}{int}\ end\ =\ 17);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_shift_schedule_a854d72f7991db101204c08256d807337}{calculateShiftDuration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_shift_schedule_a0b37b19836765bb4d881884537e27a5f}{overlapsWith}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d}{ShiftSchedule}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00259\ \};}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00265\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_salary_a037ddd4cbe65da6fd0bae05160efd07f}{Salary}}\ \{}
+\DoxyCodeLine{00266\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{int}\ employeeId;\ \ \ \ \ \ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{double}\ grossPay;\ \ \ \ \ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{double}\ taxDeduction;\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordtype}{double}\ bonus;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00271\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00279\ \ \ \ \ \doxymbox{\hyperlink{class_salary_a037ddd4cbe65da6fd0bae05160efd07f}{Salary}}(\textcolor{keywordtype}{int}\ empId\ =\ 1,\ \textcolor{keywordtype}{double}\ gross\ =\ 2000.0,\ \textcolor{keywordtype}{double}\ tax\ =\ 300.0,\ \textcolor{keywordtype}{double}\ bonus\ =\ 0.0);}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_salary_a50c8bc9f36da14f6a63dddca536f7b63}{computeNetPay}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_salary_a400bcec0e125c5f28254ce20a6a157e8}{addPerformanceBonus}}(\textcolor{keywordtype}{double}\ amount);}
+\DoxyCodeLine{00292\ \};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00298\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_h_r_department_a7cbe127b5d420016274bdab83d4b0497}{HRDepartment}}\ \{}
+\DoxyCodeLine{00299\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00300\ \ \ \ \ std::vector<Employee>\ staff;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00301\ \ \ \ \ std::vector<ShiftSchedule>\ schedules;\ }
+\DoxyCodeLine{00302\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00303\ \ \ \ \ \doxymbox{\hyperlink{class_h_r_department_a7cbe127b5d420016274bdab83d4b0497}{HRDepartment}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_h_r_department_aceae69e9bcb59c7a5b133e4a022e870a}{hireEmployee}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_employee}{Employee}}\&\ emp);}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_h_r_department_a967f5d474cc50c9f475d886d5dca77b1}{assignShift}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_shift_schedule}{ShiftSchedule}}\&\ schedule);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_h_r_department_abd9d20d7d6645b225af26a852426a383}{calculateMonthlyPayroll}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_h_r_department_a6914aa48bbd2b98d0ca6b05a2ae38181}{getHeadcount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ staff.size();\ \}}
+\DoxyCodeLine{00324\ \};}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00330\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_supplier_a67e15cfcd300d15aa9519c8ba88f567b}{Supplier}}\ \{}
+\DoxyCodeLine{00331\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00332\ \ \ \ \ std::string\ supplierId;\ \ }
+\DoxyCodeLine{00333\ \ \ \ \ std::string\ companyName;\ }
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordtype}{double}\ reliabilityScore;\ }
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordtype}{int}\ leadTimeDays;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00336\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00344\ \ \ \ \ \doxymbox{\hyperlink{class_supplier_a67e15cfcd300d15aa9519c8ba88f567b}{Supplier}}(std::string\ \textcolor{keywordtype}{id}\ =\ \textcolor{stringliteral}{"{}SUP-\/1"{}},\ std::string\ name\ =\ \textcolor{stringliteral}{"{}BookWholesale"{}},\ \textcolor{keywordtype}{double}\ score\ =\ 0.95,\ \textcolor{keywordtype}{int}\ lead\ =\ 3);}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_supplier_a0ac4e80662f74212c1dbb0ad2fb94b12}{isPreferredSupplier}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_supplier_a1062c26bef218ae49fc56e6bb90fc37b}{updateReliability}}(\textcolor{keywordtype}{bool}\ deliveredOnTime);}
+\DoxyCodeLine{00357\ \};}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00363\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_supply_shipment_af671e5458c043867ac05103d21c712d3}{SupplyShipment}}\ \{}
+\DoxyCodeLine{00364\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00365\ \ \ \ \ std::string\ shipmentId;\ }
+\DoxyCodeLine{00366\ \ \ \ \ \doxymbox{\hyperlink{class_supplier}{Supplier}}\ supplier;\ \ \ \ \ \ }
+\DoxyCodeLine{00367\ \ \ \ \ \doxymbox{\hyperlink{class_warehouse}{Warehouse}}\ destination;\ \ }
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordtype}{int}\ totalUnits;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordtype}{bool}\ received;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00370\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00378\ \ \ \ \ \doxymbox{\hyperlink{class_supply_shipment_af671e5458c043867ac05103d21c712d3}{SupplyShipment}}(std::string\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_supplier}{Supplier}}\&\ sup,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_warehouse}{Warehouse}}\&\ dest,\ \textcolor{keywordtype}{int}\ units);}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_supply_shipment_a4f8644de8dd33ddd8d4e7715d33bd0f2}{dispatchShipment}}();}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_supply_shipment_a9b1f014555d1aeb1f1b12ed6fa14317c}{completeDelivery}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_inventory_item}{InventoryItem}}\&\ item);}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_supply_shipment_a57845b124a65087b3e1f91df4f08c037}{isReceived}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ received;\ \}}
+\DoxyCodeLine{00393\ \};}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00399\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_courier_a174af584e45ae2e4b795e5a908d9a287}{Courier}}\ \{}
+\DoxyCodeLine{00400\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00401\ \ \ \ \ std::string\ courierId;\ \ \ }
+\DoxyCodeLine{00402\ \ \ \ \ std::string\ fullName;\ \ \ \ }
+\DoxyCodeLine{00403\ \ \ \ \ std::string\ vehicleType;\ }
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordtype}{bool}\ available;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00405\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00412\ \ \ \ \ \doxymbox{\hyperlink{class_courier_a174af584e45ae2e4b795e5a908d9a287}{Courier}}(std::string\ \textcolor{keywordtype}{id}\ =\ \textcolor{stringliteral}{"{}CR-\/1"{}},\ std::string\ name\ =\ \textcolor{stringliteral}{"{}Alex"{}},\ std::string\ vehicle\ =\ \textcolor{stringliteral}{"{}Van"{}});}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_courier_a854bf9dce04484f14c9718efceae67b2}{assignOrder}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order);}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_courier_a090206bc8dca486d034e16783336f8ed}{completeDropoff}}();}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_courier_aa91d20e5fd02b9c35197d6f35592cb6d}{isAvailable}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ available;\ \}}
+\DoxyCodeLine{00427\ \};}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00433\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_delivery_route_aece0f27d7fdc6b8c8712e1d0c79a5cc0}{DeliveryRoute}}\ \{}
+\DoxyCodeLine{00434\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00435\ \ \ \ \ std::string\ routeCode;\ \ \ \ \ \ }
+\DoxyCodeLine{00436\ \ \ \ \ \doxymbox{\hyperlink{class_courier}{Courier}}\ assignedCourier;\ \ \ \ }
+\DoxyCodeLine{00437\ \ \ \ \ std::vector<Address>\ stops;\ }
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordtype}{double}\ estimatedKm;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00439\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00446\ \ \ \ \ \doxymbox{\hyperlink{class_delivery_route_aece0f27d7fdc6b8c8712e1d0c79a5cc0}{DeliveryRoute}}(std::string\ code,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_courier}{Courier}}\&\ courier,\ \textcolor{keywordtype}{double}\ km\ =\ 15.0);}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_delivery_route_af457ecf8d14a6d8887f0b3bd761280af}{addStop}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_address}{Address}}\&\ addr);}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_delivery_route_ace423af68d0294d1ff95dc71592e6d60}{estimateFuelCost}}(\textcolor{keywordtype}{double}\ costPerKm)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00460\ \};}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00466\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tracking_system_a718a2a873a13555dc3a7d4c6da65b68a}{TrackingSystem}}\ \{}
+\DoxyCodeLine{00467\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00468\ \ \ \ \ std::string\ trackingNumber;\ \ }
+\DoxyCodeLine{00469\ \ \ \ \ std::string\ currentLocation;\ }
+\DoxyCodeLine{00470\ \ \ \ \ std::string\ statusNote;\ \ \ \ \ \ }
+\DoxyCodeLine{00471\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00476\ \ \ \ \ \doxymbox{\hyperlink{class_tracking_system_a718a2a873a13555dc3a7d4c6da65b68a}{TrackingSystem}}(std::string\ trackNum\ =\ \textcolor{stringliteral}{"{}TRK-\/001"{}});}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tracking_system_ab9edfaa8151656e0d418843702ffe353}{updateCheckpoint}}(\textcolor{keyword}{const}\ std::string\&\ location,\ \textcolor{keyword}{const}\ std::string\&\ note);}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00489\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_tracking_system_a80fe3a082ea7bf187ce1ab7c267b8fcf}{formatTrackingSummary}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00490\ \};}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00496\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_return_request_ac80519baaa3aeeb18a5cf8f882654977}{ReturnRequest}}\ \{}
+\DoxyCodeLine{00497\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00498\ \ \ \ \ \textcolor{keywordtype}{int}\ requestId;\ \ \ \ \ \ }
+\DoxyCodeLine{00499\ \ \ \ \ \doxymbox{\hyperlink{class_order}{Order}}\ originalOrder;}
+\DoxyCodeLine{00500\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\ returnedBook;\ \ }
+\DoxyCodeLine{00501\ \ \ \ \ std::string\ reason;\ }
+\DoxyCodeLine{00502\ \ \ \ \ \textcolor{keywordtype}{bool}\ approved;\ \ \ \ \ \ }
+\DoxyCodeLine{00503\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00511\ \ \ \ \ \doxymbox{\hyperlink{class_return_request_ac80519baaa3aeeb18a5cf8f882654977}{ReturnRequest}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_book}{Book}}\&\ book,\ std::string\ reason);}
+\DoxyCodeLine{00512\ }
+\DoxyCodeLine{00516\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_return_request_a756500ae54419551e031b3838c5e743c}{approveReturn}}();}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00522\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_return_request_a3e9c2d7945fc3beaf5dac2ff08da148e}{rejectReturn}}(\textcolor{keyword}{const}\ std::string\&\ note);}
+\DoxyCodeLine{00523\ }
+\DoxyCodeLine{00524\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_return_request_a588cf2a4a0bd9ab7be803f452c621e3e}{isApproved}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ approved;\ \}}
+\DoxyCodeLine{00525\ \ \ \ \ \doxymbox{\hyperlink{class_book}{Book}}\ \doxymbox{\hyperlink{class_return_request_a6564fa78f83b628e78b3fc8a198e04f0}{getReturnedBook}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ returnedBook;\ \}}
+\DoxyCodeLine{00526\ \};}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00532\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_refund_processor_afafee0ecc39b79c7486a6cd8542bcde0}{RefundProcessor}}\ \{}
+\DoxyCodeLine{00533\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00534\ \ \ \ \ \textcolor{keywordtype}{double}\ processedRefundsTotal;\ }
+\DoxyCodeLine{00535\ \ \ \ \ \textcolor{keywordtype}{int}\ refundCount;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00536\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00537\ \ \ \ \ \doxymbox{\hyperlink{class_refund_processor_afafee0ecc39b79c7486a6cd8542bcde0}{RefundProcessor}}();}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00547\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_refund_processor_a6ecb5d0bfdca03ae0f15c325b499a21e}{executeRefund}}(\doxymbox{\hyperlink{class_return_request}{ReturnRequest}}\&\ request,\ \doxymbox{\hyperlink{class_payment}{Payment}}\&\ payment,\ \doxymbox{\hyperlink{class_book}{Book}}\&\ inventoryBook);}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_refund_processor_ad40879e2a412d7b8504e612ac8b6ea9b}{getProcessedRefundsTotal}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ processedRefundsTotal;\ \}}
+\DoxyCodeLine{00550\ \};}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00556\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_sales_analytics_aca9717ef3c9f70774fe436be1165f29d}{SalesAnalytics}}\ \{}
+\DoxyCodeLine{00557\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00558\ \ \ \ \ std::vector<Order>\ completedOrders;\ }
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{keywordtype}{double}\ cumulativeSales;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00560\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00561\ \ \ \ \ \doxymbox{\hyperlink{class_sales_analytics_aca9717ef3c9f70774fe436be1165f29d}{SalesAnalytics}}();}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00567\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_sales_analytics_a98656b2edbe716cba69e73312c2c5e09}{recordOrder}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order);}
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_sales_analytics_aa9a12d1291cd7574343d01c19047c468}{calculateAverageOrderValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_sales_analytics_a3180e791762115a32f2880fa2fcb80de}{getOrderVolume}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ completedOrders.size();\ \}}
+\DoxyCodeLine{00576\ \};}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00582\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_popularity_rating_a87e22eebe8b502446130240603e67052}{PopularityRating}}\ \{}
+\DoxyCodeLine{00583\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00584\ \ \ \ \ std::string\ isbn;\ \ }
+\DoxyCodeLine{00585\ \ \ \ \ \textcolor{keywordtype}{int}\ viewCount;\ \ \ \ \ }
+\DoxyCodeLine{00586\ \ \ \ \ \textcolor{keywordtype}{int}\ purchaseCount;\ }
+\DoxyCodeLine{00587\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00592\ \ \ \ \ \doxymbox{\hyperlink{class_popularity_rating_a87e22eebe8b502446130240603e67052}{PopularityRating}}(std::string\ isbn\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00597\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_popularity_rating_a94fa9d697da7e1b004baede8856aeb1f}{recordView}}();}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00603\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_popularity_rating_ae5e58d589ae1e6ba4f46dffebd101c73}{recordPurchase}}(\textcolor{keywordtype}{int}\ qty);}
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00609\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_popularity_rating_ac6cb6469538bcd8f67a6ef91370495c1}{computePopularityIndex}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00610\ \};}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00616\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_inventory_report_aac7d90e52ae862b8f130bb242329762d}{InventoryReport}}\ \{}
+\DoxyCodeLine{00617\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00618\ \ \ \ \ std::string\ reportDate;\ \ \ }
+\DoxyCodeLine{00619\ \ \ \ \ \doxymbox{\hyperlink{class_warehouse}{Warehouse}}\ warehouse;\ \ \ \ \ \ }
+\DoxyCodeLine{00620\ \ \ \ \ \textcolor{keywordtype}{double}\ valuationSnapshot;\ }
+\DoxyCodeLine{00621\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00627\ \ \ \ \ \doxymbox{\hyperlink{class_inventory_report_aac7d90e52ae862b8f130bb242329762d}{InventoryReport}}(std::string\ date,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_warehouse}{Warehouse}}\&\ wh);}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00632\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_inventory_report_a095576e3f94b11ffadc788a96de38139}{generateSnapshot}}();}
+\DoxyCodeLine{00633\ }
+\DoxyCodeLine{00638\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_inventory_report_aaf2eb1942fc49623198425fb54f82722}{formatSummaryLine}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00639\ \};}
+\DoxyCodeLine{00640\ }
+\DoxyCodeLine{00645\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_financial_auditor_a4deb8a8d9a445c2f9f3aa6d7819a745b}{FinancialAuditor}}\ \{}
+\DoxyCodeLine{00646\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00647\ \ \ \ \ std::string\ auditorName;\ \ \ \ \ }
+\DoxyCodeLine{00648\ \ \ \ \ \textcolor{keywordtype}{double}\ discrepancyTolerance;\ }
+\DoxyCodeLine{00649\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00655\ \ \ \ \ \doxymbox{\hyperlink{class_financial_auditor_a4deb8a8d9a445c2f9f3aa6d7819a745b}{FinancialAuditor}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}AuditBot"{}},\ \textcolor{keywordtype}{double}\ tolerance\ =\ 0.01);}
+\DoxyCodeLine{00656\ }
+\DoxyCodeLine{00663\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_financial_auditor_aa27c7988fda97b1b1f19884b9e8fbdab}{verifyInvoiceMatchesOrder}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_invoice}{Invoice}}\&\ invoice,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_order}{Order}}\&\ order)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00664\ }
+\DoxyCodeLine{00671\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_financial_auditor_ad816328fe166c22dbadf369f31e01095}{calculateNetMargin}}(\textcolor{keywordtype}{double}\ revenue,\ \textcolor{keywordtype}{double}\ expenses)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00672\ \};}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00678\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_review_system_a2010e10fd1b5f566bbde6303a046ef15}{ReviewSystem}}\ \{}
+\DoxyCodeLine{00679\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00680\ \ \ \ \ \textcolor{keywordtype}{int}\ reviewId;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00681\ \ \ \ \ std::string\ bookIsbn;}
+\DoxyCodeLine{00682\ \ \ \ \ std::string\ authorName;\ }
+\DoxyCodeLine{00683\ \ \ \ \ \textcolor{keywordtype}{int}\ stars;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00684\ \ \ \ \ std::string\ comment;\ }
+\DoxyCodeLine{00685\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00694\ \ \ \ \ \doxymbox{\hyperlink{class_review_system_a2010e10fd1b5f566bbde6303a046ef15}{ReviewSystem}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 1,\ std::string\ isbn\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ author\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{int}\ stars\ =\ 5,\ std::string\ comment\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00695\ }
+\DoxyCodeLine{00701\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_review_system_ab2783a13b83b4a3a336fecd2f7ed9f29}{updateRating}}(\textcolor{keywordtype}{int}\ newStars,\ \textcolor{keyword}{const}\ std::string\&\ newComment);}
+\DoxyCodeLine{00702\ }
+\DoxyCodeLine{00707\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_review_system_a5efd72f970b8a6535d0f2420d4abe5b7}{isPositiveReview}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00708\ }
+\DoxyCodeLine{00709\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_review_system_a3e6e498394076c15419961142247835b}{getStars}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ stars;\ \}}
+\DoxyCodeLine{00710\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_review_system_a6cca1dd81c9876c3c0481d3167c5753c}{getReviewId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ reviewId;\ \}}
+\DoxyCodeLine{00711\ \};}
+\DoxyCodeLine{00712\ }
+\DoxyCodeLine{00717\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_rating_a650fe9436045fafa9d682c8980c145fd}{Rating}}\ \{}
+\DoxyCodeLine{00718\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00719\ \ \ \ \ std::string\ bookIsbn;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00720\ \ \ \ \ std::vector<ReviewSystem>\ reviews;\ }
+\DoxyCodeLine{00721\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00726\ \ \ \ \ \doxymbox{\hyperlink{class_rating_a650fe9436045fafa9d682c8980c145fd}{Rating}}(std::string\ isbn\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00727\ }
+\DoxyCodeLine{00732\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rating_ac224f4d687e3fc66c67543b78c6ebda6}{addReview}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_review_system}{ReviewSystem}}\&\ review);}
+\DoxyCodeLine{00733\ }
+\DoxyCodeLine{00739\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_rating_a464ad0b8970328c43277320790b1ef23}{removeReviewById}}(\textcolor{keywordtype}{int}\ reviewId);}
+\DoxyCodeLine{00740\ }
+\DoxyCodeLine{00745\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_rating_ab37a426de57f0fa6eaf929448aac275f}{calculateAverageStars}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00746\ \};}
+\DoxyCodeLine{00747\ }
+\DoxyCodeLine{00752\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_recommendation_engine_aad26b6cec0d2d88cd08d31761cfc47e1}{RecommendationEngine}}\ \{}
+\DoxyCodeLine{00753\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00754\ \ \ \ \ std::string\ strategyName;\ \ \ }
+\DoxyCodeLine{00755\ \ \ \ \ \textcolor{keywordtype}{double}\ minScoreThreshold;\ \ \ }
+\DoxyCodeLine{00756\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00762\ \ \ \ \ \doxymbox{\hyperlink{class_recommendation_engine_aad26b6cec0d2d88cd08d31761cfc47e1}{RecommendationEngine}}(std::string\ strategy\ =\ \textcolor{stringliteral}{"{}GenreMatch"{}},\ \textcolor{keywordtype}{double}\ threshold\ =\ 4.0);}
+\DoxyCodeLine{00763\ }
+\DoxyCodeLine{00770\ \ \ \ \ std::vector<Book>\ \doxymbox{\hyperlink{class_recommendation_engine_acba9c2df2b7d9f369a39ba188e8521dc}{recommendByGenre}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_catalog_manager}{CatalogManager}}\&\ catalog,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_genre}{Genre}}\&\ preferred)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00771\ }
+\DoxyCodeLine{00777\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_recommendation_engine_a2e05dc6ee0dfa73caabcb0c5a0b6550c}{shouldRecommendRating}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_rating}{Rating}}\&\ rating)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00778\ \};}
+\DoxyCodeLine{00779\ }
+\DoxyCodeLine{00784\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_activity_log_a872760460dfab7d09a78484f5a15e94a}{ActivityLog}}\ \{}
+\DoxyCodeLine{00785\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00786\ \ \ \ \ std::vector<std::string>\ entries;\ }
+\DoxyCodeLine{00787\ \ \ \ \ \textcolor{keywordtype}{int}\ maxCapacity;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00788\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00793\ \ \ \ \ \doxymbox{\hyperlink{class_activity_log_a872760460dfab7d09a78484f5a15e94a}{ActivityLog}}(\textcolor{keywordtype}{int}\ capacity\ =\ 500);}
+\DoxyCodeLine{00794\ }
+\DoxyCodeLine{00800\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_activity_log_a9de4e3c2ab7c7b7288ec8acfc3852923}{logUserAction}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_user}{User}}\&\ user,\ \textcolor{keyword}{const}\ std::string\&\ action);}
+\DoxyCodeLine{00801\ }
+\DoxyCodeLine{00806\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_activity_log_a6e7a4fcc52491dc6153c13dd5276f0b1}{getLatestEntry}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00807\ }
+\DoxyCodeLine{00808\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{class_activity_log_a8f7104e566b8088b668c93f2399c6c98}{countEntries}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ entries.size();\ \}}
+\DoxyCodeLine{00809\ \};}
+
+\end{DoxyCode}

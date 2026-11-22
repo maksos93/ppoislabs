@@ -1,0 +1,68 @@
+\doxysection{include/\+staff.hpp File Reference}
+\hypertarget{staff_8hpp}{}\label{staff_8hpp}\index{include/staff.hpp@{include/staff.hpp}}
+
+
+Employees, HR, Supply Chain, Delivery, Analytics, and Review definitions.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include "{}book.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}users.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}orders.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_employee}{Employee}}
+\begin{DoxyCompactList}\small\item\em Base class representing a staff member with role, salary, and home address. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_librarian}{Librarian}}
+\begin{DoxyCompactList}\small\item\em Library desk staff responsible for issuing and accepting returned books. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_cataloger}{Cataloger}}
+\begin{DoxyCompactList}\small\item\em Specialist responsible for indexing new books and assigning call numbers. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_cashier}{Cashier}}
+\begin{DoxyCompactList}\small\item\em Bookstore point-\/of-\/sale operator managing register drawer balance. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_manager}{Manager}}
+\begin{DoxyCompactList}\small\item\em Department manager authorized to approve high-\/value orders and override discounts. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_administrator}{Administrator}}
+\begin{DoxyCompactList}\small\item\em System administrator with security clearance to suspend or restore reader cards. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_shift_schedule}{Shift\+Schedule}}
+\begin{DoxyCompactList}\small\item\em Represents a work shift assignment for an employee on a given day. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_salary}{Salary}}
+\begin{DoxyCompactList}\small\item\em Represents a payroll calculation record with gross pay, tax deductions, and bonuses. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_h_r_department}{HRDepartment}}
+\begin{DoxyCompactList}\small\item\em Manages staff roster, shift scheduling, and monthly payroll aggregation. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_supplier}{Supplier}}
+\begin{DoxyCompactList}\small\item\em Represents an external book wholesaler or publisher vendor. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_supply_shipment}{Supply\+Shipment}}
+\begin{DoxyCompactList}\small\item\em Tracks an inbound book shipment from a \doxylink{class_supplier}{Supplier} to a destination \doxylink{class_warehouse}{Warehouse}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_courier}{Courier}}
+\begin{DoxyCompactList}\small\item\em Represents a delivery courier responsible for transporting customer orders. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_delivery_route}{Delivery\+Route}}
+\begin{DoxyCompactList}\small\item\em Represents a multi-\/stop delivery route assigned to a \doxylink{class_courier}{Courier}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_tracking_system}{Tracking\+System}}
+\begin{DoxyCompactList}\small\item\em Tracks real-\/time checkpoint location and status notes for shipments and orders. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_return_request}{Return\+Request}}
+\begin{DoxyCompactList}\small\item\em Represents a customer request to return a purchased book from an \doxylink{class_order}{Order}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_refund_processor}{Refund\+Processor}}
+\begin{DoxyCompactList}\small\item\em Executes financial refunds and restocks returned books upon approved \doxylink{class_return_request}{Return\+Request}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_sales_analytics}{Sales\+Analytics}}
+\begin{DoxyCompactList}\small\item\em Aggregates completed orders to compute sales volume and average order value (AOV). \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_popularity_rating}{Popularity\+Rating}}
+\begin{DoxyCompactList}\small\item\em Tracks page views and purchase counts to compute a book popularity index. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_inventory_report}{Inventory\+Report}}
+\begin{DoxyCompactList}\small\item\em Generates point-\/in-\/time asset valuation snapshots for a \doxylink{class_warehouse}{Warehouse}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_financial_auditor}{Financial\+Auditor}}
+\begin{DoxyCompactList}\small\item\em Audits invoice accuracy against order totals and computes net profit margins. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_review_system}{Review\+System}}
+\begin{DoxyCompactList}\small\item\em Represents an individual customer or reader review with star rating and text comment. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_rating}{Rating}}
+\begin{DoxyCompactList}\small\item\em Aggregates all \doxylink{class_review_system}{Review\+System} entries for a book and calculates its average rating. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_recommendation_engine}{Recommendation\+Engine}}
+\begin{DoxyCompactList}\small\item\em Provides book recommendations based on genre preferences and minimum rating thresholds. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_activity_log}{Activity\+Log}}
+\begin{DoxyCompactList}\small\item\em Bounded audit log recording user actions across the library and bookstore system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Employees, HR, Supply Chain, Delivery, Analytics, and Review definitions. 
+

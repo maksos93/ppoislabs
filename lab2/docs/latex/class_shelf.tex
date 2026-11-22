@@ -1,0 +1,104 @@
+\doxysection{Shelf Class Reference}
+\hypertarget{class_shelf}{}\label{class_shelf}\index{Shelf@{Shelf}}
+
+
+Represents a physical storage shelf with unit capacity tracking.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_shelf_a218362770e48d9783352818f2521843a}{Shelf}} (std::\+string code="{}A1"{}, int capacity=100)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_shelf}{Shelf} with a code and maximum capacity. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_shelf_a2500b2d145d9e47c32673cea865861d6}{allocate\+Space}} (int units)
+\begin{DoxyCompactList}\small\item\em Attempts to allocate space on the shelf for incoming units. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_shelf_a7179460c0503923467ea3bbfdcb9df4c}{release\+Space}} (int units)
+\begin{DoxyCompactList}\small\item\em Frees occupied space on the shelf. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_shelf_a39522cec90bad98516c715ecbf29149b}{get\+Occupancy\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em Calculates current occupancy ratio in \+[0.\+0, 1.\+0]. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a physical storage shelf with unit capacity tracking. 
+
+\label{class_shelf_doc-constructors}
+\Hypertarget{class_shelf_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shelf_a218362770e48d9783352818f2521843a}\index{Shelf@{Shelf}!Shelf@{Shelf}}
+\index{Shelf@{Shelf}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{Shelf()}{Shelf()}}
+{\footnotesize\ttfamily \label{class_shelf_a218362770e48d9783352818f2521843a} 
+Shelf::\+\+Shelf (\begin{DoxyParamCaption}\item[{std::\+string}]{code}{ = {\ttfamily "{}A1"{}}, }\item[{int}]{capacity}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_shelf}{Shelf} with a code and maximum capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & \doxylink{class_shelf}{Shelf} identifier. \\
+\hline
+{\em capacity} & Maximum unit capacity. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_shelf_doc-func-members}
+\Hypertarget{class_shelf_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shelf_a2500b2d145d9e47c32673cea865861d6}\index{Shelf@{Shelf}!allocateSpace@{allocateSpace}}
+\index{allocateSpace@{allocateSpace}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{allocateSpace()}{allocateSpace()}}
+{\footnotesize\ttfamily \label{class_shelf_a2500b2d145d9e47c32673cea865861d6} 
+bool Shelf::\+allocate\+Space (\begin{DoxyParamCaption}\item[{int}]{units}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to allocate space on the shelf for incoming units. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & Number of units to place. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if space was allocated, false if capacity would be exceeded. 
+\end{DoxyReturn}
+\Hypertarget{class_shelf_a39522cec90bad98516c715ecbf29149b}\index{Shelf@{Shelf}!getOccupancyRate@{getOccupancyRate}}
+\index{getOccupancyRate@{getOccupancyRate}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{getOccupancyRate()}{getOccupancyRate()}}
+{\footnotesize\ttfamily \label{class_shelf_a39522cec90bad98516c715ecbf29149b} 
+double Shelf::\+get\+Occupancy\+Rate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates current occupancy ratio in \+[0.\+0, 1.\+0]. 
+
+\begin{DoxyReturn}{Returns}
+Occupancy rate. 
+\end{DoxyReturn}
+\Hypertarget{class_shelf_a7179460c0503923467ea3bbfdcb9df4c}\index{Shelf@{Shelf}!releaseSpace@{releaseSpace}}
+\index{releaseSpace@{releaseSpace}!Shelf@{Shelf}}
+\doxysubsubsection{\texorpdfstring{releaseSpace()}{releaseSpace()}}
+{\footnotesize\ttfamily \label{class_shelf_a7179460c0503923467ea3bbfdcb9df4c} 
+void Shelf::\+release\+Space (\begin{DoxyParamCaption}\item[{int}]{units}{}\end{DoxyParamCaption})}
+
+
+
+Frees occupied space on the shelf. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & Number of units removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\doxysection{Transaction\+Manager Class Reference}
+\hypertarget{class_transaction_manager}{}\label{class_transaction_manager}\index{TransactionManager@{TransactionManager}}
+
+
+Coordinates order confirmation, invoice settlement, and cumulative revenue tracking.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_transaction_manager_ac5ced818a8f63f5981ab0e1e2dbf2e5c}{Transaction\+Manager}} ()
+\item 
+void \doxymbox{\hyperlink{class_transaction_manager_ae79a75b0f52f28314d975c8d57ca039e}{register\+Invoice}} (const \doxymbox{\hyperlink{class_invoice}{Invoice}} \&invoice)
+\begin{DoxyCompactList}\small\item\em Appends an \doxylink{class_invoice}{Invoice} to the internal ledger. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_transaction_manager_a895f6bf1586d66df28da1bb0117b9ee4}{settle\+Order\+Payment}} (\doxymbox{\hyperlink{class_order}{Order}} \&order, \doxymbox{\hyperlink{class_invoice}{Invoice}} \&invoice, \doxymbox{\hyperlink{class_payment}{Payment}} \&payment)
+\begin{DoxyCompactList}\small\item\em Processes payment, confirms the order, and updates total revenue. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_transaction_manager_a15f69a8d4af7f21d7e4b7190c7daa227}{get\+Total\+Revenue}} () const
+\item 
+size\+\_\+t \doxymbox{\hyperlink{class_transaction_manager_a822a98ded613f90b72859e26fe455058}{count\+Paid\+Invoices}} () const
+\begin{DoxyCompactList}\small\item\em Counts how many invoices in the ledger are marked as paid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Coordinates order confirmation, invoice settlement, and cumulative revenue tracking. 
+
+\label{class_transaction_manager_doc-constructors}
+\Hypertarget{class_transaction_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_transaction_manager_ac5ced818a8f63f5981ab0e1e2dbf2e5c}\index{TransactionManager@{TransactionManager}!TransactionManager@{TransactionManager}}
+\index{TransactionManager@{TransactionManager}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{TransactionManager()}{TransactionManager()}}
+{\footnotesize\ttfamily \label{class_transaction_manager_ac5ced818a8f63f5981ab0e1e2dbf2e5c} 
+Transaction\+Manager::\+\+Transaction\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_transaction_manager_doc-func-members}
+\Hypertarget{class_transaction_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transaction_manager_a822a98ded613f90b72859e26fe455058}\index{TransactionManager@{TransactionManager}!countPaidInvoices@{countPaidInvoices}}
+\index{countPaidInvoices@{countPaidInvoices}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{countPaidInvoices()}{countPaidInvoices()}}
+{\footnotesize\ttfamily \label{class_transaction_manager_a822a98ded613f90b72859e26fe455058} 
+size\+\_\+t Transaction\+Manager::\+count\+Paid\+Invoices (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Counts how many invoices in the ledger are marked as paid. 
+
+\begin{DoxyReturn}{Returns}
+Number of paid invoices. 
+\end{DoxyReturn}
+\Hypertarget{class_transaction_manager_a15f69a8d4af7f21d7e4b7190c7daa227}\index{TransactionManager@{TransactionManager}!getTotalRevenue@{getTotalRevenue}}
+\index{getTotalRevenue@{getTotalRevenue}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{getTotalRevenue()}{getTotalRevenue()}}
+{\footnotesize\ttfamily \label{class_transaction_manager_a15f69a8d4af7f21d7e4b7190c7daa227} 
+double Transaction\+Manager::\+get\+Total\+Revenue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_transaction_manager_ae79a75b0f52f28314d975c8d57ca039e}\index{TransactionManager@{TransactionManager}!registerInvoice@{registerInvoice}}
+\index{registerInvoice@{registerInvoice}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{registerInvoice()}{registerInvoice()}}
+{\footnotesize\ttfamily \label{class_transaction_manager_ae79a75b0f52f28314d975c8d57ca039e} 
+void Transaction\+Manager::\+register\+Invoice (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_invoice}{Invoice}} \&}]{invoice}{}\end{DoxyParamCaption})}
+
+
+
+Appends an \doxylink{class_invoice}{Invoice} to the internal ledger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invoice} & \doxylink{class_invoice}{Invoice} to record. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_transaction_manager_a895f6bf1586d66df28da1bb0117b9ee4}\index{TransactionManager@{TransactionManager}!settleOrderPayment@{settleOrderPayment}}
+\index{settleOrderPayment@{settleOrderPayment}!TransactionManager@{TransactionManager}}
+\doxysubsubsection{\texorpdfstring{settleOrderPayment()}{settleOrderPayment()}}
+{\footnotesize\ttfamily \label{class_transaction_manager_a895f6bf1586d66df28da1bb0117b9ee4} 
+bool Transaction\+Manager::\+settle\+Order\+Payment (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{, }\item[{\doxymbox{\hyperlink{class_invoice}{Invoice}} \&}]{invoice}{, }\item[{\doxymbox{\hyperlink{class_payment}{Payment}} \&}]{payment}{}\end{DoxyParamCaption})}
+
+
+
+Processes payment, confirms the order, and updates total revenue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & \doxylink{class_order}{Order} to confirm. \\
+\hline
+{\em invoice} & \doxylink{class_invoice}{Invoice} to settle. \\
+\hline
+{\em payment} & \doxylink{class_payment}{Payment} method to execute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if settlement succeeded. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

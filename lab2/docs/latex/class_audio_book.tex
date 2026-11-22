@@ -1,0 +1,159 @@
+\doxysection{Audio\+Book Class Reference}
+\hypertarget{class_audio_book}{}\label{class_audio_book}\index{AudioBook@{AudioBook}}
+
+
+Represents an audio recording of a \doxylink{class_book}{Book} with narrator and duration metadata.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+Inheritance diagram for Audio\+Book:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_book}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_audio_book_a0678ee9e8f939d7847ba9769fbc12db0}{Audio\+Book}} (const \doxymbox{\hyperlink{class_book}{Book}} \&base, std::\+string narrator="{}Narrator"{}, int minutes=300, int bitrate=128)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_audio_book}{Audio\+Book} from a base \doxylink{class_book}{Book}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_audio_book_a152e9333a0153c86dcb59ca0837afd74}{calculate\+Listening\+Hours}} (double playback\+Speed) const
+\begin{DoxyCompactList}\small\item\em Calculates total listening time in hours at a given playback speed. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_audio_book_af87cd84ef974ce990fd7fe6fdf9612d0}{estimate\+Storage\+Megabytes}} () const
+\begin{DoxyCompactList}\small\item\em Estimates audio storage size in megabytes from duration and bitrate. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_audio_book_a51667c6f38b5aea3d2ce0b8cab01dab7}{describe\+Format}} () const override
+\begin{DoxyCompactList}\small\item\em Describes the audiobook and its narrator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}} (const std::\+string \&isbn="{}"{}, const std::\+string \&title="{}"{}, const \doxymbox{\hyperlink{class_author}{Author}} \&author=\doxymbox{\hyperlink{class_author}{Author}}(), const \doxymbox{\hyperlink{class_publisher}{Publisher}} \&publisher=\doxymbox{\hyperlink{class_publisher}{Publisher}}(), const \doxymbox{\hyperlink{class_genre}{Genre}} \&genre=\doxymbox{\hyperlink{class_genre}{Genre}}(), double price=0.\+0, int stock=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book}{Book} and validates price and stock non-\/negativity. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_book_a2093c9d67fc5f170ee281d9df5cb9036}{\texorpdfstring{$\sim$}{\string~}\+Book}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic book subclasses. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_a2541b8cd253471ecf942bf99d4c65bf2}{get\+Isbn}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a604066cfc14211ded8b21afbde600467}{get\+Title}} () const
+\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a296c97ef556a3132648a823c4a091674}{get\+Author}} () const
+\item 
+double \doxymbox{\hyperlink{class_book_a337e2c053be4b6333bf104d16b78669b}{get\+Price}} () const
+\item 
+int \doxymbox{\hyperlink{class_book_a03624dd5855ac5dcddf0770492a465e5}{get\+Stock\+Quantity}} () const
+\item 
+void \doxymbox{\hyperlink{class_book_a99129292306d8c38b592dc28aebac17c}{update\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Updates the retail price of the book. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a306f56b4342cda0971b45e860e4c2e1b}{restock}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases available stock by a positive number of copies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a16c1021f6d24022196162e59432b0d40}{reserve\+Copies}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reserves and deducts copies from stock for borrowing or purchase. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_aaf858563d5e47afeb79f602e6aebcdb3}{calculate\+Discounted\+Price}} (double percent) const
+\begin{DoxyCompactList}\small\item\em Calculates the book price after applying a percentage discount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}}
+\begin{DoxyCompactList}\small\item\em International Standard \doxylink{class_book}{Book} Number. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_book}{Book} title. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_author}{Author} of the book. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_publisher}{Publisher}} \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}}
+\begin{DoxyCompactList}\small\item\em Publishing house. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_genre}{Genre}} \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}}
+\begin{DoxyCompactList}\small\item\em Literary genre. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}}
+\begin{DoxyCompactList}\small\item\em Retail unit price. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stock\+Quantity}}
+\begin{DoxyCompactList}\small\item\em Available copies in stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an audio recording of a \doxylink{class_book}{Book} with narrator and duration metadata. 
+
+\label{class_audio_book_doc-constructors}
+\Hypertarget{class_audio_book_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_audio_book_a0678ee9e8f939d7847ba9769fbc12db0}\index{AudioBook@{AudioBook}!AudioBook@{AudioBook}}
+\index{AudioBook@{AudioBook}!AudioBook@{AudioBook}}
+\doxysubsubsection{\texorpdfstring{AudioBook()}{AudioBook()}}
+{\footnotesize\ttfamily \label{class_audio_book_a0678ee9e8f939d7847ba9769fbc12db0} 
+Audio\+Book::\+\+Audio\+Book (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{base}{, }\item[{std::\+string}]{narrator}{ = {\ttfamily "{}Narrator"{}}, }\item[{int}]{minutes}{ = {\ttfamily 300}, }\item[{int}]{bitrate}{ = {\ttfamily 128}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_audio_book}{Audio\+Book} from a base \doxylink{class_book}{Book}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_book}{Book} entity. \\
+\hline
+{\em narrator} & Narrator name. \\
+\hline
+{\em minutes} & Total playback duration in minutes. \\
+\hline
+{\em bitrate} & Audio bitrate in kbps. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_audio_book_doc-func-members}
+\Hypertarget{class_audio_book_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_book_a152e9333a0153c86dcb59ca0837afd74}\index{AudioBook@{AudioBook}!calculateListeningHours@{calculateListeningHours}}
+\index{calculateListeningHours@{calculateListeningHours}!AudioBook@{AudioBook}}
+\doxysubsubsection{\texorpdfstring{calculateListeningHours()}{calculateListeningHours()}}
+{\footnotesize\ttfamily \label{class_audio_book_a152e9333a0153c86dcb59ca0837afd74} 
+double Audio\+Book::\+calculate\+Listening\+Hours (\begin{DoxyParamCaption}\item[{double}]{playback\+Speed}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates total listening time in hours at a given playback speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playback\+Speed} & Speed multiplier (e.\+g., 1.\+0, 1.\+5). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Listening time in hours. 
+\end{DoxyReturn}
+\Hypertarget{class_audio_book_a51667c6f38b5aea3d2ce0b8cab01dab7}\index{AudioBook@{AudioBook}!describeFormat@{describeFormat}}
+\index{describeFormat@{describeFormat}!AudioBook@{AudioBook}}
+\doxysubsubsection{\texorpdfstring{describeFormat()}{describeFormat()}}
+{\footnotesize\ttfamily \label{class_audio_book_a51667c6f38b5aea3d2ce0b8cab01dab7} 
+std::\+string Audio\+Book::\+describe\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Describes the audiobook and its narrator. 
+
+\begin{DoxyReturn}{Returns}
+Formatted \doxylink{class_audio_book}{Audio\+Book} description. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_book_a35e9ae89775c2c59b699b738faa1b3dc}{Book}}.
+
+\Hypertarget{class_audio_book_af87cd84ef974ce990fd7fe6fdf9612d0}\index{AudioBook@{AudioBook}!estimateStorageMegabytes@{estimateStorageMegabytes}}
+\index{estimateStorageMegabytes@{estimateStorageMegabytes}!AudioBook@{AudioBook}}
+\doxysubsubsection{\texorpdfstring{estimateStorageMegabytes()}{estimateStorageMegabytes()}}
+{\footnotesize\ttfamily \label{class_audio_book_af87cd84ef974ce990fd7fe6fdf9612d0} 
+double Audio\+Book::\+estimate\+Storage\+Megabytes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Estimates audio storage size in megabytes from duration and bitrate. 
+
+\begin{DoxyReturn}{Returns}
+Estimated size in MB. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

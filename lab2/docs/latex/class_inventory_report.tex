@@ -1,0 +1,79 @@
+\doxysection{Inventory\+Report Class Reference}
+\hypertarget{class_inventory_report}{}\label{class_inventory_report}\index{InventoryReport@{InventoryReport}}
+
+
+Generates point-\/in-\/time asset valuation snapshots for a \doxylink{class_warehouse}{Warehouse}.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory_report_aac7d90e52ae862b8f130bb242329762d}{Inventory\+Report}} (std::\+string date, const \doxymbox{\hyperlink{class_warehouse}{Warehouse}} \&wh)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_inventory_report}{Inventory\+Report} for a warehouse on a specific date. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_report_a095576e3f94b11ffadc788a96de38139}{generate\+Snapshot}} ()
+\begin{DoxyCompactList}\small\item\em Captures current total asset valuation from the warehouse. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_inventory_report_aaf2eb1942fc49623198425fb54f82722}{format\+Summary\+Line}} () const
+\begin{DoxyCompactList}\small\item\em Formats a one-\/line summary of the inventory valuation snapshot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates point-\/in-\/time asset valuation snapshots for a \doxylink{class_warehouse}{Warehouse}. 
+
+\label{class_inventory_report_doc-constructors}
+\Hypertarget{class_inventory_report_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_inventory_report_aac7d90e52ae862b8f130bb242329762d}\index{InventoryReport@{InventoryReport}!InventoryReport@{InventoryReport}}
+\index{InventoryReport@{InventoryReport}!InventoryReport@{InventoryReport}}
+\doxysubsubsection{\texorpdfstring{InventoryReport()}{InventoryReport()}}
+{\footnotesize\ttfamily \label{class_inventory_report_aac7d90e52ae862b8f130bb242329762d} 
+Inventory\+Report::\+\+Inventory\+Report (\begin{DoxyParamCaption}\item[{std::\+string}]{date}{, }\item[{const \doxymbox{\hyperlink{class_warehouse}{Warehouse}} \&}]{wh}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_inventory_report}{Inventory\+Report} for a warehouse on a specific date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & Report date string. \\
+\hline
+{\em wh} & Target \doxylink{class_warehouse}{Warehouse}. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_inventory_report_doc-func-members}
+\Hypertarget{class_inventory_report_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_inventory_report_aaf2eb1942fc49623198425fb54f82722}\index{InventoryReport@{InventoryReport}!formatSummaryLine@{formatSummaryLine}}
+\index{formatSummaryLine@{formatSummaryLine}!InventoryReport@{InventoryReport}}
+\doxysubsubsection{\texorpdfstring{formatSummaryLine()}{formatSummaryLine()}}
+{\footnotesize\ttfamily \label{class_inventory_report_aaf2eb1942fc49623198425fb54f82722} 
+std::\+string Inventory\+Report::\+format\+Summary\+Line (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Formats a one-\/line summary of the inventory valuation snapshot. 
+
+\begin{DoxyReturn}{Returns}
+Formatted report summary line. 
+\end{DoxyReturn}
+\Hypertarget{class_inventory_report_a095576e3f94b11ffadc788a96de38139}\index{InventoryReport@{InventoryReport}!generateSnapshot@{generateSnapshot}}
+\index{generateSnapshot@{generateSnapshot}!InventoryReport@{InventoryReport}}
+\doxysubsubsection{\texorpdfstring{generateSnapshot()}{generateSnapshot()}}
+{\footnotesize\ttfamily \label{class_inventory_report_a095576e3f94b11ffadc788a96de38139} 
+void Inventory\+Report::\+generate\+Snapshot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Captures current total asset valuation from the warehouse. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\doxysection{Courier Class Reference}
+\hypertarget{class_courier}{}\label{class_courier}\index{Courier@{Courier}}
+
+
+Represents a delivery courier responsible for transporting customer orders.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_courier_a174af584e45ae2e4b795e5a908d9a287}{Courier}} (std::\+string id="{}CR-\/1"{}, std::\+string name="{}Alex"{}, std::\+string vehicle="{}Van"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_courier}{Courier} profile. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_courier_a854bf9dce04484f14c9718efceae67b2}{assign\+Order}} (const \doxymbox{\hyperlink{class_order}{Order}} \&order)
+\begin{DoxyCompactList}\small\item\em Assigns an active \doxylink{class_order}{Order} to the courier and marks them busy. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_courier_a090206bc8dca486d034e16783336f8ed}{complete\+Dropoff}} ()
+\begin{DoxyCompactList}\small\item\em Marks the dropoff complete and restores courier availability. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_courier_aa91d20e5fd02b9c35197d6f35592cb6d}{is\+Available}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a delivery courier responsible for transporting customer orders. 
+
+\label{class_courier_doc-constructors}
+\Hypertarget{class_courier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_courier_a174af584e45ae2e4b795e5a908d9a287}\index{Courier@{Courier}!Courier@{Courier}}
+\index{Courier@{Courier}!Courier@{Courier}}
+\doxysubsubsection{\texorpdfstring{Courier()}{Courier()}}
+{\footnotesize\ttfamily \label{class_courier_a174af584e45ae2e4b795e5a908d9a287} 
+Courier::\+\+Courier (\begin{DoxyParamCaption}\item[{std::\+string}]{id}{ = {\ttfamily "{}CR-\/1"{}}, }\item[{std::\+string}]{name}{ = {\ttfamily "{}Alex"{}}, }\item[{std::\+string}]{vehicle}{ = {\ttfamily "{}Van"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_courier}{Courier} profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{class_courier}{Courier} ID. \\
+\hline
+{\em name} & \doxylink{class_courier}{Courier} name. \\
+\hline
+{\em vehicle} & Vehicle type. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_courier_doc-func-members}
+\Hypertarget{class_courier_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_courier_a854bf9dce04484f14c9718efceae67b2}\index{Courier@{Courier}!assignOrder@{assignOrder}}
+\index{assignOrder@{assignOrder}!Courier@{Courier}}
+\doxysubsubsection{\texorpdfstring{assignOrder()}{assignOrder()}}
+{\footnotesize\ttfamily \label{class_courier_a854bf9dce04484f14c9718efceae67b2} 
+void Courier::\+assign\+Order (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Assigns an active \doxylink{class_order}{Order} to the courier and marks them busy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & \doxylink{class_order}{Order} to deliver. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_delivery_exception}{Delivery\+Exception}} & if courier is busy or order is cancelled. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_courier_a090206bc8dca486d034e16783336f8ed}\index{Courier@{Courier}!completeDropoff@{completeDropoff}}
+\index{completeDropoff@{completeDropoff}!Courier@{Courier}}
+\doxysubsubsection{\texorpdfstring{completeDropoff()}{completeDropoff()}}
+{\footnotesize\ttfamily \label{class_courier_a090206bc8dca486d034e16783336f8ed} 
+void Courier::\+complete\+Dropoff (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Marks the dropoff complete and restores courier availability. 
+
+\Hypertarget{class_courier_aa91d20e5fd02b9c35197d6f35592cb6d}\index{Courier@{Courier}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!Courier@{Courier}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily \label{class_courier_aa91d20e5fd02b9c35197d6f35592cb6d} 
+bool Courier::\+is\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

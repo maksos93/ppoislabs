@@ -1,0 +1,92 @@
+\doxysection{Activity\+Log Class Reference}
+\hypertarget{class_activity_log}{}\label{class_activity_log}\index{ActivityLog@{ActivityLog}}
+
+
+Bounded audit log recording user actions across the library and bookstore system.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_activity_log_a872760460dfab7d09a78484f5a15e94a}{Activity\+Log}} (int capacity=500)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_activity_log}{Activity\+Log} with a maximum entry capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_activity_log_a9de4e3c2ab7c7b7288ec8acfc3852923}{log\+User\+Action}} (const \doxymbox{\hyperlink{class_user}{User}} \&user, const std::\+string \&action)
+\begin{DoxyCompactList}\small\item\em Records a formatted action entry for a \doxylink{class_user}{User}, evicting oldest if at capacity. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_activity_log_a6e7a4fcc52491dc6153c13dd5276f0b1}{get\+Latest\+Entry}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the most recently logged activity entry. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_activity_log_a8f7104e566b8088b668c93f2399c6c98}{count\+Entries}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bounded audit log recording user actions across the library and bookstore system. 
+
+\label{class_activity_log_doc-constructors}
+\Hypertarget{class_activity_log_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_activity_log_a872760460dfab7d09a78484f5a15e94a}\index{ActivityLog@{ActivityLog}!ActivityLog@{ActivityLog}}
+\index{ActivityLog@{ActivityLog}!ActivityLog@{ActivityLog}}
+\doxysubsubsection{\texorpdfstring{ActivityLog()}{ActivityLog()}}
+{\footnotesize\ttfamily \label{class_activity_log_a872760460dfab7d09a78484f5a15e94a} 
+Activity\+Log::\+\+Activity\+Log (\begin{DoxyParamCaption}\item[{int}]{capacity}{ = {\ttfamily 500}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_activity_log}{Activity\+Log} with a maximum entry capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Maximum number of entries to retain. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_activity_log_doc-func-members}
+\Hypertarget{class_activity_log_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_activity_log_a8f7104e566b8088b668c93f2399c6c98}\index{ActivityLog@{ActivityLog}!countEntries@{countEntries}}
+\index{countEntries@{countEntries}!ActivityLog@{ActivityLog}}
+\doxysubsubsection{\texorpdfstring{countEntries()}{countEntries()}}
+{\footnotesize\ttfamily \label{class_activity_log_a8f7104e566b8088b668c93f2399c6c98} 
+size\+\_\+t Activity\+Log::\+count\+Entries (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_activity_log_a6e7a4fcc52491dc6153c13dd5276f0b1}\index{ActivityLog@{ActivityLog}!getLatestEntry@{getLatestEntry}}
+\index{getLatestEntry@{getLatestEntry}!ActivityLog@{ActivityLog}}
+\doxysubsubsection{\texorpdfstring{getLatestEntry()}{getLatestEntry()}}
+{\footnotesize\ttfamily \label{class_activity_log_a6e7a4fcc52491dc6153c13dd5276f0b1} 
+std::\+string Activity\+Log::\+get\+Latest\+Entry (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the most recently logged activity entry. 
+
+\begin{DoxyReturn}{Returns}
+Latest entry string, or "{}\+No activity"{} if empty. 
+\end{DoxyReturn}
+\Hypertarget{class_activity_log_a9de4e3c2ab7c7b7288ec8acfc3852923}\index{ActivityLog@{ActivityLog}!logUserAction@{logUserAction}}
+\index{logUserAction@{logUserAction}!ActivityLog@{ActivityLog}}
+\doxysubsubsection{\texorpdfstring{logUserAction()}{logUserAction()}}
+{\footnotesize\ttfamily \label{class_activity_log_a9de4e3c2ab7c7b7288ec8acfc3852923} 
+void Activity\+Log::\+log\+User\+Action (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_user}{User}} \&}]{user}{, }\item[{const std::\+string \&}]{action}{}\end{DoxyParamCaption})}
+
+
+
+Records a formatted action entry for a \doxylink{class_user}{User}, evicting oldest if at capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Acting \doxylink{class_user}{User}. \\
+\hline
+{\em action} & Description of the action performed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

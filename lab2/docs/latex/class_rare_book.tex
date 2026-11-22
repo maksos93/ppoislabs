@@ -1,0 +1,168 @@
+\doxysection{Rare\+Book Class Reference}
+\hypertarget{class_rare_book}{}\label{class_rare_book}\index{RareBook@{RareBook}}
+
+
+Represents an antiquarian or collectible book requiring appraisal and insurance.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+Inheritance diagram for Rare\+Book:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rare_book}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_rare_book_a53ca148c5d03e381102d0e53ef8d7424}{Rare\+Book}} (const \doxymbox{\hyperlink{class_book}{Book}} \&base, int year=1900, std::\+string grade="{}Fine"{}, double value=500.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_rare_book}{Rare\+Book} from a base \doxylink{class_book}{Book}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_rare_book_ab1d8afd4fc20c958a9083dea5b04bca9}{compute\+Insurance\+Premium}} (double rate) const
+\begin{DoxyCompactList}\small\item\em Computes insurance premium based on appraised value and rate. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_rare_book_a926768b7420d1e2d5d21454b6c021a59}{reappraise}} (double new\+Value, const std::\+string \&new\+Grade)
+\begin{DoxyCompactList}\small\item\em Updates the appraised valuation and physical condition grade. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_rare_book_a9c91732e67816fb51df4b83e08e3aa21}{describe\+Format}} () const override
+\begin{DoxyCompactList}\small\item\em Describes the rare book publication year and condition grade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_book_a0c62ff6012a58f404e5549985d4bf46a}{Book}} (const std::\+string \&isbn="{}"{}, const std::\+string \&title="{}"{}, const \doxymbox{\hyperlink{class_author}{Author}} \&author=\doxymbox{\hyperlink{class_author}{Author}}(), const \doxymbox{\hyperlink{class_publisher}{Publisher}} \&publisher=\doxymbox{\hyperlink{class_publisher}{Publisher}}(), const \doxymbox{\hyperlink{class_genre}{Genre}} \&genre=\doxymbox{\hyperlink{class_genre}{Genre}}(), double price=0.\+0, int stock=0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_book}{Book} and validates price and stock non-\/negativity. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_book_a2093c9d67fc5f170ee281d9df5cb9036}{\texorpdfstring{$\sim$}{\string~}\+Book}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for polymorphic book subclasses. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_a2541b8cd253471ecf942bf99d4c65bf2}{get\+Isbn}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a604066cfc14211ded8b21afbde600467}{get\+Title}} () const
+\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a296c97ef556a3132648a823c4a091674}{get\+Author}} () const
+\item 
+double \doxymbox{\hyperlink{class_book_a337e2c053be4b6333bf104d16b78669b}{get\+Price}} () const
+\item 
+int \doxymbox{\hyperlink{class_book_a03624dd5855ac5dcddf0770492a465e5}{get\+Stock\+Quantity}} () const
+\item 
+void \doxymbox{\hyperlink{class_book_a99129292306d8c38b592dc28aebac17c}{update\+Price}} (double new\+Price)
+\begin{DoxyCompactList}\small\item\em Updates the retail price of the book. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a306f56b4342cda0971b45e860e4c2e1b}{restock}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases available stock by a positive number of copies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_book_a16c1021f6d24022196162e59432b0d40}{reserve\+Copies}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reserves and deducts copies from stock for borrowing or purchase. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_aaf858563d5e47afeb79f602e6aebcdb3}{calculate\+Discounted\+Price}} (double percent) const
+\begin{DoxyCompactList}\small\item\em Calculates the book price after applying a percentage discount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_book_a4801ef77b3878e363935f09ebb15a213}{isbn}}
+\begin{DoxyCompactList}\small\item\em International Standard \doxylink{class_book}{Book} Number. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_book_af2e58fdc67a5ed97d213ba4834b00e9e}{title}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_book}{Book} title. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_author}{Author}} \doxymbox{\hyperlink{class_book_a1c84f2a0d3db51a0c65f061c91096053}{author}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_author}{Author} of the book. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_publisher}{Publisher}} \doxymbox{\hyperlink{class_book_aef3c6f6b2c5bfa006a79cee3ff66ee2c}{publisher}}
+\begin{DoxyCompactList}\small\item\em Publishing house. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_genre}{Genre}} \doxymbox{\hyperlink{class_book_af6a2c9fdd799a0a30ddd9b461033c782}{genre}}
+\begin{DoxyCompactList}\small\item\em Literary genre. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_book_afa8e149d0bfb4372166d0ccfe8aa30b7}{price}}
+\begin{DoxyCompactList}\small\item\em Retail unit price. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_book_a7957c60a3cd6c7f57d6640f35e233ca4}{stock\+Quantity}}
+\begin{DoxyCompactList}\small\item\em Available copies in stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an antiquarian or collectible book requiring appraisal and insurance. 
+
+\label{class_rare_book_doc-constructors}
+\Hypertarget{class_rare_book_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rare_book_a53ca148c5d03e381102d0e53ef8d7424}\index{RareBook@{RareBook}!RareBook@{RareBook}}
+\index{RareBook@{RareBook}!RareBook@{RareBook}}
+\doxysubsubsection{\texorpdfstring{RareBook()}{RareBook()}}
+{\footnotesize\ttfamily \label{class_rare_book_a53ca148c5d03e381102d0e53ef8d7424} 
+Rare\+Book::\+\+Rare\+Book (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{base}{, }\item[{int}]{year}{ = {\ttfamily 1900}, }\item[{std::\+string}]{grade}{ = {\ttfamily "{}Fine"{}}, }\item[{double}]{value}{ = {\ttfamily 500.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_rare_book}{Rare\+Book} from a base \doxylink{class_book}{Book}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_book}{Book} entity. \\
+\hline
+{\em year} & Year of original publication. \\
+\hline
+{\em grade} & Condition grade string. \\
+\hline
+{\em value} & Appraised value in currency units. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_rare_book_doc-func-members}
+\Hypertarget{class_rare_book_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rare_book_ab1d8afd4fc20c958a9083dea5b04bca9}\index{RareBook@{RareBook}!computeInsurancePremium@{computeInsurancePremium}}
+\index{computeInsurancePremium@{computeInsurancePremium}!RareBook@{RareBook}}
+\doxysubsubsection{\texorpdfstring{computeInsurancePremium()}{computeInsurancePremium()}}
+{\footnotesize\ttfamily \label{class_rare_book_ab1d8afd4fc20c958a9083dea5b04bca9} 
+double Rare\+Book::\+compute\+Insurance\+Premium (\begin{DoxyParamCaption}\item[{double}]{rate}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes insurance premium based on appraised value and rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & Insurance rate multiplier (e.\+g., 0.\+05 for 5\%). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Calculated insurance premium. 
+\end{DoxyReturn}
+\Hypertarget{class_rare_book_a9c91732e67816fb51df4b83e08e3aa21}\index{RareBook@{RareBook}!describeFormat@{describeFormat}}
+\index{describeFormat@{describeFormat}!RareBook@{RareBook}}
+\doxysubsubsection{\texorpdfstring{describeFormat()}{describeFormat()}}
+{\footnotesize\ttfamily \label{class_rare_book_a9c91732e67816fb51df4b83e08e3aa21} 
+std::\+string Rare\+Book::\+describe\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Describes the rare book publication year and condition grade. 
+
+\begin{DoxyReturn}{Returns}
+Formatted \doxylink{class_rare_book}{Rare\+Book} description. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_book_a35e9ae89775c2c59b699b738faa1b3dc}{Book}}.
+
+\Hypertarget{class_rare_book_a926768b7420d1e2d5d21454b6c021a59}\index{RareBook@{RareBook}!reappraise@{reappraise}}
+\index{reappraise@{reappraise}!RareBook@{RareBook}}
+\doxysubsubsection{\texorpdfstring{reappraise()}{reappraise()}}
+{\footnotesize\ttfamily \label{class_rare_book_a926768b7420d1e2d5d21454b6c021a59} 
+void Rare\+Book::\+reappraise (\begin{DoxyParamCaption}\item[{double}]{new\+Value}{, }\item[{const std::\+string \&}]{new\+Grade}{}\end{DoxyParamCaption})}
+
+
+
+Updates the appraised valuation and physical condition grade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Value} & Updated appraised value (must be \texorpdfstring{$>$}{>}= 0). \\
+\hline
+{\em new\+Grade} & Updated condition grade. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}} & if new\+Value is negative. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\doxysection{Guest Class Reference}
+\hypertarget{class_guest}{}\label{class_guest}\index{Guest@{Guest}}
+
+
+Represents an unauthenticated visitor browsing the online catalog.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_guest_aacabc00ee68cd326f08162f9c7aeb360}{Guest}} (std::\+string token="{}GUEST-\/TMP"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_guest}{Guest} session. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_guest_aa69bf171a0790457073942c5b618b19c}{track\+Page\+View}} ()
+\begin{DoxyCompactList}\small\item\em Increments the counter of viewed catalog pages. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_guest_ae9da05605eafc6e877dd65cd26da5ff9}{can\+Browse\+Catalog}} () const
+\begin{DoxyCompactList}\small\item\em Verifies whether the guest has an active session token to browse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an unauthenticated visitor browsing the online catalog. 
+
+\label{class_guest_doc-constructors}
+\Hypertarget{class_guest_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_guest_aacabc00ee68cd326f08162f9c7aeb360}\index{Guest@{Guest}!Guest@{Guest}}
+\index{Guest@{Guest}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{Guest()}{Guest()}}
+{\footnotesize\ttfamily \label{class_guest_aacabc00ee68cd326f08162f9c7aeb360} 
+Guest::\+\+Guest (\begin{DoxyParamCaption}\item[{std::\+string}]{token}{ = {\ttfamily "{}GUEST-\/TMP"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_guest}{Guest} session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & Temporary session token. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_guest_doc-func-members}
+\Hypertarget{class_guest_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_guest_ae9da05605eafc6e877dd65cd26da5ff9}\index{Guest@{Guest}!canBrowseCatalog@{canBrowseCatalog}}
+\index{canBrowseCatalog@{canBrowseCatalog}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{canBrowseCatalog()}{canBrowseCatalog()}}
+{\footnotesize\ttfamily \label{class_guest_ae9da05605eafc6e877dd65cd26da5ff9} 
+bool Guest::\+can\+Browse\+Catalog (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifies whether the guest has an active session token to browse. 
+
+\begin{DoxyReturn}{Returns}
+True if session\+Token is non-\/empty. 
+\end{DoxyReturn}
+\Hypertarget{class_guest_aa69bf171a0790457073942c5b618b19c}\index{Guest@{Guest}!trackPageView@{trackPageView}}
+\index{trackPageView@{trackPageView}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{trackPageView()}{trackPageView()}}
+{\footnotesize\ttfamily \label{class_guest_aa69bf171a0790457073942c5b618b19c} 
+void Guest::\+track\+Page\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increments the counter of viewed catalog pages. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

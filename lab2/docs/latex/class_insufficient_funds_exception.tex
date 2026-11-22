@@ -1,0 +1,57 @@
+\doxysection{Insufficient\+Funds\+Exception Class Reference}
+\hypertarget{class_insufficient_funds_exception}{}\label{class_insufficient_funds_exception}\index{InsufficientFundsException@{InsufficientFundsException}}
+
+
+Thrown when tendered cash, credit limit, or loyalty points are below the required amount.  
+
+
+
+
+{\ttfamily \+\#include $<$exceptions.\+hpp$>$}
+
+Inheritance diagram for Insufficient\+Funds\+Exception:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_insufficient_funds_exception}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_insufficient_funds_exception_a9a20e80f5686a10e09ff946229da7703}{Insufficient\+Funds\+Exception}} (double required, double available)
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception} comparing required and available balances. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_library_exception}{Library\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_library_exception_a77a7a251c00b0e02e47b41bacf065a28}{Library\+Exception}} (const std::\+string \&message)
+\begin{DoxyCompactList}\small\item\em Constructs a base \doxylink{class_library_exception}{Library\+Exception} with an error description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Thrown when tendered cash, credit limit, or loyalty points are below the required amount. 
+
+\label{class_insufficient_funds_exception_doc-constructors}
+\Hypertarget{class_insufficient_funds_exception_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_insufficient_funds_exception_a9a20e80f5686a10e09ff946229da7703}\index{InsufficientFundsException@{InsufficientFundsException}!InsufficientFundsException@{InsufficientFundsException}}
+\index{InsufficientFundsException@{InsufficientFundsException}!InsufficientFundsException@{InsufficientFundsException}}
+\doxysubsubsection{\texorpdfstring{InsufficientFundsException()}{InsufficientFundsException()}}
+{\footnotesize\ttfamily \label{class_insufficient_funds_exception_a9a20e80f5686a10e09ff946229da7703} 
+Insufficient\+Funds\+Exception::\+\+Insufficient\+Funds\+Exception (\begin{DoxyParamCaption}\item[{double}]{required}{, }\item[{double}]{available}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs \doxylink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception} comparing required and available balances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em required} & Amount required to complete the operation. \\
+\hline
+{\em available} & Amount actually available. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{exceptions_8hpp}{exceptions.\+hpp}}\end{DoxyCompactItemize}

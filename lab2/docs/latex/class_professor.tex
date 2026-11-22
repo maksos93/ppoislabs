@@ -1,0 +1,173 @@
+\doxysection{Professor Class Reference}
+\hypertarget{class_professor}{}\label{class_professor}\index{Professor@{Professor}}
+
+
+Specialized \doxylink{class_reader}{Reader} representing faculty members with extended loan periods.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+Inheritance diagram for Professor:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_professor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_professor_afedfd1fb0d4a90971d7d72977a3af1c2}{Professor}} (const \doxymbox{\hyperlink{class_reader}{Reader}} \&base, std::\+string dept="{}Computer Science"{}, std::\+string rank="{}Associate"{}, int days=60)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_professor}{Professor} reader profile. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_professor_a92b93c46f72bb9dc47dae32a33cfbbbe}{compute\+Due\+Days}} (bool is\+Reference\+Material) const
+\begin{DoxyCompactList}\small\item\em Computes loan duration in days depending on whether the item is reference material. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_professor_ac9a1ae758cafaf218a48e3b345224e3a}{can\+Request\+Interlibrary\+Loan}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the professor is permitted to initiate interlibrary loans. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_professor_a84b44314cbc7c21e0130bc6de30c34b2}{get\+Access\+Tier}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the professor access tier label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_reader}{Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_reader_acdc6cab7f5f5cad02baaa38ea029842c}{Reader}} (const \doxymbox{\hyperlink{class_user}{User}} \&base, \doxymbox{\hyperlink{class_membership_card}{Membership\+Card}} card=\doxymbox{\hyperlink{class_membership_card}{Membership\+Card}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_reader}{Reader} from a base \doxylink{class_user}{User} and \doxylink{class_membership_card}{Membership\+Card}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_reader_a8693e98619ea5782fdc9542b2282cd37}{borrow\+Book}} (\doxymbox{\hyperlink{class_book}{Book}} \&book)
+\begin{DoxyCompactList}\small\item\em Borrows a book, reserving one copy and recording the loan on the card. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_reader_a4fa277ed528574528c3d35594894552f}{return\+Book}} (\doxymbox{\hyperlink{class_book}{Book}} \&book)
+\begin{DoxyCompactList}\small\item\em Returns a previously borrowed book and restores stock quantity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_reader_ae0fcf1516e7f00e36e29b67d0546a637}{add\+Fine}} (double amount)
+\begin{DoxyCompactList}\small\item\em Adds an overdue or damage fine to the reader\textquotesingle{}s balance. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_reader_a37583d39b822b7106e2f8a547162e818}{pay\+Fine}} (double amount)
+\begin{DoxyCompactList}\small\item\em Pays down the reader\textquotesingle{}s unpaid fine balance. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_reader_a75301c3009eb0cc43adef1e902342256}{get\+Access\+Tier}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the reader access tier label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_user}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_user_a215ef3e0986908c5715e9a68ddaa27b1}{User}} (int id=0, std::\+string name="{}"{}, std::\+string email="{}"{}, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_user}{User} account. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_user_a634d7ad22c3d2b5fed35f71e10d98628}{\texorpdfstring{$\sim$}{\string~}\+User}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for user hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_user_ac5a839e8c9b3bb68858d8c206a32885d}{get\+User\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a41aaa8d1f105ff225353dfe895306fde}{get\+Full\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_user_a68c520e78268ba63c97ff04b6fb210a1}{get\+Email}} () const
+\item 
+bool \doxymbox{\hyperlink{class_user_aef1e8dac7577b691d1ae8a2f6ac724bf}{validate\+Email\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Validates basic email syntax (\textquotesingle{}@\textquotesingle{} and \textquotesingle{}.\textquotesingle{} presence). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_afd788345e0a135166880f3827025b962}{relocate}} (const \doxymbox{\hyperlink{class_address}{Address}} \&new\+Address)
+\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_user_a16ebaa37e193ab4e11a70d850560b8ee}{apply\+Notification\+Preferences}} (const \doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \&prefs)
+\begin{DoxyCompactList}\small\item\em Applies updated notification preferences to the user profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_reader}{Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_membership_card}{Membership\+Card}} \doxymbox{\hyperlink{class_reader_ab9833b44edf4b9ad4a54543bf1ae7406}{card}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_reader}{Reader}\textquotesingle{}s library membership card. \end{DoxyCompactList}\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{class_reader_a5d868134471329b71a4a875ee79f8acf}{borrowed\+Isbns}}
+\begin{DoxyCompactList}\small\item\em List of currently borrowed book ISBNs. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_reader_a59fc334e765a3c89460271ddb860d481}{unpaid\+Fines}}
+\begin{DoxyCompactList}\small\item\em Accumulated overdue fine balance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_user}{User}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_user_a5986b220d29c26d9f8bcd8a31b404a76}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique numeric user ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_a0cf4d35683a5bbfb232721eb5877690d}{full\+Name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_user_af340678819489cd891b44490fc799cfa}{address}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s postal address. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_notification_preferences}{Notification\+Preferences}} \doxymbox{\hyperlink{class_user_ac3df1beda00cc0c2265a2b7f152419fc}{preferences}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s notification settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specialized \doxylink{class_reader}{Reader} representing faculty members with extended loan periods. 
+
+\label{class_professor_doc-constructors}
+\Hypertarget{class_professor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_professor_afedfd1fb0d4a90971d7d72977a3af1c2}\index{Professor@{Professor}!Professor@{Professor}}
+\index{Professor@{Professor}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{Professor()}{Professor()}}
+{\footnotesize\ttfamily \label{class_professor_afedfd1fb0d4a90971d7d72977a3af1c2} 
+Professor::\+\+Professor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_reader}{Reader}} \&}]{base}{, }\item[{std::\+string}]{dept}{ = {\ttfamily "{}Computer~Science"{}}, }\item[{std::\+string}]{rank}{ = {\ttfamily "{}Associate"{}}, }\item[{int}]{days}{ = {\ttfamily 60}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_professor}{Professor} reader profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_reader}{Reader} profile. \\
+\hline
+{\em dept} & Department name. \\
+\hline
+{\em rank} & Academic rank. \\
+\hline
+{\em days} & Extended loan period in days. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_professor_doc-func-members}
+\Hypertarget{class_professor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_professor_ac9a1ae758cafaf218a48e3b345224e3a}\index{Professor@{Professor}!canRequestInterlibraryLoan@{canRequestInterlibraryLoan}}
+\index{canRequestInterlibraryLoan@{canRequestInterlibraryLoan}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{canRequestInterlibraryLoan()}{canRequestInterlibraryLoan()}}
+{\footnotesize\ttfamily \label{class_professor_ac9a1ae758cafaf218a48e3b345224e3a} 
+bool Professor::\+can\+Request\+Interlibrary\+Loan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the professor is permitted to initiate interlibrary loans. 
+
+\begin{DoxyReturn}{Returns}
+Always true for faculty accounts. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_a92b93c46f72bb9dc47dae32a33cfbbbe}\index{Professor@{Professor}!computeDueDays@{computeDueDays}}
+\index{computeDueDays@{computeDueDays}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{computeDueDays()}{computeDueDays()}}
+{\footnotesize\ttfamily \label{class_professor_a92b93c46f72bb9dc47dae32a33cfbbbe} 
+int Professor::\+compute\+Due\+Days (\begin{DoxyParamCaption}\item[{bool}]{is\+Reference\+Material}{}\end{DoxyParamCaption}) const}
+
+
+
+Computes loan duration in days depending on whether the item is reference material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Reference\+Material} & True if item is restricted reference material. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Allowed loan duration in days. 
+\end{DoxyReturn}
+\Hypertarget{class_professor_a84b44314cbc7c21e0130bc6de30c34b2}\index{Professor@{Professor}!getAccessTier@{getAccessTier}}
+\index{getAccessTier@{getAccessTier}!Professor@{Professor}}
+\doxysubsubsection{\texorpdfstring{getAccessTier()}{getAccessTier()}}
+{\footnotesize\ttfamily \label{class_professor_a84b44314cbc7c21e0130bc6de30c34b2} 
+std::\+string Professor::\+get\+Access\+Tier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the professor access tier label. 
+
+\begin{DoxyReturn}{Returns}
+"{}\+Professor\+Reader"{} string. 
+\end{DoxyReturn}
+
+
+Reimplemented from \doxymbox{\hyperlink{class_user_ac007e6f7428dba19fd3bbe11d45efef4}{User}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

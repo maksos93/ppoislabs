@@ -1,0 +1,66 @@
+\doxysection{include/\+book.hpp File Reference}
+\hypertarget{book_8hpp}{}\label{book_8hpp}\index{include/book.hpp@{include/book.hpp}}
+
+
+\doxylink{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}{Catalog}, Books, Publishing, and Inventory management definitions.  
+
+
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_address}{Address}}
+\begin{DoxyCompactList}\small\item\em Represents a physical postal address for users, publishers, warehouses, and delivery routes. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_genre}{Genre}}
+\begin{DoxyCompactList}\small\item\em Represents a literary genre or subject classification. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_category}{Category}}
+\begin{DoxyCompactList}\small\item\em Represents a catalog category linked to a primary literary \doxylink{class_genre}{Genre}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_author}{Author}}
+\begin{DoxyCompactList}\small\item\em Represents a book author with biographical metadata. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_publisher}{Publisher}}
+\begin{DoxyCompactList}\small\item\em Represents a publishing house with licensing code and office address. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_book}{Book}}
+\begin{DoxyCompactList}\small\item\em Core domain entity representing a book in the library and bookstore catalog. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_edition}{Edition}}
+\begin{DoxyCompactList}\small\item\em Represents a specific print edition of a \doxylink{class_book}{Book}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_e_book}{EBook}}
+\begin{DoxyCompactList}\small\item\em Represents a digital electronic book with file size and DRM properties. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_audio_book}{Audio\+Book}}
+\begin{DoxyCompactList}\small\item\em Represents an audio recording of a \doxylink{class_book}{Book} with narrator and duration metadata. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_rare_book}{Rare\+Book}}
+\begin{DoxyCompactList}\small\item\em Represents an antiquarian or collectible book requiring appraisal and insurance. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_inventory_item}{Inventory\+Item}}
+\begin{DoxyCompactList}\small\item\em Tracks warehouse SKU, stock quantity, and reorder threshold for a \doxylink{class_book}{Book}. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_stock}{Stock}}
+\begin{DoxyCompactList}\small\item\em Aggregates a batch of \doxylink{class_inventory_item}{Inventory\+Item} entries for valuation and low-\/stock monitoring. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_shelf}{Shelf}}
+\begin{DoxyCompactList}\small\item\em Represents a physical storage shelf with unit capacity tracking. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_section}{Section}}
+\begin{DoxyCompactList}\small\item\em Groups multiple \doxylink{class_shelf}{Shelf} units under a specific literary \doxylink{class_genre}{Genre} inside a warehouse or hall. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_warehouse}{Warehouse}}
+\begin{DoxyCompactList}\small\item\em Represents a physical storage facility holding sections and active stock batches. \end{DoxyCompactList}\item 
+class \doxymbox{\hyperlink{class_catalog_manager}{Catalog\+Manager}}
+\begin{DoxyCompactList}\small\item\em Central registry for managing books by ISBN and featured authors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \doxymbox{\hyperlink{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}{Catalog}} = \doxymbox{\hyperlink{class_catalog_manager}{Catalog\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}{Catalog}, Books, Publishing, and Inventory management definitions. 
+
+
+
+\label{book_8hpp_doc-typedef-members}
+\Hypertarget{book_8hpp_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}\index{book.hpp@{book.hpp}!Catalog@{Catalog}}
+\index{Catalog@{Catalog}!book.hpp@{book.hpp}}
+\doxysubsubsection{\texorpdfstring{Catalog}{Catalog}}
+{\footnotesize\ttfamily \label{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc} 
+using \doxymbox{\hyperlink{book_8hpp_aa91c4c1c3a9218d0dcbedf89a96276fc}{Catalog}} = \doxymbox{\hyperlink{class_catalog_manager}{Catalog\+Manager}}}
+

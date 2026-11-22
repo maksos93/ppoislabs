@@ -1,0 +1,187 @@
+\doxysection{Catalog\+Manager Class Reference}
+\hypertarget{class_catalog_manager}{}\label{class_catalog_manager}\index{CatalogManager@{CatalogManager}}
+
+
+Central registry for managing books by ISBN and featured authors.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_catalog_manager_a25f6a7df2607ead0009494963fb54f1c}{Catalog\+Manager}} ()=default
+\item 
+void \doxymbox{\hyperlink{class_catalog_manager_ae906b58465360336579223c90f8f2360}{add\+Book}} (const \doxymbox{\hyperlink{class_book}{Book}} \&book)
+\begin{DoxyCompactList}\small\item\em Adds a new \doxylink{class_book}{Book} to the catalog. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catalog_manager_a71bbbf1fdf045ef1c4f5a4e4cb4cdabf}{remove\+Book}} (const std::\+string \&isbn)
+\begin{DoxyCompactList}\small\item\em Removes a \doxylink{class_book}{Book} from the catalog by ISBN. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_book}{Book}} \& \doxymbox{\hyperlink{class_catalog_manager_ad8360a306dcb1fc401ea112fb96d10ae}{get\+Book}} (const std::\+string \&isbn)
+\begin{DoxyCompactList}\small\item\em Retrieves a mutable reference to a \doxylink{class_book}{Book} by ISBN. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_book}{Book}} \& \doxymbox{\hyperlink{class_catalog_manager_af2d1016c377a554a24d44247416e21bc}{get\+Book}} (const std::\+string \&isbn) const
+\begin{DoxyCompactList}\small\item\em Retrieves a const reference to a \doxylink{class_book}{Book} by ISBN. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_book}{Book}} $>$ \doxymbox{\hyperlink{class_catalog_manager_adddfdbf663dfcd8958ae64952f595b59}{search\+By\+Author}} (const std::\+string \&author\+Name) const
+\begin{DoxyCompactList}\small\item\em Searches the catalog for all books written by a given author. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_catalog_manager_a8f2aa552369fc73022aec5316dccb33b}{register\+Featured\+Author}} (const \doxymbox{\hyperlink{class_author}{Author}} \&author)
+\begin{DoxyCompactList}\small\item\em Adds an \doxylink{class_author}{Author} to the featured authors list. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{class_catalog_manager_aa38a51710e97abf6066d2173525936e9}{get\+Book\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns total number of distinct books in the catalog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Central registry for managing books by ISBN and featured authors. 
+
+\label{class_catalog_manager_doc-constructors}
+\Hypertarget{class_catalog_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_catalog_manager_a25f6a7df2607ead0009494963fb54f1c}\index{CatalogManager@{CatalogManager}!CatalogManager@{CatalogManager}}
+\index{CatalogManager@{CatalogManager}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{CatalogManager()}{CatalogManager()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_a25f6a7df2607ead0009494963fb54f1c} 
+Catalog\+Manager::\+\+Catalog\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\label{class_catalog_manager_doc-func-members}
+\Hypertarget{class_catalog_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_catalog_manager_ae906b58465360336579223c90f8f2360}\index{CatalogManager@{CatalogManager}!addBook@{addBook}}
+\index{addBook@{addBook}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_ae906b58465360336579223c90f8f2360} 
+void Catalog\+Manager::\+add\+Book (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{book}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new \doxylink{class_book}{Book} to the catalog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & \doxylink{class_book}{Book} instance to insert. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_duplicate_book_exception}{Duplicate\+Book\+Exception}} & if a book with the same ISBN already exists. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_catalog_manager_ad8360a306dcb1fc401ea112fb96d10ae}\index{CatalogManager@{CatalogManager}!getBook@{getBook}}
+\index{getBook@{getBook}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{getBook()}{getBook()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_catalog_manager_ad8360a306dcb1fc401ea112fb96d10ae} 
+\doxymbox{\hyperlink{class_book}{Book}} \& Catalog\+Manager::\+get\+Book (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{isbn}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a mutable reference to a \doxylink{class_book}{Book} by ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & ISBN to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the matching \doxylink{class_book}{Book}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_book_not_found_exception}{Book\+Not\+Found\+Exception}} & if the ISBN is not found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_catalog_manager_af2d1016c377a554a24d44247416e21bc}\index{CatalogManager@{CatalogManager}!getBook@{getBook}}
+\index{getBook@{getBook}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{getBook()}{getBook()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_catalog_manager_af2d1016c377a554a24d44247416e21bc} 
+const \doxymbox{\hyperlink{class_book}{Book}} \& Catalog\+Manager::\+get\+Book (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{isbn}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a const reference to a \doxylink{class_book}{Book} by ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & ISBN to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const reference to the matching \doxylink{class_book}{Book}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_book_not_found_exception}{Book\+Not\+Found\+Exception}} & if the ISBN is not found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_catalog_manager_aa38a51710e97abf6066d2173525936e9}\index{CatalogManager@{CatalogManager}!getBookCount@{getBookCount}}
+\index{getBookCount@{getBookCount}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{getBookCount()}{getBookCount()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_aa38a51710e97abf6066d2173525936e9} 
+size\+\_\+t Catalog\+Manager::\+get\+Book\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns total number of distinct books in the catalog. 
+
+\begin{DoxyReturn}{Returns}
+Number of catalog entries. 
+\end{DoxyReturn}
+\Hypertarget{class_catalog_manager_a8f2aa552369fc73022aec5316dccb33b}\index{CatalogManager@{CatalogManager}!registerFeaturedAuthor@{registerFeaturedAuthor}}
+\index{registerFeaturedAuthor@{registerFeaturedAuthor}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{registerFeaturedAuthor()}{registerFeaturedAuthor()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_a8f2aa552369fc73022aec5316dccb33b} 
+void Catalog\+Manager::\+register\+Featured\+Author (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_author}{Author}} \&}]{author}{}\end{DoxyParamCaption})}
+
+
+
+Adds an \doxylink{class_author}{Author} to the featured authors list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em author} & \doxylink{class_author}{Author} to feature. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_catalog_manager_a71bbbf1fdf045ef1c4f5a4e4cb4cdabf}\index{CatalogManager@{CatalogManager}!removeBook@{removeBook}}
+\index{removeBook@{removeBook}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{removeBook()}{removeBook()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_a71bbbf1fdf045ef1c4f5a4e4cb4cdabf} 
+void Catalog\+Manager::\+remove\+Book (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{isbn}{}\end{DoxyParamCaption})}
+
+
+
+Removes a \doxylink{class_book}{Book} from the catalog by ISBN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em isbn} & ISBN of the book to remove. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_book_not_found_exception}{Book\+Not\+Found\+Exception}} & if the ISBN is not present. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_catalog_manager_adddfdbf663dfcd8958ae64952f595b59}\index{CatalogManager@{CatalogManager}!searchByAuthor@{searchByAuthor}}
+\index{searchByAuthor@{searchByAuthor}!CatalogManager@{CatalogManager}}
+\doxysubsubsection{\texorpdfstring{searchByAuthor()}{searchByAuthor()}}
+{\footnotesize\ttfamily \label{class_catalog_manager_adddfdbf663dfcd8958ae64952f595b59} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_book}{Book}} $>$ Catalog\+Manager::\+search\+By\+Author (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{author\+Name}{}\end{DoxyParamCaption}) const}
+
+
+
+Searches the catalog for all books written by a given author. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em author\+Name} & Exact author full name to match. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of matching \doxylink{class_book}{Book} objects. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

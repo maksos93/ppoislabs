@@ -1,0 +1,101 @@
+\doxysection{Return\+Request Class Reference}
+\hypertarget{class_return_request}{}\label{class_return_request}\index{ReturnRequest@{ReturnRequest}}
+
+
+Represents a customer request to return a purchased book from an \doxylink{class_order}{Order}.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_return_request_ac80519baaa3aeeb18a5cf8f882654977}{Return\+Request}} (int id, const \doxymbox{\hyperlink{class_order}{Order}} \&order, const \doxymbox{\hyperlink{class_book}{Book}} \&book, std::\+string reason)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_return_request}{Return\+Request}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_return_request_a756500ae54419551e031b3838c5e743c}{approve\+Return}} ()
+\begin{DoxyCompactList}\small\item\em Approves the return request for refund processing. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_return_request_a3e9c2d7945fc3beaf5dac2ff08da148e}{reject\+Return}} (const std::\+string \&note)
+\begin{DoxyCompactList}\small\item\em Rejects the return request and appends an explanation note. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_return_request_a588cf2a4a0bd9ab7be803f452c621e3e}{is\+Approved}} () const
+\item 
+\doxymbox{\hyperlink{class_book}{Book}} \doxymbox{\hyperlink{class_return_request_a6564fa78f83b628e78b3fc8a198e04f0}{get\+Returned\+Book}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a customer request to return a purchased book from an \doxylink{class_order}{Order}. 
+
+\label{class_return_request_doc-constructors}
+\Hypertarget{class_return_request_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_return_request_ac80519baaa3aeeb18a5cf8f882654977}\index{ReturnRequest@{ReturnRequest}!ReturnRequest@{ReturnRequest}}
+\index{ReturnRequest@{ReturnRequest}!ReturnRequest@{ReturnRequest}}
+\doxysubsubsection{\texorpdfstring{ReturnRequest()}{ReturnRequest()}}
+{\footnotesize\ttfamily \label{class_return_request_ac80519baaa3aeeb18a5cf8f882654977} 
+Return\+Request::\+\+Return\+Request (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{, }\item[{const \doxymbox{\hyperlink{class_book}{Book}} \&}]{book}{, }\item[{std::\+string}]{reason}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_return_request}{Return\+Request}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Return request ID. \\
+\hline
+{\em order} & Original \doxylink{class_order}{Order}. \\
+\hline
+{\em book} & \doxylink{class_book}{Book} to return. \\
+\hline
+{\em reason} & Reason description. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_return_request_doc-func-members}
+\Hypertarget{class_return_request_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_return_request_a756500ae54419551e031b3838c5e743c}\index{ReturnRequest@{ReturnRequest}!approveReturn@{approveReturn}}
+\index{approveReturn@{approveReturn}!ReturnRequest@{ReturnRequest}}
+\doxysubsubsection{\texorpdfstring{approveReturn()}{approveReturn()}}
+{\footnotesize\ttfamily \label{class_return_request_a756500ae54419551e031b3838c5e743c} 
+void Return\+Request::\+approve\+Return (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Approves the return request for refund processing. 
+
+\Hypertarget{class_return_request_a6564fa78f83b628e78b3fc8a198e04f0}\index{ReturnRequest@{ReturnRequest}!getReturnedBook@{getReturnedBook}}
+\index{getReturnedBook@{getReturnedBook}!ReturnRequest@{ReturnRequest}}
+\doxysubsubsection{\texorpdfstring{getReturnedBook()}{getReturnedBook()}}
+{\footnotesize\ttfamily \label{class_return_request_a6564fa78f83b628e78b3fc8a198e04f0} 
+\doxymbox{\hyperlink{class_book}{Book}} Return\+Request::\+get\+Returned\+Book (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_return_request_a588cf2a4a0bd9ab7be803f452c621e3e}\index{ReturnRequest@{ReturnRequest}!isApproved@{isApproved}}
+\index{isApproved@{isApproved}!ReturnRequest@{ReturnRequest}}
+\doxysubsubsection{\texorpdfstring{isApproved()}{isApproved()}}
+{\footnotesize\ttfamily \label{class_return_request_a588cf2a4a0bd9ab7be803f452c621e3e} 
+bool Return\+Request::\+is\+Approved (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_return_request_a3e9c2d7945fc3beaf5dac2ff08da148e}\index{ReturnRequest@{ReturnRequest}!rejectReturn@{rejectReturn}}
+\index{rejectReturn@{rejectReturn}!ReturnRequest@{ReturnRequest}}
+\doxysubsubsection{\texorpdfstring{rejectReturn()}{rejectReturn()}}
+{\footnotesize\ttfamily \label{class_return_request_a3e9c2d7945fc3beaf5dac2ff08da148e} 
+void Return\+Request::\+reject\+Return (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{note}{}\end{DoxyParamCaption})}
+
+
+
+Rejects the return request and appends an explanation note. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em note} & Rejection reason. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,78 @@
+\doxysection{Refund\+Processor Class Reference}
+\hypertarget{class_refund_processor}{}\label{class_refund_processor}\index{RefundProcessor@{RefundProcessor}}
+
+
+Executes financial refunds and restocks returned books upon approved \doxylink{class_return_request}{Return\+Request}.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_refund_processor_afafee0ecc39b79c7486a6cd8542bcde0}{Refund\+Processor}} ()
+\item 
+double \doxymbox{\hyperlink{class_refund_processor_a6ecb5d0bfdca03ae0f15c325b499a21e}{execute\+Refund}} (\doxymbox{\hyperlink{class_return_request}{Return\+Request}} \&request, \doxymbox{\hyperlink{class_payment}{Payment}} \&payment, \doxymbox{\hyperlink{class_book}{Book}} \&inventory\+Book)
+\begin{DoxyCompactList}\small\item\em Refunds payment and restocks the returned book if the \doxylink{class_return_request}{Return\+Request} is approved. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_refund_processor_ad40879e2a412d7b8504e612ac8b6ea9b}{get\+Processed\+Refunds\+Total}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Executes financial refunds and restocks returned books upon approved \doxylink{class_return_request}{Return\+Request}. 
+
+\label{class_refund_processor_doc-constructors}
+\Hypertarget{class_refund_processor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_refund_processor_afafee0ecc39b79c7486a6cd8542bcde0}\index{RefundProcessor@{RefundProcessor}!RefundProcessor@{RefundProcessor}}
+\index{RefundProcessor@{RefundProcessor}!RefundProcessor@{RefundProcessor}}
+\doxysubsubsection{\texorpdfstring{RefundProcessor()}{RefundProcessor()}}
+{\footnotesize\ttfamily \label{class_refund_processor_afafee0ecc39b79c7486a6cd8542bcde0} 
+Refund\+Processor::\+\+Refund\+Processor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_refund_processor_doc-func-members}
+\Hypertarget{class_refund_processor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_refund_processor_a6ecb5d0bfdca03ae0f15c325b499a21e}\index{RefundProcessor@{RefundProcessor}!executeRefund@{executeRefund}}
+\index{executeRefund@{executeRefund}!RefundProcessor@{RefundProcessor}}
+\doxysubsubsection{\texorpdfstring{executeRefund()}{executeRefund()}}
+{\footnotesize\ttfamily \label{class_refund_processor_a6ecb5d0bfdca03ae0f15c325b499a21e} 
+double Refund\+Processor::\+execute\+Refund (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_return_request}{Return\+Request}} \&}]{request}{, }\item[{\doxymbox{\hyperlink{class_payment}{Payment}} \&}]{payment}{, }\item[{\doxymbox{\hyperlink{class_book}{Book}} \&}]{inventory\+Book}{}\end{DoxyParamCaption})}
+
+
+
+Refunds payment and restocks the returned book if the \doxylink{class_return_request}{Return\+Request} is approved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Approved \doxylink{class_return_request}{Return\+Request}. \\
+\hline
+{\em payment} & \doxylink{class_payment}{Payment} transaction to refund. \\
+\hline
+{\em inventory\+Book} & \doxylink{class_book}{Book} record to restock. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Refunded monetary value. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_unauthorized_access_exception}{Unauthorized\+Access\+Exception}} & if request is not approved. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_refund_processor_ad40879e2a412d7b8504e612ac8b6ea9b}\index{RefundProcessor@{RefundProcessor}!getProcessedRefundsTotal@{getProcessedRefundsTotal}}
+\index{getProcessedRefundsTotal@{getProcessedRefundsTotal}!RefundProcessor@{RefundProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedRefundsTotal()}{getProcessedRefundsTotal()}}
+{\footnotesize\ttfamily \label{class_refund_processor_ad40879e2a412d7b8504e612ac8b6ea9b} 
+double Refund\+Processor::\+get\+Processed\+Refunds\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

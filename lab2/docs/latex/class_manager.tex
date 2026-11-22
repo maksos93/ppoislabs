@@ -1,0 +1,132 @@
+\doxysection{Manager Class Reference}
+\hypertarget{class_manager}{}\label{class_manager}\index{Manager@{Manager}}
+
+
+Department manager authorized to approve high-\/value orders and override discounts.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+Inheritance diagram for Manager:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_manager_a0a3963c57d92fc053203002757222486}{Manager}} (const \doxymbox{\hyperlink{class_employee}{Employee}} \&base, std::\+string dept="{}Operations"{}, double limit=5000.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_manager}{Manager} from a base \doxylink{class_employee}{Employee}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_manager_a9fff35221b763f8263e58f41d9d2526e}{approve\+High\+Value\+Order}} (const \doxymbox{\hyperlink{class_order}{Order}} \&order) const
+\begin{DoxyCompactList}\small\item\em Checks whether an order\textquotesingle{}s total falls within the manager\textquotesingle{}s approval limit. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_manager_a3d124f62cdeec539a62bfdb29b3bc4c9}{override\+Order\+Discount}} (\doxymbox{\hyperlink{class_order}{Order}} \&order, const \doxymbox{\hyperlink{class_discount}{Discount}} \&discount) const
+\begin{DoxyCompactList}\small\item\em Applies a manual discount override to an \doxylink{class_order}{Order}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_employee}{Employee}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_employee_a561a7548dc90a90a6152628768d728ed}{Employee}} (int id=1, std::\+string name="{}Staff"{}, std::\+string role="{}General"{}, double salary=2000.\+0, \doxymbox{\hyperlink{class_address}{Address}} addr=\doxymbox{\hyperlink{class_address}{Address}}())
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_employee}{Employee} record. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}{\texorpdfstring{$\sim$}{\string~}\+Employee}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for staff hierarchy. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_employee_adc96c05f46592d40685154159f1f6520}{get\+Employee\+Id}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_ad78934ca7e3f6c151e6a4f8209f19aaf}{get\+Name}} () const
+\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a1b0f136461c2e70b37fbbb9bc0b914cc}{get\+Role}} () const
+\item 
+void \doxymbox{\hyperlink{class_employee_a8d29e990ff6c34e4259a363c82f8e9aa}{promote}} (const std::\+string \&new\+Role, double raise\+Amount)
+\begin{DoxyCompactList}\small\item\em Updates the employee\textquotesingle{}s role and applies a salary raise. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_a984a6803bd2f5564874f0d2b372754c4}{calculate\+Annual\+Compensation}} () const
+\begin{DoxyCompactList}\small\item\em Calculates annual gross compensation (base\+Salary \texorpdfstring{$\ast$}{*} 12). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_employee_af7f827037017807c93e8b5b43a160c45}{authorize\+Action}} (const std::\+string \&required\+Role) const
+\begin{DoxyCompactList}\small\item\em Checks whether the employee is authorized for a required role. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_employee}{Employee}}}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_employee_a7edc0b03cdfbe2f30d562bbbc5084534}{employee\+Id}}
+\begin{DoxyCompactList}\small\item\em Unique staff ID. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3ba103222f2451bf4d34c05ca28a1bed}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_employee}{Employee} full name. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_employee_a3d82032c7d5e923b168d7d97770809f6}{role}}
+\begin{DoxyCompactList}\small\item\em Job title / role. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_employee_ab01497423d689ff200f66bdb47639286}{base\+Salary}}
+\begin{DoxyCompactList}\small\item\em Monthly base salary. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_address}{Address}} \doxymbox{\hyperlink{class_employee_afb986057b9e105b46ad781c3feb7a645}{home\+Address}}
+\begin{DoxyCompactList}\small\item\em Residential address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Department manager authorized to approve high-\/value orders and override discounts. 
+
+\label{class_manager_doc-constructors}
+\Hypertarget{class_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_manager_a0a3963c57d92fc053203002757222486}\index{Manager@{Manager}!Manager@{Manager}}
+\index{Manager@{Manager}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{Manager()}{Manager()}}
+{\footnotesize\ttfamily \label{class_manager_a0a3963c57d92fc053203002757222486} 
+Manager::\+\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_employee}{Employee}} \&}]{base}{, }\item[{std::\+string}]{dept}{ = {\ttfamily "{}Operations"{}}, }\item[{double}]{limit}{ = {\ttfamily 5000.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_manager}{Manager} from a base \doxylink{class_employee}{Employee}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base \doxylink{class_employee}{Employee} profile. \\
+\hline
+{\em dept} & Department name. \\
+\hline
+{\em limit} & Financial approval ceiling. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_manager_doc-func-members}
+\Hypertarget{class_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_manager_a9fff35221b763f8263e58f41d9d2526e}\index{Manager@{Manager}!approveHighValueOrder@{approveHighValueOrder}}
+\index{approveHighValueOrder@{approveHighValueOrder}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{approveHighValueOrder()}{approveHighValueOrder()}}
+{\footnotesize\ttfamily \label{class_manager_a9fff35221b763f8263e58f41d9d2526e} 
+bool Manager::\+approve\+High\+Value\+Order (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether an order\textquotesingle{}s total falls within the manager\textquotesingle{}s approval limit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & \doxylink{class_order}{Order} to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if order total \texorpdfstring{$<$}{<}= approval\+Limit. 
+\end{DoxyReturn}
+\Hypertarget{class_manager_a3d124f62cdeec539a62bfdb29b3bc4c9}\index{Manager@{Manager}!overrideOrderDiscount@{overrideOrderDiscount}}
+\index{overrideOrderDiscount@{overrideOrderDiscount}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{overrideOrderDiscount()}{overrideOrderDiscount()}}
+{\footnotesize\ttfamily \label{class_manager_a3d124f62cdeec539a62bfdb29b3bc4c9} 
+void Manager::\+override\+Order\+Discount (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{, }\item[{const \doxymbox{\hyperlink{class_discount}{Discount}} \&}]{discount}{}\end{DoxyParamCaption}) const}
+
+
+
+Applies a manual discount override to an \doxylink{class_order}{Order}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Target \doxylink{class_order}{Order}. \\
+\hline
+{\em discount} & \doxylink{class_discount}{Discount} to apply. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

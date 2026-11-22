@@ -1,0 +1,98 @@
+\doxysection{Notification\+Preferences Class Reference}
+\hypertarget{class_notification_preferences}{}\label{class_notification_preferences}\index{NotificationPreferences@{NotificationPreferences}}
+
+
+Stores communication channel preferences for a user account.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_notification_preferences_a4777cd88ef710b2f6a21048d1aea4e2f}{Notification\+Preferences}} (bool email=true, bool sms=false, std::\+string freq="{}Weekly"{})
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{class_notification_preferences}{Notification\+Preferences} with channel flags and digest frequency. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_notification_preferences_adc7972dee340dbd1ff508e272361eacc}{enable\+All\+Channels}} ()
+\begin{DoxyCompactList}\small\item\em Enables both email and SMS notification channels. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_notification_preferences_a12672f62f0a5c22186ce69d1382b13f6}{disable\+Marketing}} ()
+\begin{DoxyCompactList}\small\item\em Disables marketing digests by setting frequency to "{}\+None"{}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_notification_preferences_a1002e4fc427c11b2383ca5664fa9fc87}{can\+Send\+Channel}} (const std::\+string \&channel) const
+\begin{DoxyCompactList}\small\item\em Checks whether notifications can be sent over a specific channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores communication channel preferences for a user account. 
+
+\label{class_notification_preferences_doc-constructors}
+\Hypertarget{class_notification_preferences_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_notification_preferences_a4777cd88ef710b2f6a21048d1aea4e2f}\index{NotificationPreferences@{NotificationPreferences}!NotificationPreferences@{NotificationPreferences}}
+\index{NotificationPreferences@{NotificationPreferences}!NotificationPreferences@{NotificationPreferences}}
+\doxysubsubsection{\texorpdfstring{NotificationPreferences()}{NotificationPreferences()}}
+{\footnotesize\ttfamily \label{class_notification_preferences_a4777cd88ef710b2f6a21048d1aea4e2f} 
+Notification\+Preferences::\+\+Notification\+Preferences (\begin{DoxyParamCaption}\item[{bool}]{email}{ = {\ttfamily true}, }\item[{bool}]{sms}{ = {\ttfamily false}, }\item[{std::\+string}]{freq}{ = {\ttfamily "{}Weekly"{}}}\end{DoxyParamCaption})}
+
+
+
+Constructs \doxylink{class_notification_preferences}{Notification\+Preferences} with channel flags and digest frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email enabled flag. \\
+\hline
+{\em sms} & SMS enabled flag. \\
+\hline
+{\em freq} & Digest frequency string. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_notification_preferences_doc-func-members}
+\Hypertarget{class_notification_preferences_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_notification_preferences_a1002e4fc427c11b2383ca5664fa9fc87}\index{NotificationPreferences@{NotificationPreferences}!canSendChannel@{canSendChannel}}
+\index{canSendChannel@{canSendChannel}!NotificationPreferences@{NotificationPreferences}}
+\doxysubsubsection{\texorpdfstring{canSendChannel()}{canSendChannel()}}
+{\footnotesize\ttfamily \label{class_notification_preferences_a1002e4fc427c11b2383ca5664fa9fc87} 
+bool Notification\+Preferences::\+can\+Send\+Channel (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{channel}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether notifications can be sent over a specific channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channel name ("{}email"{} or "{}sms"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the requested channel is active. 
+\end{DoxyReturn}
+\Hypertarget{class_notification_preferences_a12672f62f0a5c22186ce69d1382b13f6}\index{NotificationPreferences@{NotificationPreferences}!disableMarketing@{disableMarketing}}
+\index{disableMarketing@{disableMarketing}!NotificationPreferences@{NotificationPreferences}}
+\doxysubsubsection{\texorpdfstring{disableMarketing()}{disableMarketing()}}
+{\footnotesize\ttfamily \label{class_notification_preferences_a12672f62f0a5c22186ce69d1382b13f6} 
+void Notification\+Preferences::\+disable\+Marketing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disables marketing digests by setting frequency to "{}\+None"{}. 
+
+\Hypertarget{class_notification_preferences_adc7972dee340dbd1ff508e272361eacc}\index{NotificationPreferences@{NotificationPreferences}!enableAllChannels@{enableAllChannels}}
+\index{enableAllChannels@{enableAllChannels}!NotificationPreferences@{NotificationPreferences}}
+\doxysubsubsection{\texorpdfstring{enableAllChannels()}{enableAllChannels()}}
+{\footnotesize\ttfamily \label{class_notification_preferences_adc7972dee340dbd1ff508e272361eacc} 
+void Notification\+Preferences::\+enable\+All\+Channels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Enables both email and SMS notification channels. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

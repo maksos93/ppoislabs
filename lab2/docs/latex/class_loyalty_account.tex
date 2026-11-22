@@ -1,0 +1,116 @@
+\doxysection{Loyalty\+Account Class Reference}
+\hypertarget{class_loyalty_account}{}\label{class_loyalty_account}\index{LoyaltyAccount@{LoyaltyAccount}}
+
+
+Tracks reward points, tier status, and cumulative spend for bookstore customers.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_loyalty_account_aa4e4af217e67ef598924454de366bb92}{Loyalty\+Account}} (int points=0, std::\+string tier="{}Silver"{}, double spent=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_loyalty_account}{Loyalty\+Account}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_loyalty_account_abfc5a4248258fa6a08c0f16b9a513a18}{accrue\+Purchase}} (double amount)
+\begin{DoxyCompactList}\small\item\em Credits points for a purchase and updates loyalty tier. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_loyalty_account_ad831c7fdf6cf0ce1adb85dcbd147b81e}{redeem\+Points}} (int points)
+\begin{DoxyCompactList}\small\item\em Redeems loyalty points for monetary credit. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_loyalty_account_af3377dcf7f8e47babfadbd2c88479328}{recalculate\+Tier}} ()
+\begin{DoxyCompactList}\small\item\em Recalculates tier level based on cumulative spend thresholds. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_loyalty_account_ae3e79e9b634aa1f9b5dfc6e227776af1}{get\+Points\+Balance}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks reward points, tier status, and cumulative spend for bookstore customers. 
+
+\label{class_loyalty_account_doc-constructors}
+\Hypertarget{class_loyalty_account_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_loyalty_account_aa4e4af217e67ef598924454de366bb92}\index{LoyaltyAccount@{LoyaltyAccount}!LoyaltyAccount@{LoyaltyAccount}}
+\index{LoyaltyAccount@{LoyaltyAccount}!LoyaltyAccount@{LoyaltyAccount}}
+\doxysubsubsection{\texorpdfstring{LoyaltyAccount()}{LoyaltyAccount()}}
+{\footnotesize\ttfamily \label{class_loyalty_account_aa4e4af217e67ef598924454de366bb92} 
+Loyalty\+Account::\+\+Loyalty\+Account (\begin{DoxyParamCaption}\item[{int}]{points}{ = {\ttfamily 0}, }\item[{std::\+string}]{tier}{ = {\ttfamily "{}Silver"{}}, }\item[{double}]{spent}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_loyalty_account}{Loyalty\+Account}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Initial points balance. \\
+\hline
+{\em tier} & Initial tier label. \\
+\hline
+{\em spent} & Initial cumulative spend. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_loyalty_account_doc-func-members}
+\Hypertarget{class_loyalty_account_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_loyalty_account_abfc5a4248258fa6a08c0f16b9a513a18}\index{LoyaltyAccount@{LoyaltyAccount}!accruePurchase@{accruePurchase}}
+\index{accruePurchase@{accruePurchase}!LoyaltyAccount@{LoyaltyAccount}}
+\doxysubsubsection{\texorpdfstring{accruePurchase()}{accruePurchase()}}
+{\footnotesize\ttfamily \label{class_loyalty_account_abfc5a4248258fa6a08c0f16b9a513a18} 
+void Loyalty\+Account::\+accrue\+Purchase (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Credits points for a purchase and updates loyalty tier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Purchase total in currency units. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_loyalty_account_ae3e79e9b634aa1f9b5dfc6e227776af1}\index{LoyaltyAccount@{LoyaltyAccount}!getPointsBalance@{getPointsBalance}}
+\index{getPointsBalance@{getPointsBalance}!LoyaltyAccount@{LoyaltyAccount}}
+\doxysubsubsection{\texorpdfstring{getPointsBalance()}{getPointsBalance()}}
+{\footnotesize\ttfamily \label{class_loyalty_account_ae3e79e9b634aa1f9b5dfc6e227776af1} 
+int Loyalty\+Account::\+get\+Points\+Balance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_loyalty_account_af3377dcf7f8e47babfadbd2c88479328}\index{LoyaltyAccount@{LoyaltyAccount}!recalculateTier@{recalculateTier}}
+\index{recalculateTier@{recalculateTier}!LoyaltyAccount@{LoyaltyAccount}}
+\doxysubsubsection{\texorpdfstring{recalculateTier()}{recalculateTier()}}
+{\footnotesize\ttfamily \label{class_loyalty_account_af3377dcf7f8e47babfadbd2c88479328} 
+void Loyalty\+Account::\+recalculate\+Tier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Recalculates tier level based on cumulative spend thresholds. 
+
+\Hypertarget{class_loyalty_account_ad831c7fdf6cf0ce1adb85dcbd147b81e}\index{LoyaltyAccount@{LoyaltyAccount}!redeemPoints@{redeemPoints}}
+\index{redeemPoints@{redeemPoints}!LoyaltyAccount@{LoyaltyAccount}}
+\doxysubsubsection{\texorpdfstring{redeemPoints()}{redeemPoints()}}
+{\footnotesize\ttfamily \label{class_loyalty_account_ad831c7fdf6cf0ce1adb85dcbd147b81e} 
+double Loyalty\+Account::\+redeem\+Points (\begin{DoxyParamCaption}\item[{int}]{points}{}\end{DoxyParamCaption})}
+
+
+
+Redeems loyalty points for monetary credit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Number of points to redeem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Monetary discount value (\$0.01 per point). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception}} & if points \texorpdfstring{$<$}{<}= 0 or points \texorpdfstring{$>$}{>} points\+Balance. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}

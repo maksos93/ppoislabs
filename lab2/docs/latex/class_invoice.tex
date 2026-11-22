@@ -1,0 +1,104 @@
+\doxysection{Invoice Class Reference}
+\hypertarget{class_invoice}{}\label{class_invoice}\index{Invoice@{Invoice}}
+
+
+Represents a billing invoice with tax calculation generated for an \doxylink{class_order}{Order}.  
+
+
+
+
+{\ttfamily \+\#include $<$orders.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_invoice_a5545cee62099af50011a501b0b7844f3}{Invoice}} (std::\+string number="{}INV-\/001"{}, const \doxymbox{\hyperlink{class_order}{Order}} \&order=\doxymbox{\hyperlink{class_order}{Order}}(), double tax=0.\+20)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_invoice}{Invoice} for an \doxylink{class_order}{Order}. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_invoice_ab472426eb7018c5b7d0b9f3e0e18efab}{calculate\+Tax\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the tax amount due on the order total. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_invoice_a1d0c4a6025cb57fbe902d5acd5fca3be}{calculate\+Grand\+Total}} () const
+\begin{DoxyCompactList}\small\item\em Calculates the grand total including taxes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_invoice_a725a7aeb7ae3486c3bfec76a92df230d}{mark\+As\+Paid}} ()
+\begin{DoxyCompactList}\small\item\em Marks the invoice as paid. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_invoice_a9398e4c8ea2ee8598855818c7255d140}{is\+Paid}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a billing invoice with tax calculation generated for an \doxylink{class_order}{Order}. 
+
+\label{class_invoice_doc-constructors}
+\Hypertarget{class_invoice_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_invoice_a5545cee62099af50011a501b0b7844f3}\index{Invoice@{Invoice}!Invoice@{Invoice}}
+\index{Invoice@{Invoice}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{Invoice()}{Invoice()}}
+{\footnotesize\ttfamily \label{class_invoice_a5545cee62099af50011a501b0b7844f3} 
+Invoice::\+\+Invoice (\begin{DoxyParamCaption}\item[{std::\+string}]{number}{ = {\ttfamily "{}INV-\/001"{}}, }\item[{const \doxymbox{\hyperlink{class_order}{Order}} \&}]{order}{ = {\ttfamily \doxymbox{\hyperlink{class_order}{Order}}()}, }\item[{double}]{tax}{ = {\ttfamily 0.20}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_invoice}{Invoice} for an \doxylink{class_order}{Order}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & \doxylink{class_invoice}{Invoice} number string. \\
+\hline
+{\em order} & Associated \doxylink{class_order}{Order}. \\
+\hline
+{\em tax} & Tax rate fraction. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_invoice_doc-func-members}
+\Hypertarget{class_invoice_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_invoice_a1d0c4a6025cb57fbe902d5acd5fca3be}\index{Invoice@{Invoice}!calculateGrandTotal@{calculateGrandTotal}}
+\index{calculateGrandTotal@{calculateGrandTotal}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{calculateGrandTotal()}{calculateGrandTotal()}}
+{\footnotesize\ttfamily \label{class_invoice_a1d0c4a6025cb57fbe902d5acd5fca3be} 
+double Invoice::\+calculate\+Grand\+Total (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the grand total including taxes. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_order}{Order} total plus tax. 
+\end{DoxyReturn}
+\Hypertarget{class_invoice_ab472426eb7018c5b7d0b9f3e0e18efab}\index{Invoice@{Invoice}!calculateTaxAmount@{calculateTaxAmount}}
+\index{calculateTaxAmount@{calculateTaxAmount}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{calculateTaxAmount()}{calculateTaxAmount()}}
+{\footnotesize\ttfamily \label{class_invoice_ab472426eb7018c5b7d0b9f3e0e18efab} 
+double Invoice::\+calculate\+Tax\+Amount (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates the tax amount due on the order total. 
+
+\begin{DoxyReturn}{Returns}
+Tax amount. 
+\end{DoxyReturn}
+\Hypertarget{class_invoice_a9398e4c8ea2ee8598855818c7255d140}\index{Invoice@{Invoice}!isPaid@{isPaid}}
+\index{isPaid@{isPaid}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{isPaid()}{isPaid()}}
+{\footnotesize\ttfamily \label{class_invoice_a9398e4c8ea2ee8598855818c7255d140} 
+bool Invoice::\+is\+Paid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_invoice_a725a7aeb7ae3486c3bfec76a92df230d}\index{Invoice@{Invoice}!markAsPaid@{markAsPaid}}
+\index{markAsPaid@{markAsPaid}!Invoice@{Invoice}}
+\doxysubsubsection{\texorpdfstring{markAsPaid()}{markAsPaid()}}
+{\footnotesize\ttfamily \label{class_invoice_a725a7aeb7ae3486c3bfec76a92df230d} 
+void Invoice::\+mark\+As\+Paid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Marks the invoice as paid. 
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{orders_8hpp}{orders.\+hpp}}\item 
+src/\doxymbox{\hyperlink{orders_8cpp}{orders.\+cpp}}\end{DoxyCompactItemize}

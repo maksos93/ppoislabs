@@ -1,0 +1,116 @@
+\doxysection{Inventory\+Item Class Reference}
+\hypertarget{class_inventory_item}{}\label{class_inventory_item}\index{InventoryItem@{InventoryItem}}
+
+
+Tracks warehouse SKU, stock quantity, and reorder threshold for a \doxylink{class_book}{Book}.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_inventory_item_a0189b2463303a4b9d38bc022fbf1d177}{Inventory\+Item}} (std::\+string sku="{}"{}, \doxymbox{\hyperlink{class_book}{Book}} book=\doxymbox{\hyperlink{class_book}{Book}}(), int qty=0, int threshold=5)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_inventory_item}{Inventory\+Item} record. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_inventory_item_a9137974e10d923c95e0c2ba57ab86667}{needs\+Reorder}} () const
+\begin{DoxyCompactList}\small\item\em Determines whether current quantity has reached or fallen below reorder\+Threshold. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_inventory_item_a1cd6c21d62117f3113c1cedf3dedaaab}{adjust\+Stock}} (int delta)
+\begin{DoxyCompactList}\small\item\em Adjusts on-\/hand stock by a positive or negative delta. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_inventory_item_a913357c51edaad1781aac6924d0ffea8}{calculate\+Total\+Valuation}} () const
+\begin{DoxyCompactList}\small\item\em Calculates total retail valuation of units on hand. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_inventory_item_a807b249d98f8876b9de5fa77811942b5}{get\+Sku}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks warehouse SKU, stock quantity, and reorder threshold for a \doxylink{class_book}{Book}. 
+
+\label{class_inventory_item_doc-constructors}
+\Hypertarget{class_inventory_item_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_inventory_item_a0189b2463303a4b9d38bc022fbf1d177}\index{InventoryItem@{InventoryItem}!InventoryItem@{InventoryItem}}
+\index{InventoryItem@{InventoryItem}!InventoryItem@{InventoryItem}}
+\doxysubsubsection{\texorpdfstring{InventoryItem()}{InventoryItem()}}
+{\footnotesize\ttfamily \label{class_inventory_item_a0189b2463303a4b9d38bc022fbf1d177} 
+Inventory\+Item::\+\+Inventory\+Item (\begin{DoxyParamCaption}\item[{std::\+string}]{sku}{ = {\ttfamily "{}"{}}, }\item[{\doxymbox{\hyperlink{class_book}{Book}}}]{book}{ = {\ttfamily \doxymbox{\hyperlink{class_book}{Book}}()}, }\item[{int}]{qty}{ = {\ttfamily 0}, }\item[{int}]{threshold}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{class_inventory_item}{Inventory\+Item} record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sku} & Unique SKU identifier. \\
+\hline
+{\em book} & Associated \doxylink{class_book}{Book}. \\
+\hline
+{\em qty} & Initial quantity on hand. \\
+\hline
+{\em threshold} & Low-\/stock threshold. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_inventory_item_doc-func-members}
+\Hypertarget{class_inventory_item_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_inventory_item_a1cd6c21d62117f3113c1cedf3dedaaab}\index{InventoryItem@{InventoryItem}!adjustStock@{adjustStock}}
+\index{adjustStock@{adjustStock}!InventoryItem@{InventoryItem}}
+\doxysubsubsection{\texorpdfstring{adjustStock()}{adjustStock()}}
+{\footnotesize\ttfamily \label{class_inventory_item_a1cd6c21d62117f3113c1cedf3dedaaab} 
+void Inventory\+Item::\+adjust\+Stock (\begin{DoxyParamCaption}\item[{int}]{delta}{}\end{DoxyParamCaption})}
+
+
+
+Adjusts on-\/hand stock by a positive or negative delta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Quantity change. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_out_of_stock_exception}{Out\+Of\+Stock\+Exception}} & if resulting quantity would be negative. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_inventory_item_a913357c51edaad1781aac6924d0ffea8}\index{InventoryItem@{InventoryItem}!calculateTotalValuation@{calculateTotalValuation}}
+\index{calculateTotalValuation@{calculateTotalValuation}!InventoryItem@{InventoryItem}}
+\doxysubsubsection{\texorpdfstring{calculateTotalValuation()}{calculateTotalValuation()}}
+{\footnotesize\ttfamily \label{class_inventory_item_a913357c51edaad1781aac6924d0ffea8} 
+double Inventory\+Item::\+calculate\+Total\+Valuation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates total retail valuation of units on hand. 
+
+\begin{DoxyReturn}{Returns}
+Total value (quantity\+On\+Hand \texorpdfstring{$\ast$}{*} book price). 
+\end{DoxyReturn}
+\Hypertarget{class_inventory_item_a807b249d98f8876b9de5fa77811942b5}\index{InventoryItem@{InventoryItem}!getSku@{getSku}}
+\index{getSku@{getSku}!InventoryItem@{InventoryItem}}
+\doxysubsubsection{\texorpdfstring{getSku()}{getSku()}}
+{\footnotesize\ttfamily \label{class_inventory_item_a807b249d98f8876b9de5fa77811942b5} 
+std::\+string Inventory\+Item::\+get\+Sku (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_inventory_item_a9137974e10d923c95e0c2ba57ab86667}\index{InventoryItem@{InventoryItem}!needsReorder@{needsReorder}}
+\index{needsReorder@{needsReorder}!InventoryItem@{InventoryItem}}
+\doxysubsubsection{\texorpdfstring{needsReorder()}{needsReorder()}}
+{\footnotesize\ttfamily \label{class_inventory_item_a9137974e10d923c95e0c2ba57ab86667} 
+bool Inventory\+Item::\+needs\+Reorder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Determines whether current quantity has reached or fallen below reorder\+Threshold. 
+
+\begin{DoxyReturn}{Returns}
+True if restocking is needed. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

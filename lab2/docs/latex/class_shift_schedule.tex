@@ -1,0 +1,91 @@
+\doxysection{Shift\+Schedule Class Reference}
+\hypertarget{class_shift_schedule}{}\label{class_shift_schedule}\index{ShiftSchedule@{ShiftSchedule}}
+
+
+Represents a work shift assignment for an employee on a given day.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d}{Shift\+Schedule}} (int emp\+Id=1, std::\+string day="{}Monday"{}, int start=9, int end=17)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_shift_schedule}{Shift\+Schedule} entry. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_shift_schedule_a854d72f7991db101204c08256d807337}{calculate\+Shift\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Calculates shift length in hours. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_shift_schedule_a0b37b19836765bb4d881884537e27a5f}{overlaps\+With}} (const \doxymbox{\hyperlink{class_shift_schedule}{Shift\+Schedule}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks whether this shift overlaps in time with another shift on the same day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a work shift assignment for an employee on a given day. 
+
+\label{class_shift_schedule_doc-constructors}
+\Hypertarget{class_shift_schedule_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d}\index{ShiftSchedule@{ShiftSchedule}!ShiftSchedule@{ShiftSchedule}}
+\index{ShiftSchedule@{ShiftSchedule}!ShiftSchedule@{ShiftSchedule}}
+\doxysubsubsection{\texorpdfstring{ShiftSchedule()}{ShiftSchedule()}}
+{\footnotesize\ttfamily \label{class_shift_schedule_abde4f429d0184b34f5cf94ce9840362d} 
+Shift\+Schedule::\+\+Shift\+Schedule (\begin{DoxyParamCaption}\item[{int}]{emp\+Id}{ = {\ttfamily 1}, }\item[{std::\+string}]{day}{ = {\ttfamily "{}Monday"{}}, }\item[{int}]{start}{ = {\ttfamily 9}, }\item[{int}]{end}{ = {\ttfamily 17}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_shift_schedule}{Shift\+Schedule} entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emp\+Id} & \doxylink{class_employee}{Employee} ID. \\
+\hline
+{\em day} & Day name. \\
+\hline
+{\em start} & Start hour. \\
+\hline
+{\em end} & End hour. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_shift_schedule_doc-func-members}
+\Hypertarget{class_shift_schedule_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shift_schedule_a854d72f7991db101204c08256d807337}\index{ShiftSchedule@{ShiftSchedule}!calculateShiftDuration@{calculateShiftDuration}}
+\index{calculateShiftDuration@{calculateShiftDuration}!ShiftSchedule@{ShiftSchedule}}
+\doxysubsubsection{\texorpdfstring{calculateShiftDuration()}{calculateShiftDuration()}}
+{\footnotesize\ttfamily \label{class_shift_schedule_a854d72f7991db101204c08256d807337} 
+int Shift\+Schedule::\+calculate\+Shift\+Duration (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculates shift length in hours. 
+
+\begin{DoxyReturn}{Returns}
+Duration in hours. 
+\end{DoxyReturn}
+\Hypertarget{class_shift_schedule_a0b37b19836765bb4d881884537e27a5f}\index{ShiftSchedule@{ShiftSchedule}!overlapsWith@{overlapsWith}}
+\index{overlapsWith@{overlapsWith}!ShiftSchedule@{ShiftSchedule}}
+\doxysubsubsection{\texorpdfstring{overlapsWith()}{overlapsWith()}}
+{\footnotesize\ttfamily \label{class_shift_schedule_a0b37b19836765bb4d881884537e27a5f} 
+bool Shift\+Schedule::\+overlaps\+With (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_shift_schedule}{Shift\+Schedule}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether this shift overlaps in time with another shift on the same day. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_shift_schedule}{Shift\+Schedule} to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if schedules overlap. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

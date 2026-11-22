@@ -1,0 +1,122 @@
+\chapter{Лабораторная работа №2. Крупный ООП-\/проект }
+\hypertarget{index}{}\label{index}\index{Лабораторная работа №2. Крупный ООП-\/проект@{Лабораторная работа №2. Крупный ООП-\/проект}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+
+
+Предметная область: {\bfseries{книги}} (Система управления библиотекой и книжным магазином). Модель охватывает книги, авторов, издательства, жанры, склады, учет инвентаря, пользователей, читателей, заказы, оплату, сотрудников, логистику, возвраты, отзывы и аналитику.
+
+Формат строки: {\ttfamily Класс \texorpdfstring{$\vert$}{|} число полей \texorpdfstring{$\vert$}{|} число методов \texorpdfstring{$\vert$}{|} связанные классы}.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Спецификация объектной модели (60 доменных классов)}{Спецификация объектной модели (60 доменных классов)}}\label{index_autotoc_md1}
+
+\begin{DoxyTable}{4}{}{}{1}
+\SetCell{bg=\tableheadbgcolor,font=\bfseries}Класс  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Поля  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Методы  &\SetCell{bg=\tableheadbgcolor,font=\bfseries}Ассоциации (связанные классы)  \\
+{\bfseries{\doxylink{class_address}{Address}}}  &\SetCell{c}4  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_genre}{Genre}}}  &\SetCell{c}2  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_category}{Category}}}  &\SetCell{c}3  &\SetCell{c}2  &\doxylink{class_genre}{Genre}  \\
+{\bfseries{\doxylink{class_author}{Author}}}  &\SetCell{c}3  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_publisher}{Publisher}}}  &\SetCell{c}3  &\SetCell{c}2  &\doxylink{class_address}{Address}  \\
+{\bfseries{\doxylink{class_book}{Book}}}  &\SetCell{c}7  &\SetCell{c}5  &\doxylink{class_author}{Author}, \doxylink{class_publisher}{Publisher}, \doxylink{class_genre}{Genre}  \\
+{\bfseries{\doxylink{class_edition}{Edition}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_e_book}{EBook}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_audio_book}{Audio\+Book}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_rare_book}{Rare\+Book}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_inventory_item}{Inventory\+Item}}}  &\SetCell{c}4  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_stock}{Stock}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_inventory_item}{Inventory\+Item}  \\
+{\bfseries{\doxylink{class_shelf}{Shelf}}}  &\SetCell{c}3  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_section}{Section}}}  &\SetCell{c}3  &\SetCell{c}2  &\doxylink{class_shelf}{Shelf}, \doxylink{class_genre}{Genre}  \\
+{\bfseries{\doxylink{class_warehouse}{Warehouse}}}  &\SetCell{c}4  &\SetCell{c}4  &\doxylink{class_address}{Address}, \doxylink{class_section}{Section}, \doxylink{class_stock}{Stock}, \doxylink{class_inventory_item}{Inventory\+Item}  \\
+{\bfseries{\doxylink{class_catalog_manager}{Catalog\+Manager}}}  &\SetCell{c}2  &\SetCell{c}4  &\doxylink{class_book}{Book}, \doxylink{class_author}{Author}  \\
+{\bfseries{\doxylink{class_notification_preferences}{Notification\+Preferences}}}  &\SetCell{c}3  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_user}{User}}}  &\SetCell{c}5  &\SetCell{c}4  &\doxylink{class_address}{Address}, \doxylink{class_notification_preferences}{Notification\+Preferences}  \\
+{\bfseries{\doxylink{class_membership_card}{Membership\+Card}}}  &\SetCell{c}4  &\SetCell{c}4  &—  \\
+{\bfseries{\doxylink{class_reader}{Reader}}}  &\SetCell{c}3  &\SetCell{c}5  &\doxylink{class_user}{User}, \doxylink{class_membership_card}{Membership\+Card}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_student}{Student}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_reader}{Reader}  \\
+{\bfseries{\doxylink{class_professor}{Professor}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_reader}{Reader}  \\
+{\bfseries{\doxylink{class_loyalty_account}{Loyalty\+Account}}}  &\SetCell{c}3  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_v_i_p_customer}{VIPCustomer}}}  &\SetCell{c}3  &\SetCell{c}4  &\doxylink{class_user}{User}, \doxylink{class_loyalty_account}{Loyalty\+Account}  \\
+{\bfseries{\doxylink{class_guest}{Guest}}}  &\SetCell{c}3  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_user_registry}{User\+Registry}}}  &\SetCell{c}2  &\SetCell{c}4  &\doxylink{class_user}{User}, \doxylink{class_address}{Address}  \\
+{\bfseries{\doxylink{class_order_item}{Order\+Item}}}  &\SetCell{c}3  &\SetCell{c}3  &\doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_discount}{Discount}}}  &\SetCell{c}3  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_promotion}{Promotion}}}  &\SetCell{c}4  &\SetCell{c}3  &\doxylink{class_discount}{Discount}  \\
+{\bfseries{\doxylink{class_order}{Order}}}  &\SetCell{c}5  &\SetCell{c}5  &\doxylink{class_user}{User}, \doxylink{class_order_item}{Order\+Item}, \doxylink{class_book}{Book}, \doxylink{class_discount}{Discount}  \\
+{\bfseries{\doxylink{class_invoice}{Invoice}}}  &\SetCell{c}4  &\SetCell{c}3  &\doxylink{class_order}{Order}  \\
+{\bfseries{\doxylink{class_payment}{Payment}}}  &\SetCell{c}4  &\SetCell{c}2  &\doxylink{class_invoice}{Invoice}  \\
+{\bfseries{\doxylink{class_credit_card_payment}{Credit\+Card\+Payment}}}  &\SetCell{c}3  &\SetCell{c}2  &\doxylink{class_payment}{Payment}, \doxylink{class_invoice}{Invoice}  \\
+{\bfseries{\doxylink{class_cash_payment}{Cash\+Payment}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_payment}{Payment}, \doxylink{class_invoice}{Invoice}  \\
+{\bfseries{\doxylink{class_pay_pal_payment}{Pay\+Pal\+Payment}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_payment}{Payment}, \doxylink{class_invoice}{Invoice}  \\
+{\bfseries{\doxylink{class_transaction_manager}{Transaction\+Manager}}}  &\SetCell{c}2  &\SetCell{c}3  &\doxylink{class_invoice}{Invoice}, \doxylink{class_order}{Order}, \doxylink{class_payment}{Payment}  \\
+{\bfseries{\doxylink{class_employee}{Employee}}}  &\SetCell{c}5  &\SetCell{c}3  &\doxylink{class_address}{Address}  \\
+{\bfseries{\doxylink{class_librarian}{Librarian}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_employee}{Employee}, \doxylink{class_reader}{Reader}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_cataloger}{Cataloger}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_employee}{Employee}, \doxylink{class_catalog_manager}{Catalog\+Manager}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_cashier}{Cashier}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_employee}{Employee}  \\
+{\bfseries{\doxylink{class_manager}{Manager}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_employee}{Employee}, \doxylink{class_order}{Order}, \doxylink{class_discount}{Discount}  \\
+{\bfseries{\doxylink{class_administrator}{Administrator}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_employee}{Employee}, \doxylink{class_membership_card}{Membership\+Card}  \\
+{\bfseries{\doxylink{class_shift_schedule}{Shift\+Schedule}}}  &\SetCell{c}4  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_salary}{Salary}}}  &\SetCell{c}4  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_h_r_department}{HRDepartment}}}  &\SetCell{c}2  &\SetCell{c}3  &\doxylink{class_employee}{Employee}, \doxylink{class_shift_schedule}{Shift\+Schedule}  \\
+{\bfseries{\doxylink{class_supplier}{Supplier}}}  &\SetCell{c}4  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_supply_shipment}{Supply\+Shipment}}}  &\SetCell{c}5  &\SetCell{c}2  &\doxylink{class_supplier}{Supplier}, \doxylink{class_warehouse}{Warehouse}, \doxylink{class_inventory_item}{Inventory\+Item}  \\
+{\bfseries{\doxylink{class_courier}{Courier}}}  &\SetCell{c}4  &\SetCell{c}2  &\doxylink{class_order}{Order}  \\
+{\bfseries{\doxylink{class_delivery_route}{Delivery\+Route}}}  &\SetCell{c}4  &\SetCell{c}2  &\doxylink{class_courier}{Courier}, \doxylink{class_address}{Address}  \\
+{\bfseries{\doxylink{class_tracking_system}{Tracking\+System}}}  &\SetCell{c}3  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_return_request}{Return\+Request}}}  &\SetCell{c}5  &\SetCell{c}2  &\doxylink{class_order}{Order}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_refund_processor}{Refund\+Processor}}}  &\SetCell{c}2  &\SetCell{c}1  &\doxylink{class_return_request}{Return\+Request}, \doxylink{class_payment}{Payment}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_sales_analytics}{Sales\+Analytics}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_order}{Order}  \\
+{\bfseries{\doxylink{class_popularity_rating}{Popularity\+Rating}}}  &\SetCell{c}3  &\SetCell{c}3  &—  \\
+{\bfseries{\doxylink{class_inventory_report}{Inventory\+Report}}}  &\SetCell{c}3  &\SetCell{c}2  &\doxylink{class_warehouse}{Warehouse}  \\
+{\bfseries{\doxylink{class_financial_auditor}{Financial\+Auditor}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_invoice}{Invoice}, \doxylink{class_order}{Order}  \\
+{\bfseries{\doxylink{class_review_system}{Review\+System}}}  &\SetCell{c}5  &\SetCell{c}2  &—  \\
+{\bfseries{\doxylink{class_rating}{Rating}}}  &\SetCell{c}2  &\SetCell{c}3  &\doxylink{class_review_system}{Review\+System}  \\
+{\bfseries{\doxylink{class_recommendation_engine}{Recommendation\+Engine}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_catalog_manager}{Catalog\+Manager}, \doxylink{class_genre}{Genre}, \doxylink{class_rating}{Rating}, \doxylink{class_book}{Book}  \\
+{\bfseries{\doxylink{class_activity_log}{Activity\+Log}}}  &\SetCell{c}2  &\SetCell{c}2  &\doxylink{class_user}{User}  \\
+\end{DoxyTable}
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Собственные классы исключений (13)}{Собственные классы исключений (13)}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{class_library_exception}{Library\+Exception}} (базовое исключение предметной области)
+\item {\ttfamily \doxylink{class_book_not_found_exception}{Book\+Not\+Found\+Exception}}
+\item {\ttfamily \doxylink{class_duplicate_book_exception}{Duplicate\+Book\+Exception}}
+\item {\ttfamily \doxylink{class_out_of_stock_exception}{Out\+Of\+Stock\+Exception}}
+\item {\ttfamily \doxylink{class_invalid_book_data_exception}{Invalid\+Book\+Data\+Exception}}
+\item {\ttfamily \doxylink{class_invalid_user_exception}{Invalid\+User\+Exception}}
+\item {\ttfamily \doxylink{class_order_not_found_exception}{Order\+Not\+Found\+Exception}}
+\item {\ttfamily \doxylink{class_invalid_payment_exception}{Invalid\+Payment\+Exception}}
+\item {\ttfamily \doxylink{class_insufficient_funds_exception}{Insufficient\+Funds\+Exception}}
+\item {\ttfamily \doxylink{class_delivery_exception}{Delivery\+Exception}}
+\item {\ttfamily \doxylink{class_unauthorized_access_exception}{Unauthorized\+Access\+Exception}}
+\item {\ttfamily \doxylink{class_invalid_discount_exception}{Invalid\+Discount\+Exception}}
+\item {\ttfamily \doxylink{class_review_not_found_exception}{Review\+Not\+Found\+Exception}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Структура проекта}{Структура проекта}}\label{index_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{lab2\_project/}
+\DoxyCodeLine{├──\ include/}
+\DoxyCodeLine{│\ \ \ ├──\ exceptions.hpp}
+\DoxyCodeLine{│\ \ \ ├──\ book.hpp}
+\DoxyCodeLine{│\ \ \ ├──\ users.hpp}
+\DoxyCodeLine{│\ \ \ ├──\ orders.hpp}
+\DoxyCodeLine{│\ \ \ └──\ staff.hpp}
+\DoxyCodeLine{├──\ src/}
+\DoxyCodeLine{│\ \ \ ├──\ book.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ users.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ orders.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ staff.cpp}
+\DoxyCodeLine{│\ \ \ └──\ main.cpp}
+\DoxyCodeLine{├──\ tests/}
+\DoxyCodeLine{│\ \ \ └──\ unit\_tests.cpp}
+\DoxyCodeLine{├──\ Makefile}
+\DoxyCodeLine{├──\ linter\_check.py}
+\DoxyCodeLine{└──\ README.md}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Итоговая статистика проекта}{Итоговая статистика проекта}}\label{index_autotoc_md4}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{bg=\tableheadbgcolor,font=\bfseries}Показатель  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Значение  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Требование  \\
+{\bfseries{Доменные классы}}  &\SetCell{c}60  &\SetCell{c}\$\textbackslash{}ge 50\$  \\
+{\bfseries{Поля (суммарно по классам)}}  &\SetCell{c}190  &\SetCell{c}\$\textbackslash{}ge 150\$  \\
+{\bfseries{Содержательные поведения (методы)}}  &\SetCell{c}164  &\SetCell{c}\$\textbackslash{}ge 100\$  \\
+{\bfseries{Ассоциации между классами}}  &\SetCell{c}64  &\SetCell{c}\$\textbackslash{}ge 30\$  \\
+{\bfseries{Собственные исключения}}  &\SetCell{c}13  &\SetCell{c}\$\textbackslash{}ge 12\$  \\
+\end{DoxyTable}

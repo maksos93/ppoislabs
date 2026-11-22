@@ -1,0 +1,101 @@
+\doxysection{Category Class Reference}
+\hypertarget{class_category}{}\label{class_category}\index{Category@{Category}}
+
+
+Represents a catalog category linked to a primary literary \doxylink{class_genre}{Genre}.  
+
+
+
+
+{\ttfamily \+\#include $<$book.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_category_afaf82d863dea4ba99e64864850b9f06a}{Category}} (int id=0, std::\+string title="{}Uncategorized"{}, \doxymbox{\hyperlink{class_genre}{Genre}} genre=\doxymbox{\hyperlink{class_genre}{Genre}}())
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_category}{Category} object. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_category_af6a34e981d8002f2e918c7af2b5cbf05}{assign\+Genre}} (const \doxymbox{\hyperlink{class_genre}{Genre}} \&genre)
+\begin{DoxyCompactList}\small\item\em Reassigns the primary genre of the category. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_category_ae7a47a615ae66d483ee7f7b9c81c2758}{build\+Breadcrumb}} () const
+\begin{DoxyCompactList}\small\item\em Builds a navigation breadcrumb combining genre and category title. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_category_a9f028da8cdcbf55cfa9b7008385ac7a0}{get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the category title. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a catalog category linked to a primary literary \doxylink{class_genre}{Genre}. 
+
+\label{class_category_doc-constructors}
+\Hypertarget{class_category_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_category_afaf82d863dea4ba99e64864850b9f06a}\index{Category@{Category}!Category@{Category}}
+\index{Category@{Category}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{Category()}{Category()}}
+{\footnotesize\ttfamily \label{class_category_afaf82d863dea4ba99e64864850b9f06a} 
+Category::\+\+Category (\begin{DoxyParamCaption}\item[{int}]{id}{ = {\ttfamily 0}, }\item[{std::\+string}]{title}{ = {\ttfamily "{}Uncategorized"{}}, }\item[{\doxymbox{\hyperlink{class_genre}{Genre}}}]{genre}{ = {\ttfamily \doxymbox{\hyperlink{class_genre}{Genre}}()}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_category}{Category} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{class_category}{Category} identifier. \\
+\hline
+{\em title} & \doxylink{class_category}{Category} name. \\
+\hline
+{\em genre} & Primary \doxylink{class_genre}{Genre} associated with this category. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_category_doc-func-members}
+\Hypertarget{class_category_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_category_af6a34e981d8002f2e918c7af2b5cbf05}\index{Category@{Category}!assignGenre@{assignGenre}}
+\index{assignGenre@{assignGenre}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{assignGenre()}{assignGenre()}}
+{\footnotesize\ttfamily \label{class_category_af6a34e981d8002f2e918c7af2b5cbf05} 
+void Category::\+assign\+Genre (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_genre}{Genre}} \&}]{genre}{}\end{DoxyParamCaption})}
+
+
+
+Reassigns the primary genre of the category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genre} & New \doxylink{class_genre}{Genre} to associate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_category_ae7a47a615ae66d483ee7f7b9c81c2758}\index{Category@{Category}!buildBreadcrumb@{buildBreadcrumb}}
+\index{buildBreadcrumb@{buildBreadcrumb}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{buildBreadcrumb()}{buildBreadcrumb()}}
+{\footnotesize\ttfamily \label{class_category_ae7a47a615ae66d483ee7f7b9c81c2758} 
+std::\+string Category::\+build\+Breadcrumb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Builds a navigation breadcrumb combining genre and category title. 
+
+\begin{DoxyReturn}{Returns}
+Breadcrumb string in format "{}\+Genre $>$ Category"{}. 
+\end{DoxyReturn}
+\Hypertarget{class_category_a9f028da8cdcbf55cfa9b7008385ac7a0}\index{Category@{Category}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!Category@{Category}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily \label{class_category_a9f028da8cdcbf55cfa9b7008385ac7a0} 
+std::\+string Category::\+get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the category title. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_category}{Category} title string. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{book_8hpp}{book.\+hpp}}\item 
+src/\doxymbox{\hyperlink{book_8cpp}{book.\+cpp}}\end{DoxyCompactItemize}

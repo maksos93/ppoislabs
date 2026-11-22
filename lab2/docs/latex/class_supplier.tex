@@ -1,0 +1,88 @@
+\doxysection{Supplier Class Reference}
+\hypertarget{class_supplier}{}\label{class_supplier}\index{Supplier@{Supplier}}
+
+
+Represents an external book wholesaler or publisher vendor.  
+
+
+
+
+{\ttfamily \+\#include $<$staff.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_supplier_a67e15cfcd300d15aa9519c8ba88f567b}{Supplier}} (std::\+string id="{}SUP-\/1"{}, std::\+string name="{}Book\+Wholesale"{}, double score=0.\+95, int lead=3)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_supplier}{Supplier} profile. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_supplier_a0ac4e80662f74212c1dbb0ad2fb94b12}{is\+Preferred\+Supplier}} () const
+\begin{DoxyCompactList}\small\item\em Determines whether the supplier meets preferred vendor SLA criteria. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_supplier_a1062c26bef218ae49fc56e6bb90fc37b}{update\+Reliability}} (bool delivered\+On\+Time)
+\begin{DoxyCompactList}\small\item\em Adjusts the supplier\textquotesingle{}s reliability score based on delivery punctuality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an external book wholesaler or publisher vendor. 
+
+\label{class_supplier_doc-constructors}
+\Hypertarget{class_supplier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_supplier_a67e15cfcd300d15aa9519c8ba88f567b}\index{Supplier@{Supplier}!Supplier@{Supplier}}
+\index{Supplier@{Supplier}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{Supplier()}{Supplier()}}
+{\footnotesize\ttfamily \label{class_supplier_a67e15cfcd300d15aa9519c8ba88f567b} 
+Supplier::\+\+Supplier (\begin{DoxyParamCaption}\item[{std::\+string}]{id}{ = {\ttfamily "{}SUP-\/1"{}}, }\item[{std::\+string}]{name}{ = {\ttfamily "{}BookWholesale"{}}, }\item[{double}]{score}{ = {\ttfamily 0.95}, }\item[{int}]{lead}{ = {\ttfamily 3}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_supplier}{Supplier} profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \doxylink{class_supplier}{Supplier} ID. \\
+\hline
+{\em name} & Company name. \\
+\hline
+{\em score} & Reliability score \+[0.\+0..1.\+0]. \\
+\hline
+{\em lead} & Lead time in days. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_supplier_doc-func-members}
+\Hypertarget{class_supplier_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_supplier_a0ac4e80662f74212c1dbb0ad2fb94b12}\index{Supplier@{Supplier}!isPreferredSupplier@{isPreferredSupplier}}
+\index{isPreferredSupplier@{isPreferredSupplier}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{isPreferredSupplier()}{isPreferredSupplier()}}
+{\footnotesize\ttfamily \label{class_supplier_a0ac4e80662f74212c1dbb0ad2fb94b12} 
+bool Supplier::\+is\+Preferred\+Supplier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Determines whether the supplier meets preferred vendor SLA criteria. 
+
+\begin{DoxyReturn}{Returns}
+True if reliability\+Score \texorpdfstring{$>$}{>}= 0.\+90 and lead\+Time\+Days \texorpdfstring{$<$}{<}= 5. 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_a1062c26bef218ae49fc56e6bb90fc37b}\index{Supplier@{Supplier}!updateReliability@{updateReliability}}
+\index{updateReliability@{updateReliability}!Supplier@{Supplier}}
+\doxysubsubsection{\texorpdfstring{updateReliability()}{updateReliability()}}
+{\footnotesize\ttfamily \label{class_supplier_a1062c26bef218ae49fc56e6bb90fc37b} 
+void Supplier::\+update\+Reliability (\begin{DoxyParamCaption}\item[{bool}]{delivered\+On\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Adjusts the supplier\textquotesingle{}s reliability score based on delivery punctuality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delivered\+On\+Time} & True if shipment arrived on schedule. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{staff_8hpp}{staff.\+hpp}}\item 
+src/\doxymbox{\hyperlink{staff_8cpp}{staff.\+cpp}}\end{DoxyCompactItemize}

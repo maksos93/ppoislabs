@@ -1,0 +1,113 @@
+\doxysection{Membership\+Card Class Reference}
+\hypertarget{class_membership_card}{}\label{class_membership_card}\index{MembershipCard@{MembershipCard}}
+
+
+Represents a library reader card governing active loans and suspension state.  
+
+
+
+
+{\ttfamily \+\#include $<$users.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_membership_card_aca1a880a9290f92dd20ae28140e9c223}{Membership\+Card}} (std::\+string number="{}CARD-\/000"{}, int limit=5)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_membership_card}{Membership\+Card}. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_membership_card_aacee7a007ea22cf73c26c2ca3c903c4d}{can\+Borrow}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the card is active and below its borrow limit. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_membership_card_af0fcdd250b0ea7e2bbad18bd0b8023d7}{record\+Loan}} ()
+\begin{DoxyCompactList}\small\item\em Increments active loan count if borrowing is permitted. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_membership_card_a3a079dab0132c206511bbdd534d86239}{record\+Return}} ()
+\begin{DoxyCompactList}\small\item\em Decrements active loan count upon book return. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_membership_card_ac2539dc8250ef81df1bab8934f8a0f9e}{set\+Suspended}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the suspension status of the membership card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a library reader card governing active loans and suspension state. 
+
+\label{class_membership_card_doc-constructors}
+\Hypertarget{class_membership_card_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_membership_card_aca1a880a9290f92dd20ae28140e9c223}\index{MembershipCard@{MembershipCard}!MembershipCard@{MembershipCard}}
+\index{MembershipCard@{MembershipCard}!MembershipCard@{MembershipCard}}
+\doxysubsubsection{\texorpdfstring{MembershipCard()}{MembershipCard()}}
+{\footnotesize\ttfamily \label{class_membership_card_aca1a880a9290f92dd20ae28140e9c223} 
+Membership\+Card::\+\+Membership\+Card (\begin{DoxyParamCaption}\item[{std::\+string}]{number}{ = {\ttfamily "{}CARD-\/000"{}}, }\item[{int}]{limit}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_membership_card}{Membership\+Card}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Card number string. \\
+\hline
+{\em limit} & Maximum simultaneous loans. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_membership_card_doc-func-members}
+\Hypertarget{class_membership_card_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_membership_card_aacee7a007ea22cf73c26c2ca3c903c4d}\index{MembershipCard@{MembershipCard}!canBorrow@{canBorrow}}
+\index{canBorrow@{canBorrow}!MembershipCard@{MembershipCard}}
+\doxysubsubsection{\texorpdfstring{canBorrow()}{canBorrow()}}
+{\footnotesize\ttfamily \label{class_membership_card_aacee7a007ea22cf73c26c2ca3c903c4d} 
+bool Membership\+Card::\+can\+Borrow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the card is active and below its borrow limit. 
+
+\begin{DoxyReturn}{Returns}
+True if borrowing is permitted. 
+\end{DoxyReturn}
+\Hypertarget{class_membership_card_af0fcdd250b0ea7e2bbad18bd0b8023d7}\index{MembershipCard@{MembershipCard}!recordLoan@{recordLoan}}
+\index{recordLoan@{recordLoan}!MembershipCard@{MembershipCard}}
+\doxysubsubsection{\texorpdfstring{recordLoan()}{recordLoan()}}
+{\footnotesize\ttfamily \label{class_membership_card_af0fcdd250b0ea7e2bbad18bd0b8023d7} 
+void Membership\+Card::\+record\+Loan (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increments active loan count if borrowing is permitted. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_unauthorized_access_exception}{Unauthorized\+Access\+Exception}} & if card is suspended or limit is reached. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_membership_card_a3a079dab0132c206511bbdd534d86239}\index{MembershipCard@{MembershipCard}!recordReturn@{recordReturn}}
+\index{recordReturn@{recordReturn}!MembershipCard@{MembershipCard}}
+\doxysubsubsection{\texorpdfstring{recordReturn()}{recordReturn()}}
+{\footnotesize\ttfamily \label{class_membership_card_a3a079dab0132c206511bbdd534d86239} 
+void Membership\+Card::\+record\+Return (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Decrements active loan count upon book return. 
+
+\Hypertarget{class_membership_card_ac2539dc8250ef81df1bab8934f8a0f9e}\index{MembershipCard@{MembershipCard}!setSuspended@{setSuspended}}
+\index{setSuspended@{setSuspended}!MembershipCard@{MembershipCard}}
+\doxysubsubsection{\texorpdfstring{setSuspended()}{setSuspended()}}
+{\footnotesize\ttfamily \label{class_membership_card_ac2539dc8250ef81df1bab8934f8a0f9e} 
+void Membership\+Card::\+set\+Suspended (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Sets the suspension status of the membership card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & True to suspend, false to activate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/\doxymbox{\hyperlink{users_8hpp}{users.\+hpp}}\item 
+src/\doxymbox{\hyperlink{users_8cpp}{users.\+cpp}}\end{DoxyCompactItemize}
