@@ -1,0 +1,23 @@
+# Doxyfile for Online Learning Platform OOP Project (Lab 2)
+
+PROJECT_NAME           = "Online Learning Platform OOP Project (Lab 2)"
+PROJECT_NUMBER         = "1.0"
+PROJECT_BRIEF          = "Object-Oriented Online Learning Platform (60 Classes, 13 Exceptions)"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = include src tests README.md
+FILE_PATTERNS          = *.hpp *.h *.cpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_PROTECTED      = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES

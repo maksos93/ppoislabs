@@ -1,0 +1,27 @@
+var operations_8hpp =
+[
+    [ "StaffMember", "class_staff_member.html", "class_staff_member" ],
+    [ "Mentor", "class_mentor.html", "class_mentor" ],
+    [ "CurriculumEditor", "class_curriculum_editor.html", "class_curriculum_editor" ],
+    [ "BillingSpecialist", "class_billing_specialist.html", "class_billing_specialist" ],
+    [ "CourseDirector", "class_course_director.html", "class_course_director" ],
+    [ "PlatformAdmin", "class_platform_admin.html", "class_platform_admin" ],
+    [ "SessionSchedule", "class_session_schedule.html", "class_session_schedule" ],
+    [ "PayrollRecord", "class_payroll_record.html", "class_payroll_record" ],
+    [ "HRManager", "class_h_r_manager.html", "class_h_r_manager" ],
+    [ "ContentPartner", "class_content_partner.html", "class_content_partner" ],
+    [ "ContentBatch", "class_content_batch.html", "class_content_batch" ],
+    [ "LiveSession", "class_live_session.html", "class_live_session" ],
+    [ "StudySchedule", "class_study_schedule.html", "class_study_schedule" ],
+    [ "ProgressTracker", "class_progress_tracker.html", "class_progress_tracker" ],
+    [ "RefundRequest", "class_refund_request.html", "class_refund_request" ],
+    [ "RefundHandler", "class_refund_handler.html", "class_refund_handler" ],
+    [ "EnrollmentAnalytics", "class_enrollment_analytics.html", "class_enrollment_analytics" ],
+    [ "CourseEngagement", "class_course_engagement.html", "class_course_engagement" ],
+    [ "ClassroomAudit", "class_classroom_audit.html", "class_classroom_audit" ],
+    [ "FinancialVerifier", "class_financial_verifier.html", "class_financial_verifier" ],
+    [ "CourseReview", "class_course_review.html", "class_course_review" ],
+    [ "RatingSummary", "class_rating_summary.html", "class_rating_summary" ],
+    [ "RecommendationService", "class_recommendation_service.html", "class_recommendation_service" ],
+    [ "AuditTrail", "class_audit_trail.html", "class_audit_trail" ]
+];
