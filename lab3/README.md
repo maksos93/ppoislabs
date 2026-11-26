@@ -88,10 +88,7 @@
 ## Структура проекта
 
 ```text
-edtech_lab2_project/
-├── .github/
-│   └── workflows/
-│       └── ci.yml
+lab3/
 ├── include/
 │   ├── exceptions.hpp
 │   ├── courses.hpp
