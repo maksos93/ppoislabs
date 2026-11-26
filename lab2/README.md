@@ -88,7 +88,7 @@
 ## Структура проекта
 
 ```text
-lab2_project/
+lab2/
 ├── include/
 │   ├── exceptions.hpp
 │   ├── book.hpp
